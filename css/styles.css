@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --primary-color: rgb(157, 62, 62);
+    --secondary-color: rgb(118, 153, 219);
+    /* Badges */
+    --badge-radius: 5px 5px 5px 0;
+    --badge-padding: 5px 5px 1px 5px;
+    --badge-top: -15px;
+    --badge-margin: 5px;
+}
+
+/* Global CSS */
+html {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+}
+
+body * {
+    font-family: 'Anek Telugu', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+p,
+span {
+    font-weight: 300;
+}
+
+a {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+a:hover{
+    font-weight: 500;
+}
+
+ul li {
+    position: relative;
+    margin-top: 15px;
+}
+
+ul li::before {
+    content: '\00BB\00a0'
+}
+
+ul li.new::after {
+    content: 'new';
+    font-size: 9pt;
+    position: absolute;
+    top: var(--badge-top);
+    padding: var(--badge-padding);
+    border-radius: var(--badge-radius);
+    background-color: var(--primary-color);
+    margin-left: var(--badge-margin);
+    color: white;
+}
+
+ul li.upcoming::after {
+    content: 'upcoming';
+    font-size: 9pt;
+    position: absolute;
+    top: var(--badge-top);
+    padding: var(--badge-padding);
+    border-radius: var(--badge-radius);
+    background-color: var(--secondary-color);
+    margin-left: var(--badge-margin);
+    color: white;
+}
+
+ul li.upcoming * {
+    color: black;
+    cursor: default;
+}
+
+/* Header CSS */
+header,
+footer {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(175, 175, 175);
+    box-shadow: 0px 0px 10px black;
+}
+
+#title {
+    color: var(--primary-color)
+}
+
+/* Content CSS */
+#content {
+    width: 80vw;
+    height: calc(100vh - 120px);
+    margin: 0 auto;
+    display: flex;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+main {
+    width: 80vw;
+    min-height: calc(100% -30px);
+    flex: 1;
+    padding: 15px;
+    background-color: white;
+    z-index: -1;
+}
+
+#main-title {
+    width: 100%;
+    border-bottom: .5px solid black;
+    padding: 0 5px;
+}
+
+#main-title h3::after {
+    content: "\00a0\00BB";
+    display: inline-block;
+
+}
+
+#main-content {
+    width: 100%;
+    padding: 10px 5px;
+}
+
+aside {
+    width: 20vw;
+    min-height: calc(100% -30px);
+    display: block;
+    box-shadow: -15px 0px 5px -15px rgba(0, 0, 0, 0.75);
+    padding: 15px 5px;
+    background-color: white;
+    z-index: -1;
+}
+
+aside img {
+    width: 100%;
+}
