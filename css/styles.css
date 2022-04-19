@@ -44,11 +44,12 @@ a {
     text-decoration: none;
     color: var(--primary-color);
 }
-a:hover{
+
+a:hover {
     font-weight: 500;
 }
 
-ul li.badge{
+ul li.badge {
     position: relative;
     margin-top: 15px;
 }
@@ -105,7 +106,7 @@ footer {
 }
 
 /* Content CSS */
-#main-section {
+main {
     width: 80vw;
     height: calc(100vh - 120px);
     margin: 0 auto;
@@ -114,9 +115,9 @@ footer {
     border-right: 1px solid black;
 }
 
-main {
+#main-section {
     width: 80vw;
-    min-height: calc(100% -30px);
+    min-height: calc(100% - 30px);
     flex: 1;
     padding: 15px;
     background-color: white;
@@ -142,7 +143,7 @@ main {
 
 aside {
     width: 20vw;
-    min-height: calc(100% -30px);
+    min-height: calc(100% - 30px);
     display: block;
     box-shadow: -15px 0px 5px -15px rgba(0, 0, 0, 0.75);
     padding: 15px 5px;
@@ -153,7 +154,8 @@ aside {
 aside img {
     width: 100%;
 }
-aside #next-updates{
+
+aside #next-updates {
     display: block;
     margin-top: 15px;
 }
