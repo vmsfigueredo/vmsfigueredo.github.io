@@ -1,0 +1,26 @@
+:root {
+    /* Background */
+    --background-primary-color: #664229;
+    --background-secondary-color: #E5D3B3;
+
+    /* Text */
+    --background-primary-text: #FFF;
+    --primary-color: rgb(157, 62, 62);
+    --secondary-color: rgb(118, 153, 219);
+
+    /* Link */
+    --link-color: rgb(157, 62, 62);
+    --link-darkBg-color: rgb(255, 217, 217);
+    
+    /* Badges */
+    --badge-radius: 5px 5px 5px 0;
+    --badge-padding: 5px 5px 1px 5px;
+    --badge-top: -15px;
+    --badge-margin: 5px;
+
+    /* Responsivity */
+
+    --small-width: 576px;
+    --medium-width: ;
+    --large-width: 992px;
+}

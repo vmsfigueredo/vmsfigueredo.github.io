@@ -1,21 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;300;400;500;600&display=swap');
-
-:root {
-    --primary-color: rgb(157, 62, 62);
-    --secondary-color: rgb(118, 153, 219);
-    /* Badges */
-    --badge-radius: 5px 5px 5px 0;
-    --badge-padding: 5px 5px 1px 5px;
-    --badge-top: -15px;
-    --badge-margin: 5px;
-}
+@import url('variables.css');
 
 /* Global CSS */
 html {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    background-color: whitesmoke;
+    background-color: var(--background-secondary-color);
 }
 
 body * {
@@ -42,11 +33,16 @@ span {
 a {
     font-weight: 400;
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--link-color);
+}
+
+a.dark-bg {
+    color: var(--link-darkBg-color);
 }
 
 a:hover {
     font-weight: 500;
+    cursor: pointer
 }
 
 ul li.badge {
@@ -85,6 +81,7 @@ ul li.upcoming::after {
 ul li.upcoming * {
     color: black;
     cursor: default;
+    z-index: -1;
 }
 
 /* Header CSS */
@@ -97,35 +94,43 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(175, 175, 175);
+    background-color: var(--background-primary-color);
+    color: var(--background-primary-text);
     box-shadow: 0 0 10px black;
 }
 
 #title {
-    color: var(--primary-color)
+    margin: 15px 0 5px 0;
 }
 
 /* Content CSS */
 main {
-    width: 80vw;
-    height: calc(100vh - 120px);
+    position: relative;
+    min-height: calc(100vh - 120px);
     margin: 0 auto;
     display: flex;
     border-left: 1px solid black;
     border-right: 1px solid black;
+    overflow-x: hidden;
 }
 
-#main-section {
-    width: 80vw;
+#main-page-section {
+    width: calc(100% - 30px);
     min-height: calc(100% - 30px);
     flex: 1;
     padding: 15px;
     background-color: white;
-    z-index: -1;
+}
+
+#main-section {
+    min-height: calc(100% - 30px);
+    flex: 1;
+    padding: 15px;
+    background-color: white;
 }
 
 #main-title {
-    width: 100%;
+    width: calc(100% - 20px);
     border-bottom: .5px solid black;
     padding: 0 5px;
 }
@@ -142,20 +147,63 @@ main {
 }
 
 aside {
-    width: 20vw;
     min-height: calc(100% - 30px);
     display: block;
     box-shadow: -15px 0px 5px -15px rgba(0, 0, 0, 0.75);
     padding: 15px 5px;
     background-color: white;
-    z-index: -1;
 }
 
-aside img {
+aside #profile-image img {
     width: 100%;
 }
 
-aside #next-updates {
+aside .title {
     display: block;
     margin-top: 15px;
+}
+
+/* responsivity */
+
+@media only screen and (min-width: 0px) and (max-width: 634px) {
+    main {
+        width: 95vw;
+        flex-direction: column-reverse;
+    }
+
+    #main-section {
+        width: calc(100% - 10px);
+    }
+
+    aside {
+        width: calc(100% - 10px);
+    }
+
+    aside #profile-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    aside #profile-image img {
+        box-shadow: 0px 0px 5px black;
+    }
+}
+
+@media only screen and (min-width: 635px) {
+    main {
+        width: 80vw;
+    }
+
+    #main-section {
+        width: 80vw;
+    }
+
+    aside {
+        width: 20vw;
+    }
+
+    aside #profile-image {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
