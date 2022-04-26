@@ -18,7 +18,23 @@
     }
 }
 
-@media only screen and (min-width: 635px) {
+@media only screen and (min-width: 635px) and (max-width: 899px) {
+    .design-principles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+
+    .design-principles .item:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .design-principles .item:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
     .design-principles {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
