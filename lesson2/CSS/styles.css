@@ -1,0 +1,150 @@
+@import url('variables.css');
+
+.prussian-blue-bg{
+    color: var(--timberwolf);
+    background: var(--prussian-blue);
+}
+
+.cool-grey-bg{
+    color: var(--timberwolf);
+    background: var(--cool-grey);
+}
+.satin-sheet-gold-bg{
+    color:white;
+    background: var(--satin-sheen-gold);
+}
+.timberwolf-bg{
+    color: var(--rich-black-fogra-29);
+    background: var(--timberwolf);
+}
+.rich-black-fogra-29-bg{
+    color: var(--timberwolf);
+    background: var(--rich-black-fogra-29);
+}
+
+.prussian-blue-text{
+    color: var(--prussian-blue);
+}
+
+.cool-grey-text{
+    color: var(--cool-grey);
+}
+.satin-sheet-gold-text{
+    color: var(--satin-sheen-gold);
+}
+.timberwolf-text{
+    color: var(--timberwolf);
+}
+.rich-black-fogra-29-text{
+    color: var(--rich-black-fogra-29);
+}
+.prussian-blue-logo{
+    fill: var(--prussian-blue);
+}
+/*  Content CSS */
+html {
+    background-color: var(--timberwolf);
+}
+
+header, footer{
+    background-color: var(--prussian-blue);
+    color: var(--timberwolf);
+}
+
+ul#navigation li{
+    display: inline-block;
+    margin-left: 10px;
+    background-color: var(--timberwolf);
+    color: var(--prussian-blue);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+ul#navigation li::before, ul#logos li:before{
+    content: "";
+}
+ul#navigation li:hover{
+    background-color: var(--prussian-blue);
+    color: var(--timberwolf);
+}
+ul#navigation li.active{
+    background-color: var(--prussian-blue);
+    color: var(--timberwolf);
+}
+ul#navigation li a{
+    display: block;
+    transition: .2s ease-in-out;
+    padding: 15px 10px 10px 10px !important;
+    color: var(--prussian-blue)
+}
+
+ul#navigation li:hover a{
+    color: var(--timberwolf);
+}
+ul#navigation li.active a{
+    color: var(--timberwolf);
+}
+.title{
+    font-size: 15pt;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding-bottom: .1em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+.info{
+    font-size: 14pt;
+}
+ul#logos li{
+    display: inline-block;
+    margin-left: 15px;
+}
+#colors-banner{
+    position: relative;
+    width: 75%;
+    height: 20em;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#colors-banner img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.website-example{
+    padding: 15px;
+    margin-top: .2em;
+}
+.persona{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0px 5px 5px -5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.persona h3{
+    width: 100%;
+    display: inline-block
+}
+.persona img{
+    height: 150px;
+    display: inline-block;
+    flex: 1;
+}
+.persona ul{
+    display: inline-block;
+    margin-left: 10px;
+    flex: 3;
+}
+.persona ul li{
+    margin-top: 10px;
+}
+
+.scenario{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0px 5px 5px -5px;
+    margin-top: 10px;
+    padding: 1em;
+}
