@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;300;400;500;600&display=swap');
+@import url('variables.css');
+
+/* Responsivity */
+html {
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+    list-style: none;
+    font-family: 'Anek Telugu', sans-serif;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 634px) {
+
+    header img {
+        height: 30vw;
+        margin-right: 0 !important;
+    }
+
+    header #site-title {
+        margin-top: 8vw;
+        margin-left: 2em;
+    }
+
+    header #site-title h1 {
+        font-size: 8vw;
+    }
+
+    header #site-title p {
+        font-size: 3.5vw;
+    }
+
+    /* Nav */
+    nav {
+        padding: 0 !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+    }
+
+    nav ul {
+        width: 100vw;
+        flex-direction: column;
+        transition: max-height 1s ease-in-out;
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    nav ul li a {
+        width: 100vw;
+    }
+
+    nav .menu-button {
+        display: inline-block !important;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    .menu-button .bar1,
+    .menu-button .bar2,
+    .menu-button .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: var(--timberwolf);
+        margin: 6px 0;
+        transition: .4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    /* Main */
+    main .hero .info h3 {
+        font-size: 8vw;
+    }
+
+    main .hero .info p {
+        font-size: 4vw;
+    }
+
+    /* Forecast */
+    main .forecast {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    /*  Articles */
+    main .articles {
+        flex-direction: column;
+    }
+
+    /* Footer */
+    footer #footer-widgets {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 635px) {
+
+    /* Nav */
+    nav .menu-button {
+        display: none;
+    }
+
+    nav ul {
+        max-height: 999px !important;
+    }
+
+    /* Header */
+    header img {
+        height: 150px;
+    }
+
+    header #site-title {
+        margin-top: 2em;
+        margin-left: 2em;
+    }
+
+    header #site-title h1 {
+        font-size: 32pt;
+    }
+
+    header #site-title p {
+        font-size: 12pt;
+    }
+
+    /* Main */
+    main .hero .info h3 {
+        font-size: 3em;
+    }
+
+    main .hero .info p {
+        font-size: 1.5em;
+    }
+}
+
+/*  Header  */
+
+header {
+    width: calc(100vw - 30px);
+    background: var(--satin-sheen-gold);
+    color: white;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+}
+
+/* Nav */
+
+nav {
+    width: 100vw;
+    background: var(--prussian-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li a {
+    display: block;
+    padding: 15px 15px 15px 15px;
+    color: white;
+}
+
+nav li.active a {
+    background-color: var(--timberwolf);
+    color: var(--prussian-blue);
+}
+
+nav li a:hover {
+    background-color: var(--timberwolf);
+    color: var(--prussian-blue);
+}
+
+/*  Main */
+main {
+    width: 90vw;
+    min-height: 75vh;
+    padding: 15px 15px;
+    margin: 0 auto;
+}
+
+main .page-title {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    line-height: .1em;
+    margin: 10px 0 20px;
+}
+
+main .page-title span {
+    background-color: white;
+    padding: 0 10px;
+}
+
+main .hero {
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    overflow: hidden;
+    background: url("../images/preston-id.jpeg");
+    background-size: cover;
+    background-position: center bottom;
+}
+
+main .hero .info {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(2, 4, 15, 0.3);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .hero .weather-icon {
+    background-color: var(--satin-sheen-gold);
+    border-radius: 150px;
+    padding: 0 5px;
+    display: none;
+}
+
+main .hero .weather-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Forecast */
+main .forecast {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+main .forecast .forecast-day {
+    box-shadow: 0px 0px 2px black;
+    flex: 1;
+}
+
+main .forecast .forecast-day .day {
+    font-weight: 500;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: var(--satin-sheen-gold);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .forecast .forecast-day .day img {
+    height: 35px;
+    display: none;
+}
+
+main .forecast .forecast-day .day p {
+    margin-top: 5px;
+}
+
+main .forecast .forecast-day ul li {
+    padding: 5px 10px;
+}
+
+main .forecast .forecast-day ul li * {
+    display: inline-block;
+}
+
+main .forecast .forecast-day ul li:first-of-type {
+    border-top: 1px solid black;
+}
+
+main .forecast .forecast-day ul li:not(:last-of-type) {
+    border-bottom: 1px solid black;
+}
+
+/*  Articles */
+
+main .articles {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+main .articles .article {
+    box-shadow: 0px 0px 2px black;
+    flex: 1;
+}
+
+main .articles .article h3 {
+    font-weight: 500;
+    padding: 10px 10px 5px 10px;
+    text-align: center;
+    background-color: var(--satin-sheen-gold);
+    color: white;
+}
+
+main .articles .article p {
+    padding: 15px 5px 10px 5px;
+}
+
+/* Footer */
+
+footer {
+    width: 100vw;
+    background: var(--satin-sheen-gold);
+    color: white;
+}
+
+footer #footer-widgets {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+footer #footer-widgets .widget {
+    flex: 1;
+}
+
+footer #footer-bar {
+    text-align: center;
+}
+
+footer #footer-bar a {
+    color: rgb(247, 233, 233);
+    font-weight: 300;
+}

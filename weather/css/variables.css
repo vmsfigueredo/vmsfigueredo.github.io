@@ -1,0 +1,48 @@
+:root {
+    --prussian-blue: #002642ff;
+    --cool-grey: #9093abff;
+    --satin-sheen-gold: #c49a4dff;
+    --timberwolf: #e5dadaff;
+    --rich-black-fogra-29: #02040fff;
+}
+.prussian-blue-bg{
+    color: var(--timberwolf);
+    background: var(--prussian-blue);
+}
+
+.cool-grey-bg{
+    color: var(--timberwolf);
+    background: var(--cool-grey);
+}
+.satin-sheet-gold-bg{
+    color:white;
+    background: var(--satin-sheen-gold);
+}
+.timberwolf-bg{
+    color: var(--rich-black-fogra-29);
+    background: var(--timberwolf);
+}
+.rich-black-fogra-29-bg{
+    color: var(--timberwolf);
+    background: var(--rich-black-fogra-29);
+}
+
+.prussian-blue-text{
+    color: var(--prussian-blue);
+}
+
+.cool-grey-text{
+    color: var(--cool-grey);
+}
+.satin-sheet-gold-text{
+    color: var(--satin-sheen-gold);
+}
+.timberwolf-text{
+    color: var(--timberwolf);
+}
+.rich-black-fogra-29-text{
+    color: var(--rich-black-fogra-29);
+}
+.prussian-blue-logo{
+    fill: var(--prussian-blue);
+}
