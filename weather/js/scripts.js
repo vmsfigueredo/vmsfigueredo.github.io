@@ -98,7 +98,7 @@ request.onload = function () {
 }
 // Send Request 
 
-//request.send();
+request.send();
 
 /* Forecast Days */
 
