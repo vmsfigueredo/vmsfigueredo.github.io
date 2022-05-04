@@ -67,8 +67,15 @@
         transform: rotate(45deg) translate(-8px, -8px);
     }
 
+    /*  Forecast Articles */
+
+    main #forecast-articles {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     /* Main */
-    main #hero-section .info{
+    main #hero-section .info {
         margin-top: 10px;
     }
 
