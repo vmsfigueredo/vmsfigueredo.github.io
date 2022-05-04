@@ -133,11 +133,11 @@ main #hero-section .infoul li * {
 }
 
 main #hero-section .info ul li:first-of-type {
-    border-top: 1px solid black;
+    border-top: 1px solid white;
 }
 
 main #hero-section .info ul li:not(:last-of-type) {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
 }
 
 
