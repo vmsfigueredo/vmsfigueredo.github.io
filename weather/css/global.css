@@ -25,6 +25,12 @@ header {
     justify-content: center;
 }
 
+header #site-title p {
+    padding: 10px 5px 5px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
+}
+
 /* Nav */
 
 nav {
