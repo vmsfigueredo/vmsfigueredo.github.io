@@ -19,6 +19,7 @@ header {
     width: calc(100vw - 30px);
     background: var(--satin-sheen-gold);
     color: white;
+    font-weight: 500;
     display: flex;
     padding: 15px;
     justify-content: center;
@@ -139,6 +140,13 @@ main #hero-section .info ul li:not(:last-of-type) {
     border-bottom: 1px solid black;
 }
 
+
+/*  Forecast Articles */
+
+main #forecast-articles{
+    display: flex;
+    flex-direction: column;
+}
 /* Forecast */
 main .forecast {
     display: flex;
@@ -196,10 +204,13 @@ main .articles {
     margin-top: 20px;
     flex-wrap: wrap;
 }
-
 main .articles .article {
     box-shadow: 0px 0px 2px black;
     flex: 1;
+}
+main .articles .article .article-content img{
+    float: right;
+    margin-right: 1rem;
 }
 
 main .articles .article h3 {
@@ -220,6 +231,7 @@ footer {
     width: 100vw;
     background: var(--satin-sheen-gold);
     color: white;
+    font-weight: 500;
 }
 
 footer #footer-widgets {
