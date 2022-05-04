@@ -12,6 +12,9 @@
     <link rel="icon" type="image/x-icon" href="images/logo.svg">
     <!--    Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/small.css">
+    <link rel="stylesheet" type="text/css" href="css/medium.css">
+    <link rel="stylesheet" type="text/css" href="css/large.css">
 </head>
 
 <body>
@@ -39,16 +42,18 @@
     </nav>
     <main>
         <h2 class="page-title"><span>Preston Idaho</span></h2>
-        <div class="hero">
+        <div id="hero-section">
+            <div class="hero">
+
+            </div>
             <div class="info">
                 <div class="weather-icon">
-                    <img class="weather-icon-image" src="#">
+                    <img alt="weather-icon-image" class="weather-icon-image" src="#">
+                    <h3 class="show-today"></h3>
                 </div>
-                <h3 class="show-today"></h3>
                 <p class="show-weather">Loading Weather...</p>
             </div>
         </div>
-
         <div class="forecast">
             <div class="forecast-day">
                 <div class="day"><img alt="day-1-icon" class="day-1-icon" src="#">

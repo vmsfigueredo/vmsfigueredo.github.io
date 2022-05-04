@@ -1,0 +1,60 @@
+@media only screen and (min-width: 1001px) {
+
+    /* Nav */
+    nav .menu-button {
+        display: none;
+    }
+
+    nav ul {
+        max-height: 999px !important;
+    }
+
+    /* Header */
+    header img {
+        height: 150px;
+    }
+
+    header #site-title {
+        margin-top: 2em;
+        margin-left: 2em;
+    }
+
+    header #site-title h1 {
+        font-size: 32pt;
+    }
+
+    header #site-title p {
+        font-size: 12pt;
+    }
+
+    /* Main */
+    main .hero .info h3 {
+        font-size: 3em;
+    }
+
+    main .hero .info p {
+        font-size: 1.5em;
+    }
+     /* Main */
+     main #hero-section{
+        position: relative;
+    }
+    main #hero-section .info{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    main #hero-section .info h3 {
+        font-size: 1.5em;
+    }
+
+    main #hero-section .info p {
+        font-size: 1em;
+    }
+
+    main #hero-section .info .weather-icon{
+        display: flex;
+    }
+ 
+}

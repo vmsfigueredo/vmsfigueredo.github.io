@@ -5,12 +5,19 @@ Date.prototype.addDays = function (days) {
     return date;
 }
 
-function formatDate(date) {
+function formatDate(date, type = null) {
 
+    if (type == null) {
+        type = 'ordinal'
+    }
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    return `${weekdays[date.getDay()]}, ${month[date.getMonth()]} ${ordinal_of(date.getDate())} ${date.getFullYear()}`;
+    if (type == 'ordinal') {
+        return `${weekdays[date.getDay()]}, ${month[date.getMonth()]} ${ordinal_of(date.getDate())} ${date.getFullYear()}`;
+    } else {
+        return `${weekdays[date.getDay()]},  ${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`;
+    }
 }
 
 function toggleMenu(e) {
@@ -67,10 +74,17 @@ request.onload = function () {
         console.log(data);
         const current = data.current;
         const today = data.daily[0];
-        weatherDiv.innerHTML = `Current: ${current.temp}ºF | Max: ${today.temp.max}ºF | Min: ${today.temp.min}ºF | Wind Speed: ${current.wind_speed}mph<br/>${ current.weather[0].description }`
+        weatherDiv.innerHTML = `
+            <ul>
+                <li><strong>Current:</strong> ${current.temp}ºF</li>
+                <li><strong>Max:</strong> ${today.temp.max}ºF</li>
+                <li><strong>Min:</strong> ${today.temp.min}ºF</li>
+                <li><strong>Wind Speed:</strong> ${current.wind_speed}mph</li>
+                <li><strong>Weather:</strong> ${ current.weather[0].description }</li>
+            </ul>`
         weatherIcon.src = `https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`;
-        weatherIcon.style.display = "block";
-        weatherIconDiv.style.display = "block";
+        weatherIcon.style.display = "inline-block";
+        weatherIconDiv.style.display = "inline-block";
 
 
         // Tomorrow Foward
@@ -116,7 +130,7 @@ day5.textContent = formatDate(date.addDays(5));
 
 /* Footer */
 const lastUpdated = document.querySelector('#lastUpdated');
-lastUpdated.textContent = `Last Updated: ${document.lastModified}`
+lastUpdated.textContent = `Last Updated: ${formatDate(new Date(document.lastModified), 'default')}`
 
 const footerYear = document.querySelector('#footerYear');
 footerYear.textContent = date.getFullYear();
