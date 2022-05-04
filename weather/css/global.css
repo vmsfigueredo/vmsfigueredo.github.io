@@ -232,6 +232,7 @@ main .articles .article h3 {
 
 main .articles .article p {
     padding: 15px 5px 10px 5px;
+    font-size: 14pt;
 }
 
 /* Footer */
@@ -247,6 +248,7 @@ footer #footer-widgets {
     display: flex;
     padding: 15px;
     justify-content: space-between;
+    width: 100%;
 }
 
 footer #footer-widgets .widget {
