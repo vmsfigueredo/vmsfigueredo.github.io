@@ -35,16 +35,18 @@
     main .hero .info p {
         font-size: 1.5em;
     }
-     /* Main */
-     main #hero-section{
+
+    /* Main */
+    main #hero-section {
         position: relative;
     }
-    main #hero-section .info{
-        height: 100%;
+
+    main #hero-section .info {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 15px;
+        left: 15px;
     }
+
     main #hero-section .info h3 {
         font-size: 1.5em;
     }
@@ -53,8 +55,8 @@
         font-size: 1em;
     }
 
-    main #hero-section .info .weather-icon{
+    main #hero-section .info .weather-icon {
         display: flex;
     }
- 
+
 }

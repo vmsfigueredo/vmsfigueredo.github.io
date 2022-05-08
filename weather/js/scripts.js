@@ -4,7 +4,20 @@ Date.prototype.addDays = function (days) {
     date.setDate(date.getDate() + days);
     return date;
 }
-
+function ordinal_of(i) {
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
+}
 function formatDate(date, type = null) {
 
     if (type == null) {
@@ -29,26 +42,14 @@ function toggleMenu(e) {
     }
     e.classList.toggle("change");
 }
-
+const calcWindChill = (temperature, windSpeed) => parseFloat(35.74 + (0.6215*temperature) - (35.75*(windSpeed**0.16)) + (0.4275*temperature*(windSpeed**0.16))).toFixed(2);
 /* Variables */
 const date = new Date();
 
-/* Hero Information */
+/* Pancakes Info */
 
-function ordinal_of(i) {
-    var j = i % 10,
-        k = i % 100;
-    if (j == 1 && k != 11) {
-        return i + "st";
-    }
-    if (j == 2 && k != 12) {
-        return i + "nd";
-    }
-    if (j == 3 && k != 13) {
-        return i + "rd";
-    }
-    return i + "th";
-}
+if(date.getDay() === 5) document.querySelector("#pancakes").style.display = "block";
+/* Hero Information */
 
 const todayDiv = document.querySelector('.show-today');
 
@@ -60,9 +61,7 @@ const weatherDiv = document.querySelector('.show-weather');
 const weatherIconDiv = document.querySelector('.weather-icon');
 const weatherIcon = document.querySelector('.weather-icon-image');
 var request = new XMLHttpRequest();
-const ktf = kelvin => {
-    return parseFloat((kelvin - 273.15) * (9 / 5) + 32).toFixed(2)
-}
+
 // Open a new Connection and get Data
 request.open('GET', 'https://api.openweathermap.org/data/2.5/onecall?lat=42.09699837220583&lon=-111.87595677773281&units=imperial&appid=c50b2a933706495fab439a581827e04e', true);
 
@@ -80,6 +79,7 @@ request.onload = function () {
                 <li><strong>Max:</strong> ${today.temp.max}ºF</li>
                 <li><strong>Min:</strong> ${today.temp.min}ºF</li>
                 <li><strong>Wind Speed:</strong> ${current.wind_speed}mph</li>
+                <li><strong>Wind Chill:</strong> ${calcWindChill(current.temp, current.wind_speed)}Fº</li>
                 <li><strong>Weather:</strong> ${ current.weather[0].description }</li>
             </ul>`
         weatherIcon.src = `https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`;
@@ -97,11 +97,13 @@ request.onload = function () {
             const dayWind = document.querySelector(`.wind-day-${i}`);
             const dayWeather = document.querySelector(`.weather-day-${i}`);
             const dayWeatherIcon = document.querySelector(`.day-${i}-icon`);
+            const dayWindChill = document.querySelector(`.wind-chill-day-${i}`);
 
             dayTemp.textContent = `${day.temp.day}ºF`;
             dayMax.textContent = `${day.temp.min}ºF`;
             dayMin.textContent = `${day.temp.max}ºF`;
             dayWind.textContent = `${day.wind_speed}mps`;
+            dayWindChill.textContent = `${calcWindChill(day.temp.day, day.wind_speed)}ºF`
             dayWeather.textContent = `${day.weather[0].description}`;
             dayWeatherIcon.src = `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
             dayWeatherIcon.style.display = "block";
@@ -130,7 +132,7 @@ day5.textContent = formatDate(date.addDays(5));
 
 /* Footer */
 const lastUpdated = document.querySelector('#lastUpdated');
-lastUpdated.textContent = `Last Updated: ${formatDate(new Date(document.lastModified), 'default')}`
+lastUpdated.textContent = `Last Updated: ${formatDate(new Date(document.lastModified), 'other')}`
 
 const footerYear = document.querySelector('#footerYear');
 footerYear.textContent = date.getFullYear();

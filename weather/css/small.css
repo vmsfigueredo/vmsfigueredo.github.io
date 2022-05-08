@@ -75,7 +75,16 @@
     }
 
     /* Main */
+    main #pancakes p::before {
+        content: "";
+    }
+
+    main #pancakes p::after {
+        content: "";
+    }
+
     main #hero-section .info {
+        background-color: rgba(0, 0, 0, 0.9);
         margin-top: 10px;
     }
 

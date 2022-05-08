@@ -70,13 +70,46 @@ main {
     margin: 0 auto;
 }
 
+
+/* Pancakes */
+main #pancakes {
+    position: relative;
+    width: 100%;
+    padding: 15px 0 10px 0;
+    text-align: center;
+    background-color: var(--timberwolf);
+    font-weight: 500;
+    font-size: 16pt;
+    box-shadow: 0 0 10px darkgoldenrod;
+    display: none;
+}
+
+main #pancakes p::before {
+    content: "!";
+    font-size: 36pt;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-left: -20px;
+}
+
+main #pancakes p::after {
+    content: "!";
+    font-size: 36pt;
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+}
+
+/* Page Title */
 main .page-title {
     width: 100%;
     text-align: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     line-height: .1em;
-    margin: 10px 0 20px;
+    margin: 30px 0 20px;
 }
 
 main .page-title span {
@@ -84,19 +117,25 @@ main .page-title span {
     padding: 0 10px;
 }
 
+/* Hero Section */
 main #hero-section .hero {
     width: 100%;
-    height: 35vh;
+    height: auto;
     position: relative;
     overflow: hidden;
-    background: url("../images/preston-id.jpeg");
-    background-size: cover;
-    background-position: center bottom;
+}
+
+main #hero-section .hero picture,
+main #hero-section .hero picture * {
+    width: 100%;
+    padding: 0;
 }
 
 main #hero-section .info {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px black;
     z-index: 1;
+    max-height: 300px !important;
     color: white;
     text-align: center;
     display: flex;
@@ -149,10 +188,11 @@ main #hero-section .info ul li:not(:last-of-type) {
 
 /*  Forecast Articles */
 
-main #forecast-articles{
+main #forecast-articles {
     display: flex;
     flex-direction: column;
 }
+
 /* Forecast */
 main .forecast {
     display: flex;
@@ -213,11 +253,13 @@ main .articles {
     margin-top: 20px;
     flex-wrap: wrap;
 }
+
 main .articles .article {
     box-shadow: 0px 0px 2px black;
     flex: 1;
 }
-main .articles .article .article-content img{
+
+main .articles .article .article-content img {
     float: right;
     margin-right: 1rem;
 }
