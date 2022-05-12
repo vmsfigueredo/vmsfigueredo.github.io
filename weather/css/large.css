@@ -27,36 +27,4 @@
         font-size: 12pt;
     }
 
-    /* Main */
-    main .hero .info h3 {
-        font-size: 3em;
-    }
-
-    main .hero .info p {
-        font-size: 1.5em;
-    }
-
-    /* Main */
-    main #hero-section {
-        position: relative;
-    }
-
-    main #hero-section .info {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-    }
-
-    main #hero-section .info h3 {
-        font-size: 1.5em;
-    }
-
-    main #hero-section .info p {
-        font-size: 1em;
-    }
-
-    main #hero-section .info .weather-icon {
-        display: flex;
-    }
-
 }

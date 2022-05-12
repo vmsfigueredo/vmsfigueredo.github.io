@@ -1,0 +1,6 @@
+@media only screen and (min-width: 635px) and (max-width: 1000px) {
+    #gallery picture {
+        min-width: calc(100% / 2 - 10px);
+        max-width: calc(100% / 2 - 10px)
+    }
+}

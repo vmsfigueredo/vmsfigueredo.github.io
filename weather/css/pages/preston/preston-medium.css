@@ -1,0 +1,40 @@
+@media only screen and (min-width: 635px) and (max-width: 1000px) {
+    /* Main */
+    main #pancakes p::before {
+        content: "";
+    }
+
+    main #pancakes p::after {
+        content: "";
+    }
+
+    main #hero-section {
+        position: relative;
+    }
+
+    main #hero-section .info {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    main #hero-section .hero .info h3 {
+        font-size: 3em;
+    }
+
+    main #hero-section .hero .info p {
+        font-size: 1.5em;
+    }
+
+    /* Forecast */
+    main .forecast {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        flex-direction: row;
+    }
+
+    main .forecast .forecast-day {
+        min-width: 25%;
+    }
+}

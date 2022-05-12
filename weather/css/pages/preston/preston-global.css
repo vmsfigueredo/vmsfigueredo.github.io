@@ -1,0 +1,194 @@
+@import url('preston-large.css');
+@import url('preston-medium.css');
+@import url('preston-small.css');
+/* Pancakes */
+main #pancakes {
+    position: relative;
+    width: 100%;
+    padding: 15px 0 10px 0;
+    text-align: center;
+    background-color: var(--timberwolf);
+    font-weight: 500;
+    font-size: 16pt;
+    box-shadow: 0 0 10px darkgoldenrod;
+    display: none;
+}
+
+main #pancakes p::before {
+    content: "!";
+    font-size: 36pt;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-left: -20px;
+}
+
+main #pancakes p::after {
+    content: "!";
+    font-size: 36pt;
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* Hero Section */
+main #hero-section .hero {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+main #hero-section .hero picture,
+main #hero-section .hero picture * {
+    width: 100%;
+    padding: 0;
+}
+
+main #hero-section .info {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px black;
+    z-index: 1;
+    max-height: 300px !important;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main #hero-section .info .weather-icon {
+    padding: 15px 20px 0px 20px;
+}
+
+main #hero-section .info .weather-icon img {
+    width: 30px;
+    height: 30px;
+    background-color: var(--satin-sheen-gold);
+    display: none;
+    border-radius: 50px;
+}
+
+main #hero-section .info .weather-icon h3 {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+main #hero-section .show-weather {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+main #hero-section .info ul li {
+    padding: 5px 10px;
+    width: calc(100% - 20px);
+}
+
+main #hero-section .infoul li * {
+    display: inline-block;
+}
+
+main #hero-section .info ul li:first-of-type {
+    border-top: 1px solid white;
+}
+
+main #hero-section .info ul li:not(:last-of-type) {
+    border-bottom: 1px solid white;
+}
+
+
+/*  Forecast Articles */
+
+main #forecast-articles {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Forecast */
+main .forecast {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+main .forecast .forecast-day {
+    box-shadow: 0px 0px 2px black;
+    flex: 1;
+}
+
+main .forecast .forecast-day .day {
+    font-weight: 500;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: var(--prussian-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .forecast .forecast-day .day img {
+    height: 35px;
+    display: none;
+    background-color: var(--satin-sheen-gold);
+    border-radius: 100px;
+}
+
+main .forecast .forecast-day .day p {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+main .forecast .forecast-day ul li {
+    padding: 5px 10px;
+}
+
+main .forecast .forecast-day ul li * {
+    display: inline-block;
+}
+
+main .forecast .forecast-day ul li:first-of-type {
+    border-top: 1px solid black;
+}
+
+main .forecast .forecast-day ul li:not(:last-of-type) {
+    border-bottom: 1px solid black;
+}
+
+/*  Articles */
+
+main .articles {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+main .articles .article {
+    box-shadow: 0px 0px 2px black;
+    flex: 1;
+}
+
+main .articles .article .article-content img {
+    float: right;
+    margin-right: 1rem;
+}
+
+main .articles .article h3 {
+    font-weight: 500;
+    padding: 10px 10px 5px 10px;
+    text-align: center;
+    background-color: var(--prussian-blue);
+    color: white;
+}
+
+main .articles .article p {
+    padding: 15px 5px 10px 5px;
+    font-size: 14pt;
+}
