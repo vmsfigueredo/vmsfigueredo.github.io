@@ -1,0 +1,27 @@
+form{
+    margin: 0 auto;
+    width: 450px;
+}
+
+form label{
+    display:block;
+}
+
+input, select, textarea{
+    padding: 10px 5px 5px 5px!important;
+    border-radius: 0;
+    border: none;
+}
+input[type=text], input[type=email], input[type=tel],input[type=date],input[name=type], select, datalist, textarea{
+    box-shadow: 0px 2px 5px -2px black!important;
+}
+textarea{
+    resize: none;
+    width: 450px;
+    height: 150px;
+
+}
+.thanks{
+    text-align: center;
+    font-size: 16pt;
+}
