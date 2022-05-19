@@ -8,12 +8,12 @@
     <meta name="description"
         content="Preston Town Page for Vitor Figueredo in WDD230: Web Frontend Development at Brigham Young University - Idaho.">
     <meta name="author" content="Vitor Figueredo">
-    <title>JoinWeather - Storm center</title>
+    <title>JoinWeather</title>
     <link rel="icon" type="image/x-icon" href="images/logo.svg">
     <!--    Stylesheets -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/global.css">
-    <link rel="stylesheet" type="text/css" href="css/pages/stormcenter/stormcenter-global.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/index/index-global.css">
 </head>
 
 <body>
@@ -31,18 +31,55 @@
             <div class="bar3"></div>
         </div>
         <ul id="menu-list">
-            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
             <li><a href="preston.html">Preston</a></li>
             <li><a href="#">Soda Springs</a></li>
             <li><a href="#">Fish Haven</a></li>
-            <li class="active"><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
             <li><a href="gallery-7.html">Gallery</a></li>
         </ul>
     </nav>
     <main>
-        <h2 class="page-title"><span>Thank You !</span></h2>
-        <p class="thanks">The information you shared with us will help many people.</p>
-        <a class="thanks" href="stormcenter.html">&laquo; Go Back</a>
+        <div id="index">
+            <div class="city">
+                <div class="city-body">
+                    <h2>Preston</h2>
+                    <p>Home of Napoleon Dynamite</p>
+                    <ul>
+                        <li><strong>Year Founded:</strong><span class="preston-year"></span></li>
+                        <li><strong>Population:</strong><span class="preston-pop"></span></li>
+                        <li><strong>Annual Rain Fall:</strong><span class="preston-rain"></span></li>
+                    </ul>
+                </div>
+                <img alt="preston" src="https://picsum.photos/450/250">
+            </div>
+            <div class="city">
+                <div class="city-body">
+
+                    <h2>Soda Springs</h2>
+                    <p>Home of Napoleon Dynamite</p>
+                    <ul>
+                        <li><strong>Year Founded:</strong><span class="sodasprings-year"></span></li>
+                        <li><strong>Population:</strong><span class="sodasprings-pop"></span></li>
+                        <li><strong>Annual Rain Fall:</strong><span class="sodasprings-rain"></span></li>
+                    </ul>
+                </div>
+                <img alt="preston" src="https://picsum.photos/450/250">
+            </div>
+            <div class="city">
+                <div class="city-body">
+
+                    <h2>Fish Haven</h2>
+                    <p>Home of Napoleon Dynamite</p>
+                    <ul>
+                        <li><strong>Year Founded:</strong><span class="fishhaven-year"></span></li>
+                        <li><strong>Population:</strong><span class="fishhaven-pop"></span></li>
+                        <li><strong>Annual Rain Fall:</strong><span class="fishhaven-rain"></span></li>
+                    </ul>
+                </div>
+                <img alt="preston" src="https://picsum.photos/450/250">
+            </div>
+        </div>
     </main>
     <footer>
         <div id="footer-widgets">
@@ -73,7 +110,6 @@
     </footer>
     <script src="js/functions.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/stormcenter.js"></script>
 </body>
 
 </html>
