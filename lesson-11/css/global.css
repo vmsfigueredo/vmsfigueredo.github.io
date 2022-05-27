@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;300;400;500;600&display=swap');
+@import url('variables.css');
+@import url('large.css');
+@import url('medium.css');
+@import url('small.css');
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+    list-style: none;
+    font-family: 'Anek Telugu', sans-serif;
+}
+
+/*  Header  */
+
+header {
+    width: calc(100vw - 30px);
+    background: var(--satin-sheen-gold);
+    color: white;
+    font-weight: 500;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+}
+
+header #site-title p {
+    padding: 10px 5px 5px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
+}
+
+/* Nav */
+
+nav {
+    width: 100vw;
+    background: var(--prussian-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li a {
+    display: block;
+    padding: 15px 15px 15px 15px;
+    color: white;
+}
+
+nav li.active a {
+    background-color: var(--timberwolf);
+    color: var(--prussian-blue);
+}
+
+nav li a:hover {
+    background-color: var(--timberwolf);
+    color: var(--prussian-blue);
+}
+
+/*  Main */
+main {
+    width: 90vw;
+    min-height: 75vh;
+    padding: 15px 15px;
+    margin: 0 auto;
+}
+/* Page Title */
+main .page-title {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    line-height: .1em;
+    margin: 30px 0 20px;
+}
+
+main .page-title span {
+    background-color: white;
+    padding: 0 10px;
+}
+
+/* Footer */
+
+footer {
+    width: 100vw;
+    background: var(--prussian-blue);
+    color: white;
+    font-weight: 500;
+}
+
+footer #footer-widgets {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer #footer-widgets .widget {
+    flex: 1;
+}
+
+footer #footer-bar {
+    text-align: center;
+    padding: 5px;
+}
+
+footer #footer-bar a {
+    color: rgb(247, 233, 233);
+    font-weight: 300;
+}

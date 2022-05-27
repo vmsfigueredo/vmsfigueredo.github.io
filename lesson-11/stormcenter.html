@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Preston Town Page for Vitor Figueredo in WDD230: Web Frontend Development at Brigham Young University - Idaho.">
+    <meta name="author" content="Vitor Figueredo">
+    <title>JoinWeather - Storm Center</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+    <!--    Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/stormcenter/stormcenter-global.css">
+</head>
+
+<body>
+    <header>
+        <img alt="website-logo" src="images/logo.svg" class="logo">
+        <div id="site-title">
+            <h1>JoinWeather</h1>
+            <p>Join us to check weather daily!</p>
+        </div>
+    </header>
+    <nav>
+        <div class="menu-button" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <ul id="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li class="active"><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery-7.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2 class="page-title"><span>Storm Center</span></h2>
+        <form action="thanks.html">
+            <div class="form-wrap">
+                <h3 class="page-title"><span>Contact Information</span></h3>
+
+                <div class="formblock">
+                    <label for="name">Full Name*:</label>
+                    <input type="text" id="name" name="name" minlength="5" maxlength="50" size="20" required="" pattern="[A-Z][A-Za-z' -]+">
+                </div>
+                <br>
+                <div class="formblock">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="email@domain.com" size="20">
+                </div>
+                <br>
+                <div class="formblock">
+                    <label for="phone">Phone*:</label>
+                    <input type="tel" id="phone" name="tel" required="" minlength="10" size="20">
+                </div>
+                <br>
+                <div class="formblock">
+                    <label for="zip">ZIP*:</label>
+                    <input type="text" id="zip" name="zip" required="" pattern="[0-9]*">
+                </div>
+
+                <h3 class="page-title"><span>Storm Report</span></h3>
+                <div class="formblock">
+                    <label for="date">Storm Date:</label>
+                    <input type="date" id="date" name="date" size="5">
+                </div>
+                <br>
+                <div class="formblock">
+                    <label for="type">Storm Type:</label>
+                    <input list="storm-type" id="type" name="type">
+                    <datalist id="storm-type">
+                        <option value="Flash Flood">
+                        </option><option value="Hail">
+                        </option><option value="Hurricane">
+                        </option><option value="Thunderstorm">
+                        </option><option value="Tornado">
+                        </option><option value="Other">
+                    </option></datalist>
+                </div>
+                <br>
+                <div>
+                    <label for="rating">Severity (1 to 10):</label>
+                    <input type="range" id="rating" value="1" min="1" max="10" step="1" oninput="adjustRating(this.value)">
+                    <span id="ratingvalue">1</span>
+                </div>
+                <br>
+                <div class="formblock">
+                    <label for="region">Region:</label>
+                    <select id="region">
+                        <option selected="" disabled="">Select Region...</option>
+                        <option value="preston">Preston</option>
+                        <option value="sodasprings">Soda Springs</option>
+                        <option value="fishhaven">Fish Haven</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <h3 class="page-title"><span>Are you in danger?</span></h3>
+                </div>
+                <div class="radio">
+                    <div class="radio.button">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes" name="danger" value="yes" checked="">
+                    </div>
+
+                    <div class="radio.button">
+                        <label for="maybe">Maybe</label>
+                        <input type="radio" id="maybe" name="danger" value="maybe">
+                    </div>
+
+                    <div class="radio.button">
+                        <label for="no">No</label>
+                        <input type="radio" id="no" name="danger" value="no">
+                    </div>
+                </div>
+                <br>
+                <div class="formblock"> <strong>Additional Comments or Details (max 500 characters):</strong><br>
+                    <textarea id="styled" name="message" maxlength="750"></textarea>
+                </div>
+            </div>
+            <br>
+            <input type="submit" value="Send Storm Report">
+        </form>
+    </main>
+    <footer>
+        <div id="footer-widgets">
+            <div class="widget">
+                <h3>Map</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.726282680625!2d-111.91534445196396!3d42.099805311844094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1651359860591!5m2!1spt-BR!2sbr"
+                    width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="widget">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li>JoinWeather</li>
+                    <li>Address</li>
+                    <li>City, State - Zip Code</li>
+                    <li>Phone</li>
+                    <li>our@mail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-bar" class="rich-black-fogra-29-bg">
+            <p>&copy; <span id="footerYear"></span> | Vitor Figueredo | Brazil | <a href="https://www.byui.edu/online"
+                    target="_blank" class="dark-bg">BYUI Online
+                    Learning</a></p>
+            <p id="lastUpdated"></p>
+        </div>
+    </footer>
+    <script src="js/functions.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/stormcenter.js"></script>
+</body>
+
+</html>

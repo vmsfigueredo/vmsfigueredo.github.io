@@ -1,0 +1,19 @@
+@media only screen and (min-width: 1001px) {
+    #index {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    #index .city {
+        width: calc(100%/3 - 15px);
+        box-shadow: 0 5px 8px -2px;
+    }
+
+    #index .city img {
+        width: 100%;
+    }
+}

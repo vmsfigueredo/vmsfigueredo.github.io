@@ -1,0 +1,41 @@
+    @import url('gallery-large.css');
+    @import url('gallery-medium.css');
+    @import url('gallery-small.css');
+
+
+    #gallery {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        gap: 10px;
+        align-items: center;
+    }
+
+    #gallery picture {
+        flex: 1;
+        position: relative;
+        padding: 0;
+        min-height: 100px;
+    }
+
+    #gallery picture img {
+        display: block;
+        width: 100% !important;
+        min-height: 260px;
+        background-color: lightgrey;
+        text-align: center;
+        line-height: 150px;
+        font-size: 24pt;
+        color: darkgrey;
+        box-shadow: 0 5px 5px -5px black;
+
+    }
+
+
+    #gallery picture figcaption {
+        padding: 10px 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, .7);
+    }

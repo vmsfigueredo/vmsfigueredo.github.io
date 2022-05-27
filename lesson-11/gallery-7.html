@@ -8,12 +8,12 @@
     <meta name="description"
         content="Preston Town Page for Vitor Figueredo in WDD230: Web Frontend Development at Brigham Young University - Idaho.">
     <meta name="author" content="Vitor Figueredo">
-    <title>JoinWeather</title>
+    <title>JoinWeather - Gallery</title>
     <link rel="icon" type="image/x-icon" href="images/logo.svg">
     <!--    Stylesheets -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/global.css">
-    <link rel="stylesheet" type="text/css" href="css/pages/index/index-global.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/gallery/gallery-global.css">
 </head>
 
 <body>
@@ -31,56 +31,54 @@
             <div class="bar3"></div>
         </div>
         <ul id="menu-list">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
+
             <li><a href="preston.html">Preston</a></li>
             <li><a href="#">Soda Springs</a></li>
             <li><a href="#">Fish Haven</a></li>
             <li><a href="stormcenter.html">Storm Center</a></li>
-            <li><a href="gallery-7.html">Gallery</a></li>
+            <li class="active"><a href="gallery-7.html">Gallery</a></li>
         </ul>
     </nav>
     <main>
-        <div id="index">
-            <div class="city">
-                <div class="city-body">
-                    <h2>Preston</h2>
-                    <p><span class="preston-motto"></span></p>
-                    <ul>
-                        <li><strong>Year Founded: </strong><span class="preston-year"></span></li>
-                        <li><strong>Population: </strong><span class="preston-pop"></span></li>
-                        <li><strong>Annual Rain Fall: </strong><span class="preston-rain"></span></li>
-                    </ul>
-                </div>
-                <img alt="preston" src="https://picsum.photos/450/250">
-            </div>
-            <div class="city">
-                <div class="city-body">
-
-                    <h2>Soda Springs</h2>
-                    <p><span class="sodasprings-motto"></span></p>
-                    <small><span class="sodasprings-motto"></span></small>
-                    <ul>
-                        <li><strong>Year Founded: </strong><span class="sodasprings-year"></span></li>
-                        <li><strong>Population: </strong><span class="sodasprings-pop"></span></li>
-                        <li><strong>Annual Rain Fall: </strong><span class="sodasprings-rain"></span></li>
-                    </ul>
-                </div>
-                <img alt="preston" src="https://picsum.photos/450/250">
-            </div>
-            <div class="city">
-                <div class="city-body">
-
-                    <h2>Fish Haven</h2>
-                    <p><span class="fishhaven-motto"></span></p>
-                    <small><span class="fishhaven-motto"></span></small>
-                    <ul>
-                        <li><strong>Year Founded: </strong><span class="fishhaven-year"></span></li>
-                        <li><strong>Population: </strong><span class="fishhaven-pop"></span></li>
-                        <li><strong>Annual Rain Fall: </strong><span class="fishhaven-rain"></span></li>
-                    </ul>
-                </div>
-                <img alt="preston" src="https://picsum.photos/450/250">
-            </div>
+        <h2 class="page-title"><span>Gallery</span></h2>
+        <div id="gallery">
+            <picture>
+                <img alt="Lightning on hills" data-src="images/gallery-1.jpeg">
+                <figcaption>Lightning on hills</figcaption>
+            </picture>
+            <picture>
+                <img alt="Sunrise on the sea" data-src="images/gallery-2.jpeg">
+                <figcaption>Sunrise on the sea</figcaption>
+            </picture>
+            <picture>
+                <img alt="Cloudy sky" data-src="images/gallery-3.jpeg">
+                <figcaption>Cloudy sky</figcaption>
+            </picture>
+            <picture>
+                <img alt="Tornado seen from space" data-src="images/gallery-4.jpeg">
+                <figcaption>Tornado seen from space</figcaption>
+            </picture>
+            <picture>
+                <img alt="Thunder and tornado" data-src="images/gallery-5.webp">
+                <figcaption>Thunder and tornado</figcaption>
+            </picture>
+            <picture>
+                <img alt="Rainbow" data-src="images/gallery-6.jpeg">
+                <figcaption>Rainbow</figcaption>
+            </picture>
+            <picture>
+                <img alt="Snowflake" data-src="images/gallery-7.webp">
+                <figcaption>Snowflake</figcaption>
+            </picture>
+            <picture>
+                <img alt="Sunset on Winter" data-src="images/gallery-8.jpeg">
+                <figcaption>Sunset on Winter</figcaption>
+            </picture>
+            <picture>
+                <img alt="Multiple thunders falling at the same time" data-src="images/gallery-9.jpeg">
+                <figcaption>Multiple thunders falling at the same time</figcaption>
+            </picture>
         </div>
     </main>
     <footer>
@@ -112,7 +110,7 @@
     </footer>
     <script src="js/functions.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 
 </html>
