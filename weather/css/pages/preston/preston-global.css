@@ -177,7 +177,8 @@ main .articles .article {
 
 main .articles .article .article-content img {
     float: right;
-    margin-right: 1rem;
+    margin-left: 1rem;
+    max-height: 300px;
 }
 
 main .articles .article h3 {

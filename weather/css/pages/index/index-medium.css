@@ -11,8 +11,14 @@
         box-shadow: 0 5px 8px -2px;
         display: flex;
     }
-    #index .city:nth-child(odd){
+    #index .city .city-content{
+        display: flex;
+    }
+    #index .city:nth-child(odd) .city-content{
         flex-direction: row-reverse;
+    }
+    #index .city .city-body,  #index .city .city-events{
+        flex: 50%;
     }
     #index .city img{
         width: 50%;

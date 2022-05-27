@@ -9,8 +9,12 @@
 }
 
 #index .city{
-
-    background-color: #f1f1f1;
+    background-color: transparent;
+    height: 100%;
+}
+#index .city .city-content{
+    background-color: #F1F1F1;
+    height: 100%;
 }
 #index .city .city-body{
     width: 100%;
@@ -21,14 +25,30 @@
     color: var(--prussian-blue);
     text-align: center;
     font-size: 24pt;
+    margin-bottom: 0;
 }
 
-#index .city .city-body p{
+#index .city .city-body p, #index .city .city-events p{
     color: var(--prussian-blue);
     text-align: center;
     font-size: 14pt;
+    margin-top: 10px;
 }
 
 #index .city .city-body ul li{
     margin-top: 15px;
+}
+#index .city .city-events ul li {
+    padding: 15px 10px 10px 10px;
+    border-bottom: 1px solid black;
+}
+
+#index .city .city-events ul li:is(:first-of-type) {
+    border-top: 1px solid black;
+    margin-top: 10px;
+
+}
+
+#index .city .city-events ul li:is(:last-of-type) {
+    border-bottom: 10px;
 }

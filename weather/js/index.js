@@ -13,20 +13,28 @@ request.onload = function () {
             const pop = document.querySelector(`.${town.id}-pop`);
             const rain = document.querySelector(`.${town.id}-rain`);
             const motto = document.querySelector(`.${town.id}-motto`);
-
-            if (year !== null){
+            const events = document.querySelector(`.${town.id}-events-list`)
+            if (year !== null) {
                 year.textContent = town.yearFounded;
             }
-            if (pop !== null){
+            if (pop !== null) {
                 pop.textContent = town.currentPopulation;
             }
-            if (rain !== null){
+            if (rain !== null) {
                 rain.textContent = town.averageRainfall;
             }
-            if (motto !== null){
+            if (motto !== null) {
                 motto.textContent = town.motto;
             }
-        
+            if (events !== null) {
+                events.innerHTML = "";
+                town.events.map((event) => {
+                    const li = document.createElement("li");
+                    li.appendChild(document.createTextNode(event))
+                    events.appendChild(li);
+                })
+            }
+
         })
     } else {
 
