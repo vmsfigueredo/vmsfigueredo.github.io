@@ -1,0 +1,16 @@
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+}
+form label{
+    width: 100%;
+}
+form label input, form label textarea{
+width: 100%;
+padding: 5px;
+}
+form input[type=checkbox]{
+    display: inline-block;
+}

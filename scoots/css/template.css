@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --accent-color: #00a4d6;
+    --accent-color-filter: invert(16%) sepia(76%) saturate(3084%) hue-rotate(177deg) brightness(94%) contrast(94%);
+    --accent-bg: #075b74;
+}
+
+html {
+    overflow-x: hidden;
+
+}
+
+html * {
+    padding: 0;
+    margin: 0;
+    font-family: "Anek Telugu";
+    list-style: none;
+
+}
+
+header {
+    display: block;
+    width: 100vw;
+    text-align: center;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header .header-contact{
+    width: 100vw;
+    background-color: var(--accent-bg);
+    color: white;
+    display: flex;
+    align-items: center!important;
+    justify-content: center!important;
+    margin-bottom: 10px;
+}
+header .header-contact p{
+    margin-top: 12px;
+}
+header .header-contact div img{
+    height: 25px;
+    margin-top: 10px;
+    box-shadow: 0 0 8px white;
+    border-radius: 100px;
+    margin-left: 10px;
+}
+header .header-contact .header-contact-content{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5px 10px
+}
+header .page-logo {
+    max-height: 130px;
+    max-width: 80%;
+    filter: var(--accent-color-filter);
+}
+
+nav button#toggle {
+    display: none;
+}
+
+nav {
+    display: block;
+    min-height: 50px;
+    width: 100vw;
+    background-color: var(--accent-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    width: 80vw;
+    max-height: 999px;
+}
+
+nav ul li {
+    display: inline-block;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 13.5px 5px;
+}
+
+nav ul li:hover a,
+nav ul li.active a {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+main {
+    min-height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main #main-content {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+aside {
+    width: 15vw;
+}
+
+footer {
+    display: block;
+    width: 100vw;
+    text-align: center;
+    background-color: var(--accent-bg);
+    color: white;
+    padding-top: 10px;
+}
+
+/*  Components  */
+a.button-link{
+    padding: 8px 10px 5px 10px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+a.button-link:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.2) 0 0);
+    color: black;
+}
+@media only screen and (min-width: 1001px) {}
+
+@media only screen and (min-width: 635px) and (max-width: 1000px) {}
+
+@media only screen and (min-width: 0px) and (max-width: 634px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+    }
+
+    nav button#toggle {
+        display: block;
+        width: 30px;
+        margin-right: 30px;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav button#toggle * {
+        width: 100%;
+        background-color: white;
+        height: 5px;
+    }
+
+    nav button#toggle :not(:first-child) {
+        margin-top: 5px;
+    }
+
+    nav ul {
+        width: 100vw;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .5s ease-in-out;
+    }
+
+    nav ul li {
+        display: block !important;
+        width: 100vw;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100vw;
+    }
+    #main-content{
+        width: 100vw!important;
+        padding: 0 10px;
+    }
+}

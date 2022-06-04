@@ -1,0 +1,147 @@
+{
+    "rentalTypes": [
+      {
+        "id": 1,
+        "name": "Honda Motor Scooters",
+        "summary": "Rent one of our Honda Motor Scooters for a fair price and explore Cozumel Island with quickness and facility."
+      },
+      {
+        "id": 2,
+        "name": "ATV Side-by-Side",
+        "summary": "Rent our ATV Side-by-side and explore the hardest places to reach with safety and speediness."
+
+      },
+      {
+        "id": 3,
+        "name": "Jeep Rentals",
+        "summary": "Rent one of our Jeeps and enjoy the Cozumel Island with all your family and with comfort and safety. "
+
+      }
+    ],
+    "vehicles": [
+      {
+        "rentalType": 1,
+        "name": "Honda Metropolitan",
+        "image": "honda-metropolitan.jpg",
+        "cc": 49,
+        "max_people": 1,
+        "prices": {
+          "reservation": {
+            "half-day": 20,
+            "full-day": 30
+          },
+          "walk-in": {
+            "half-day": 25,
+            "full-day": 35
+          }
+        },
+        "requirements": [
+          "12+ years to ride"
+        ]
+      },
+      {
+        "rentalType": 1,
+        "name": "Honda Dio",
+        "image": "honda-dio.jpg",
+        "cc": 110,
+        "max_people": 2,
+        "prices": {
+          "reservation": {
+            "half-day": 30,
+            "full-day": 40
+          },
+          "walk-in": {
+            "half-day": 35,
+            "full-day": 45
+          }
+        },
+        "requirements": [
+          "12+ years to ride"
+        ]
+      },
+      {
+        "rentalType": 1,
+        "name": "Honda PCX150",
+        "image": "honda-pcx.jpg",
+        "cc": 149,
+        "max_people": 2,
+        "prices": {
+          "reservation": {
+            "half-day": 40,
+            "full-day": 50
+          },
+          "walk-in": {
+            "half-day": 45,
+            "full-day": 55
+          }
+        },
+        "requirements": [
+          "12+ years to ride"
+        ]
+      },
+      {
+        "rentalType": 2,
+        "name": "Honda Pioneer 1000",
+        "image": "honda-pioneer.jpeg",
+        "cc": 1000,
+        "max_people": 2,
+        "prices": {
+          "reservation": {
+            "half-day": 50,
+            "full-day": 70
+          },
+          "walk-in": {
+            "half-day": 60,
+            "full-day": 80
+          }
+        }
+      },
+      {
+        "rentalType": 3,
+        "name": "Jeep Wrangler 4 doors",
+        "image": "jeep-wrangler-4d.jpeg",
+        "doors": 4,
+        "ac": true,
+        "max_people": 5,
+        "prices": {
+          "reservation": {
+            "half-day": 70,
+            "full-day": 100
+          },
+          "walk-in": {
+            "half-day": 85,
+            "full-day": 125
+          }
+        }
+      },
+      {
+        "rentalType": 3,
+        "name": "Jeep Wrangler 2 doors",
+        "image": "jeep-wrangler-2d.jpeg",
+        "doors": 2,
+        "ac": false,
+        "max_people": 4,
+        "prices": {
+          "reservation": {
+            "half-day": 60,
+            "full-day": 85
+          },
+          "walk-in": {
+            "half-day": 70,
+            "full-day": 90
+          }
+        }
+      }
+    ],
+    "requirements": [
+      "$50 security deposit",
+      "Valid driver's license"
+    ],
+    "services": [
+      "Unlimited mileage",
+      "Free of charge liability insurance",
+      "Free delivery to Cozumel hotel, Airbnb, or private residence for 2+ rentals",
+      "Payment via Google Pay, Cash, Credit Card, Debit Card, or Paypal",
+      "Rentals may be returned to either location"
+    ]
+  }

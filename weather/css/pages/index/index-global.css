@@ -51,4 +51,6 @@
 
 #index .city .city-events ul li:is(:last-of-type) {
     border-bottom: 10px;
+    color: #bedbed;
+    color: #777777;
 }
