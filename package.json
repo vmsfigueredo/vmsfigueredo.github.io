@@ -1,0 +1,24 @@
+{
+  "name": "vitorfigueredo-dev",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+    "resume": "md-to-pdf resume/resume.en.md && md-to-pdf resume/resume.pt.md && mv resume/resume.en.pdf \"static/Resume - Vitor Figueredo.pdf\" && mv resume/resume.pt.pdf \"static/Curriculo - Vitor Figueredo.pdf\""
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.6",
+    "@sveltejs/kit": "^2.8.0",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0"
+  }
+}

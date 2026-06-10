@@ -1,0 +1,17 @@
+node_modules
+/build
+/.svelte-kit
+.idea/
+
+# Original resume PDFs — contain client/contact data; NOT for the public repo.
+/.specs/
+/package-lock.json.bak
+.DS_Store
+.env
+.env.*
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Generated resume PDFs (build artifacts in resume/; the served copies live in static/)
+/resume/*.pdf
