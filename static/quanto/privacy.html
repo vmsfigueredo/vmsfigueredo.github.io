@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quanto — Privacidade / Privacy / Privacidad</title>
+<style>
+  :root {
+    --ink: #0d1218;
+    --ink-raised: #161e28;
+    --brass: #8a5d0b;
+    --text: #1c1c1e;
+    --muted: #6b6f76;
+    --rule: rgba(0, 0, 0, .1);
+    --page: #f4f5f7;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --brass: #f0ae3c;
+      --text: #f2f4f7;
+      --muted: #9aa1ab;
+      --rule: rgba(255, 255, 255, .12);
+      --page: #0d1218;
+      --card: #161e28;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 72px;
+    background: var(--page);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  header {
+    padding: 48px 0 24px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 32px;
+  }
+  h1 { font-size: 1.75rem; margin: 0 0 6px; letter-spacing: -.02em; }
+  .updated { color: var(--muted); font-size: .875rem; margin: 0; }
+  nav { margin-top: 20px; display: flex; gap: 8px; flex-wrap: wrap; }
+  nav a {
+    font: 600 .75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--brass);
+    text-decoration: none;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 8px 14px;
+  }
+  section { margin-bottom: 56px; }
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 { font-size: 1rem; margin: 28px 0 8px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 6px; }
+  .panel {
+    background: var(--ink);
+    color: #e8eef4;
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin: 24px 0;
+  }
+  .panel strong { color: var(--brass); }
+  .panel p { color: #e8eef4; margin: 0; }
+  code {
+    font: .9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: 1px 5px;
+  }
+  a { color: var(--brass); }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 20px;
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Quanto</h1>
+  <p class="updated">Última atualização: 19 de agosto de 2026 · Last updated: 19 August 2026</p>
+  <nav>
+    <a href="#pt">Português</a>
+    <a href="#en">English</a>
+    <a href="#es">Español</a>
+  </nav>
+</header>
+
+<!-- ============================ pt-BR ============================ -->
+<section id="pt" lang="pt-BR">
+  <h2>Política de Privacidade</h2>
+
+  <div class="panel">
+    <p><strong>O resumo:</strong> o Quanto não coleta nada. Suas contas, lançamentos,
+    orçamentos e regras ficam no seu aparelho. Não há cadastro, não há servidor nosso, não há
+    analytics e não há rastreamento. A única coisa que sai do aparelho é o código de três letras
+    da sua moeda base, para buscar a cotação do dia.</p>
+  </div>
+
+  <h3>O que o app guarda, e onde</h3>
+  <p>Tudo o que você registra — contas, transações, categorias, orçamentos e regras de recorrência —
+  é gravado num banco de dados dentro do contêiner do próprio app no seu iPhone. Esse contêiner é
+  compartilhado apenas entre o app e o seu widget, e nenhum outro aplicativo consegue lê-lo.</p>
+  <p>As preferências (moeda base, idioma, tema) ficam no mesmo lugar, pelo mesmo motivo: o widget
+  precisa saber em que moeda mostrar o total.</p>
+
+  <h3>O que sai do aparelho</h3>
+  <p>Uma única requisição, para buscar cotações de câmbio:</p>
+  <ul>
+    <li><strong>Para onde:</strong> <code>open.er-api.com</code>, um serviço público de cotações.</li>
+    <li><strong>O que vai junto:</strong> o código ISO da sua moeda base — <code>USD</code>,
+      <code>BRL</code>, e assim por diante. Nada mais.</li>
+    <li><strong>O que não vai:</strong> nenhum saldo, nenhum lançamento, nenhum nome de conta,
+      nenhum identificador seu ou do seu aparelho. A requisição é anônima e não é autenticada.</li>
+  </ul>
+  <p>A resposta fica guardada no aparelho por até doze horas, para que o app funcione sem internet
+  e para não repetir a mesma pergunta a cada abertura.</p>
+
+  <h3>Backups que você faz</h3>
+  <p>Em Ajustes existe a opção de exportar o seu ledger como um arquivo <code>.json</code>. Esse
+  arquivo é escrito onde <em>você</em> escolher salvar — Arquivos, iCloud Drive, outro app. A partir
+  daí ele segue as regras de privacidade do lugar onde foi salvo, e não as deste app. Nada é
+  exportado sem você pedir.</p>
+  <p>Se você usa o Backup do iCloud da Apple, o contêiner do app entra nesse backup como o de
+  qualquer outro aplicativo. Isso é um mecanismo do iOS, sob a sua conta iCloud; nós não temos
+  acesso a ele.</p>
+
+  <h3>O que não existe neste app</h3>
+  <ul>
+    <li>Nenhum SDK de analytics, de publicidade ou de atribuição.</li>
+    <li>Nenhum rastreamento entre apps ou sites. O app não pede permissão de rastreamento porque
+      não rastreia.</li>
+    <li>Nenhuma conta, login ou cadastro.</li>
+    <li>Nenhum servidor nosso: não existe um lugar para onde os seus dados possam ir.</li>
+  </ul>
+
+  <h3>Dados coletados, na definição da Apple</h3>
+  <p>Nenhum. A ficha de privacidade do app na App Store declara "Dados não coletados", e é isso que
+  o código faz.</p>
+
+  <h3>Crianças</h3>
+  <p>O app não coleta dados de ninguém, de qualquer idade.</p>
+
+  <h3>Mudanças nesta política</h3>
+  <p>Se o app passar a fazer algo diferente — sincronizar pelo iCloud, por exemplo — esta página
+  muda antes, e a data no topo muda junto.</p>
+
+  <h3>Contato</h3>
+  <p>Dúvida, bug ou pedido: <a href="mailto:vmsfigueredo@gmail.com">vmsfigueredo@gmail.com</a>.</p>
+</section>
+
+<!-- ============================ en ============================ -->
+<section id="en" lang="en">
+  <h2>Privacy Policy</h2>
+
+  <div class="panel">
+    <p><strong>The short version:</strong> Quanto collects nothing. Your accounts,
+    transactions, budgets and rules stay on your device. There is no sign-up, no server of ours, no
+    analytics and no tracking. The only thing that leaves the device is the three-letter code of
+    your base currency, to fetch the day's exchange rates.</p>
+  </div>
+
+  <h3>What the app stores, and where</h3>
+  <p>Everything you enter — accounts, transactions, categories, budgets and recurring rules — is
+  written to a database inside the app's own container on your iPhone. That container is shared only
+  between the app and its widget, and no other app can read it.</p>
+  <p>Preferences (base currency, language, theme) live in the same place, for the same reason: the
+  widget needs to know which currency to show the total in.</p>
+
+  <h3>What leaves the device</h3>
+  <p>One request, to fetch exchange rates:</p>
+  <ul>
+    <li><strong>Where to:</strong> <code>open.er-api.com</code>, a public rates service.</li>
+    <li><strong>What goes with it:</strong> the ISO code of your base currency — <code>USD</code>,
+      <code>BRL</code>, and so on. Nothing else.</li>
+    <li><strong>What does not:</strong> no balances, no transactions, no account names, no
+      identifier of you or your device. The request is anonymous and unauthenticated.</li>
+  </ul>
+  <p>The response is cached on the device for up to twelve hours, so the app works without a network
+  and doesn't ask the same question on every launch.</p>
+
+  <h3>Backups you make</h3>
+  <p>Settings offers an export of your ledger as a <code>.json</code> file. That file is written
+  wherever <em>you</em> choose to save it — Files, iCloud Drive, another app. From there it follows
+  the privacy terms of wherever it landed, not this app's. Nothing is ever exported without you
+  asking.</p>
+  <p>If you use Apple's iCloud Backup, the app's container is included in it like any other app's.
+  That is an iOS mechanism under your own iCloud account; we have no access to it.</p>
+
+  <h3>What this app does not have</h3>
+  <ul>
+    <li>No analytics, advertising or attribution SDK.</li>
+    <li>No cross-app or cross-site tracking. The app never asks for tracking permission because it
+      does not track.</li>
+    <li>No account, login or registration.</li>
+    <li>No server of ours: there is nowhere for your data to go.</li>
+  </ul>
+
+  <h3>Data collected, in Apple's sense</h3>
+  <p>None. The App Store privacy card says "Data Not Collected", and that is what the code does.</p>
+
+  <h3>Children</h3>
+  <p>The app collects no data from anyone, of any age.</p>
+
+  <h3>Changes to this policy</h3>
+  <p>If the app starts doing something different — syncing through iCloud, for instance — this page
+  changes first, and the date at the top changes with it.</p>
+
+  <h3>Contact</h3>
+  <p>Questions, bugs or requests: <a href="mailto:vmsfigueredo@gmail.com">vmsfigueredo@gmail.com</a>.</p>
+</section>
+
+<!-- ============================ es ============================ -->
+<section id="es" lang="es">
+  <h2>Política de Privacidad</h2>
+
+  <div class="panel">
+    <p><strong>El resumen:</strong> Quanto no recopila nada. Tus cuentas, movimientos,
+    presupuestos y reglas se quedan en tu dispositivo. No hay registro, no hay servidor nuestro, no
+    hay analítica y no hay rastreo. Lo único que sale del dispositivo es el código de tres letras de
+    tu moneda base, para consultar la cotización del día.</p>
+  </div>
+
+  <h3>Qué guarda la app, y dónde</h3>
+  <p>Todo lo que registras — cuentas, transacciones, categorías, presupuestos y reglas periódicas —
+  se escribe en una base de datos dentro del contenedor de la propia app en tu iPhone. Ese
+  contenedor se comparte únicamente entre la app y su widget, y ninguna otra aplicación puede
+  leerlo.</p>
+  <p>Las preferencias (moneda base, idioma, tema) viven en el mismo sitio, por el mismo motivo: el
+  widget necesita saber en qué moneda mostrar el total.</p>
+
+  <h3>Qué sale del dispositivo</h3>
+  <p>Una sola petición, para consultar tipos de cambio:</p>
+  <ul>
+    <li><strong>A dónde:</strong> <code>open.er-api.com</code>, un servicio público de cotizaciones.</li>
+    <li><strong>Qué la acompaña:</strong> el código ISO de tu moneda base — <code>USD</code>,
+      <code>BRL</code>, etc. Nada más.</li>
+    <li><strong>Qué no:</strong> ningún saldo, ningún movimiento, ningún nombre de cuenta, ningún
+      identificador tuyo o de tu dispositivo. La petición es anónima y no está autenticada.</li>
+  </ul>
+  <p>La respuesta se guarda en el dispositivo hasta doce horas, para que la app funcione sin
+  conexión y no repita la misma pregunta en cada apertura.</p>
+
+  <h3>Copias que tú haces</h3>
+  <p>En Ajustes puedes exportar tu libro como un archivo <code>.json</code>. Ese archivo se escribe
+  donde <em>tú</em> elijas guardarlo — Archivos, iCloud Drive, otra app. A partir de ahí sigue las
+  condiciones de privacidad del lugar donde quedó, no las de esta app. Nada se exporta sin que lo
+  pidas.</p>
+  <p>Si usas la Copia de Seguridad de iCloud de Apple, el contenedor de la app se incluye en ella
+  como el de cualquier otra. Es un mecanismo de iOS bajo tu propia cuenta de iCloud; nosotros no
+  tenemos acceso.</p>
+
+  <h3>Lo que esta app no tiene</h3>
+  <ul>
+    <li>Ningún SDK de analítica, publicidad o atribución.</li>
+    <li>Ningún rastreo entre apps o sitios. La app nunca pide permiso de rastreo porque no
+      rastrea.</li>
+    <li>Ninguna cuenta, inicio de sesión o registro.</li>
+    <li>Ningún servidor nuestro: no hay a dónde puedan ir tus datos.</li>
+  </ul>
+
+  <h3>Datos recopilados, según Apple</h3>
+  <p>Ninguno. La ficha de privacidad en la App Store dice "No se recopilan datos", y eso es lo que
+  hace el código.</p>
+
+  <h3>Menores</h3>
+  <p>La app no recopila datos de nadie, de ninguna edad.</p>
+
+  <h3>Cambios en esta política</h3>
+  <p>Si la app empieza a hacer algo distinto — sincronizar por iCloud, por ejemplo — esta página
+  cambia antes, y la fecha de arriba cambia con ella.</p>
+
+  <h3>Contacto</h3>
+  <p>Dudas, errores o peticiones: <a href="mailto:vmsfigueredo@gmail.com">vmsfigueredo@gmail.com</a>.</p>
+</section>
+
+<footer>
+  <p>Quanto · <a href="mailto:vmsfigueredo@gmail.com">vmsfigueredo@gmail.com</a></p>
+</footer>
+
+</main>
+</body>
+</html>
