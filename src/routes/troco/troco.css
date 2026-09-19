@@ -1,0 +1,363 @@
+.troco-page {
+  --paper: #fff;
+  --soft: #f7f7f8;
+  --ink: #191919;
+  --muted: #626262;
+  --line: #dedede;
+  --accent: #ff4f00;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color-scheme: light;
+  overflow: clip;
+}
+.troco-page *, .troco-page *::before, .troco-page *::after { box-sizing: border-box; }
+.troco-page ::selection { background: var(--accent); color: #fff; }
+.troco-page a { color: inherit; text-decoration: none; }
+.troco-page button { font: inherit; }
+.troco-page button, .troco-page a { -webkit-tap-highlight-color: transparent; }
+.troco-page :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.troco-page h1, .troco-page h2, .troco-page h3, .troco-page p, .troco-page figure { margin: 0; }
+.troco-page h1, .troco-page h2, .troco-page h3 { font-weight: 500; text-wrap: balance; }
+.troco-page p { text-wrap: pretty; }
+.troco-page section[id] { scroll-margin-top: 110px; }
+.troco-page svg { flex: 0 0 auto; }
+.troco-page .shell { width: min(1280px, calc(100% - 112px)); margin-inline: auto; }
+.troco-page .section-space { padding-block: 110px; }
+.troco-page .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 500; }
+.troco-page .section-number { color: var(--muted); font-variant-numeric: tabular-nums; }
+.troco-page h2 { font-size: clamp(36px, 4.1vw, 60px); line-height: 1.08; letter-spacing: -.045em; white-space: pre-line; }
+.troco-page .tiny-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; display: inline-block; }
+.troco-page .button { min-height: 52px; padding: 14px 22px; display: inline-flex; align-items: center; justify-content: center; gap: 24px; border-radius: 5px; font-size: 13px; font-weight: 500; transition: transform 180ms ease-out, background-color 180ms ease-out; }
+.troco-page .button-dark { background: var(--ink); color: #fff; }
+.troco-page .button-dark:hover { background: #353535; transform: translateY(-2px); }
+.troco-page .button svg, .troco-page .text-link svg { transition: transform 180ms ease-out; }
+.troco-page .button:hover svg, .troco-page .text-link:hover svg { transform: translate(2px, -2px); }
+.troco-page .text-link { display: inline-flex; align-items: center; gap: 16px; font-size: 13px; font-weight: 500; min-height: 44px; }
+.troco-page .icon-button { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: #fff; }
+.troco-page .skip-link { position: fixed; top: 8px; left: 16px; z-index: 50; background: var(--ink); color: #fff; padding: 12px 20px; transform: translateY(-150%); }
+.troco-page .skip-link:focus { transform: translateY(0); }
+.troco-page .reading-progress { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: var(--accent); z-index: 40; transform: scaleX(0); transform-origin: left; }
+.troco-page .troco-nav { position: sticky; top: 0; z-index: 30; background: #fff; border-bottom: 1px solid var(--line); }
+.troco-page .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; height: 88px; }
+.troco-page .wordmark { display: inline-flex; align-items: center; font-size: 31px; line-height: 1; font-weight: 700; letter-spacing: -.06em; }
+.troco-page .wordmark-dot { color: var(--accent); }
+.troco-page .brand-symbol { width: 37px; height: 37px; background: var(--accent); border-radius: 10px; color: #fff; margin-right: 10px; display: grid; place-items: center; }
+.troco-page .desktop-nav { display: flex; gap: 28px; margin-left: auto; }
+.troco-page .desktop-nav a { display: flex; gap: 7px; align-items: center; font-size: 12px; min-height: 44px; }
+.troco-page .desktop-nav a:hover, .troco-page .footer-bottom a:hover { color: #c53c00; }
+.troco-page .nav-actions { display: flex; align-items: center; gap: 24px; }
+.troco-page .language-picker { display: flex; }
+.troco-page .language-picker button { width: 33px; min-height: 44px; font-size: 10px; color: var(--muted); background: transparent; border: 0; position: relative; }
+.troco-page .language-picker .active { color: var(--ink); font-weight: 700; }
+.troco-page .language-picker .active::after { content: ''; position: absolute; width: 12px; height: 2px; bottom: 8px; left: calc(50% - 6px); background: var(--accent); }
+.troco-page .nav-cta { min-height: 43px; padding: 10px 15px; font-size: 11px; gap: 14px; }
+.troco-page .mobile-toggle, .troco-page .mobile-nav { display: none; }
+.troco-page .hero { position: relative; display: grid; grid-template-columns: 1.08fr 1fr; min-height: 740px; align-items: center; padding-block: 70px 100px; gap: 15px; }
+.troco-page .hero-copy { position: relative; z-index: 10; padding-block: 22px; }
+.troco-page .hero-copy .eyebrow { margin-bottom: 28px; }
+.troco-page h1 { font-size: clamp(62px, 6.45vw, 94px); letter-spacing: -.065em; line-height: .99; }
+.troco-page h1 > span { color: #c53c00; }
+.troco-page .hero-description { font-size: 17px; line-height: 1.7; max-width: 380px; margin-top: 28px; color: var(--muted); }
+.troco-page .hero-actions { display: flex; gap: 25px; align-items: center; margin-top: 32px; }
+.troco-page .availability { display: flex; gap: 8px; align-items: center; font-size: 10px; color: var(--muted); margin-top: 23px; }
+.troco-page .availability > span { width: 3px; height: 3px; background: #909090; border-radius: 50%; margin-inline: 3px; }
+.troco-page .hero-art { height: 550px; position: relative; display: grid; place-items: center; }
+.troco-page .orbital-scene { position: absolute; width: 600px; height: 600px; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.troco-page .hero-disc { width: 440px; height: 440px; position: absolute; top: 80px; left: 80px; border-radius: 50%; background: var(--soft); }
+.troco-page .orbit-grid { position: absolute; inset: 0; width: 100%; height: 100%; stroke: #d7d7d7; stroke-width: .8; transform: rotate(-12deg); }
+.troco-page .phone { border: 6px solid #242424; outline: 1px solid #a2a2a2; background: #f1f1f5; overflow: hidden; border-radius: 39px; box-shadow: 12px 25px 40px #00000014, 0 3px 4px #00000015; }
+.troco-page .phone img { display: block; width: 100%; height: auto; }
+.troco-page .hero-phone { width: 250px; position: relative; transform: rotate(-8deg); animation: phone-arrive 900ms ease-out both, phone-float 7s ease-in-out 900ms infinite; }
+.troco-page .currency-float { position: absolute; z-index: 10; display: flex; align-items: center; gap: 15px; background: #fff; padding: 13px 18px; border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 8px 20px #00000006; animation: currency-float 6s ease-in-out infinite; }
+.troco-page .currency-float small { font-size: 10px; font-weight: 500; color: var(--muted); }
+.troco-page .currency-float strong { font-size: 31px; line-height: 1; font-weight: 500; letter-spacing: -.06em; }
+.troco-page .currency-float-usd { top: 125px; right: 19px; transform: rotate(10deg); }
+.troco-page .currency-float-eur { top: 210px; left: 12px; animation-delay: -2s; transform: rotate(-12deg); }
+.troco-page .currency-float-brl { bottom: 99px; right: 0; animation-delay: -4s; transform: rotate(7deg); background: var(--accent); color: #191919; border-color: var(--accent); }
+.troco-page .currency-float-brl small { color: #191919; }
+.troco-page .orbital-point { position: absolute; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+.troco-page .point-one { left: 115px; bottom: 100px; }
+.troco-page .point-two { right: 111px; top: 77px; width: 6px; height: 6px; }
+.troco-page .hero-caption { position: absolute; bottom: 16px; left: 0; display: flex; align-items: center; gap: 13px; background: #fff; padding: 14px 17px; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 10px 30px #00000008; font-size: 11px; z-index: 10; animation: caption-arrive 800ms ease-out both; }
+.troco-page .caption-icon { background: var(--soft); padding: 9px; border-radius: 50%; }
+.troco-page .hero-caption small { display: block; color: var(--muted); margin-top: 3px; font-size: 9px; }
+.troco-page .hero-caption > svg { margin-left: 14px; }
+.troco-page .motion-control { position: absolute; bottom: -25px; right: 0; color: var(--muted); width: 32px; height: 32px; }
+.troco-page .hero-bottom { position: absolute; bottom: 21px; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; font-size: 9px; color: var(--muted); }
+.troco-page .hero-bottom > a { display: grid; place-items: center; border: 1px solid var(--line); width: 36px; height: 36px; border-radius: 50%; color: var(--ink); }
+.troco-page .benefits-strip { border-block: 1px solid var(--line); }
+.troco-page .benefits-inner { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 25px; }
+.troco-page .benefits-inner p { display: flex; align-items: center; justify-content: center; gap: 13px; font-size: 12px; border-right: 1px solid var(--line); }
+.troco-page .benefits-inner p:first-child { justify-content: flex-start; }
+.troco-page .benefits-inner p:last-child { justify-content: flex-end; border: 0; }
+.troco-page .benefits-inner svg { color: #6c6c6c; }
+.troco-page .section-heading { display: grid; grid-template-columns: 1.4fr 1fr; align-items: end; gap: 70px; }
+.troco-page .section-heading h2 { margin-top: 24px; }
+.troco-page .section-heading > p { color: var(--muted); max-width: 325px; font-size: 15px; justify-self: end; padding-bottom: 4px; }
+.troco-page .product-selector { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 48px; border-bottom: 1px solid var(--line); gap: 25px; }
+.troco-page .product-selector button { display: flex; align-items: center; gap: 10px; padding: 18px 0; background: transparent; border: 0; border-bottom: 2px solid transparent; color: var(--muted); font-size: 13px; text-align: left; transition: color 180ms ease-out; }
+.troco-page .product-selector button.active { color: var(--ink); border-bottom-color: var(--accent); }
+.troco-page .product-selector button.active > svg { color: #c53c00; }
+.troco-page .selector-number { margin-left: auto; font-size: 10px; }
+.troco-page .product-stage { display: grid; grid-template-columns: 1fr 1fr; margin-top: 32px; background: var(--soft); min-height: 625px; }
+.troco-page .product-detail { padding: 48px 50px 36px; display: flex; flex-direction: column; justify-content: space-between; }
+.troco-page .feature-icon { display: grid; place-items: center; width: 54px; height: 54px; background: #fff; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 28px; }
+.troco-page .product-detail .eyebrow { color: var(--muted); font-size: 11px; margin-bottom: 12px; }
+.troco-page .product-detail h3 { font-size: 32px; line-height: 1.16; letter-spacing: -.035em; max-width: 390px; }
+.troco-page .product-description { color: var(--muted); font-size: 13px; line-height: 1.7; margin-top: 18px; }
+.troco-page .check-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 13px; }
+.troco-page .check-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; }
+.troco-page .check-list svg { margin-top: 1px; }
+.troco-page .feature-pagination { margin-top: 35px; display: flex; align-items: center; gap: 12px; font-size: 10px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.troco-page .feature-pagination > div { display: flex; gap: 5px; }
+.troco-page .feature-pagination > div > span { width: 28px; height: 2px; background: #d3d3d3; }
+.troco-page .feature-pagination > div > .active { background: var(--accent); }
+.troco-page .product-preview { position: relative; overflow: hidden; min-height: 625px; display: flex; align-items: center; justify-content: center; padding: 38px 32px 58px; border-left: 1px solid #e5e5e5; }
+.troco-page .preview-type { position: absolute; top: 210px; left: -20px; font-size: 104px; line-height: 1; color: #e4e4e6; font-weight: 600; letter-spacing: -.06em; white-space: nowrap; transform: rotate(-90deg); transform-origin: 220px 110px; }
+.troco-page .product-phone { width: 230px; position: relative; border-radius: 34px; border-width: 5px; }
+.troco-page .preview-caption { position: absolute; bottom: 20px; left: 10px; right: 10px; font-size: 9px; color: var(--muted); text-align: center; }
+.troco-page .currency-section { background: var(--ink); color: #fff; }
+.troco-page .currency-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 65px; align-items: center; }
+.troco-page .currency-section .section-number { color: #b4b4b4; }
+.troco-page .currency-copy h2 { margin-top: 27px; }
+.troco-page .section-description { max-width: 390px; color: #b4b4b4; margin-top: 23px; font-size: 15px; }
+.troco-page .currency-hint { margin: 35px 0 16px; font-size: 11px; display: flex; gap: 13px; align-items: center; }
+.troco-page .currency-picker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; max-width: 410px; }
+.troco-page .currency-picker button { min-height: 46px; border: 1px solid #505050; color: #fff; background: transparent; border-radius: 4px; font-size: 12px; transition: background-color 180ms ease-out, transform 180ms ease-out; }
+.troco-page .currency-picker button:hover { transform: translateY(-2px); background: #333; }
+.troco-page .currency-picker button.active { color: #191919; background: var(--accent); border-color: var(--accent); font-weight: 600; }
+.troco-page .currency-footnote { display: flex; align-items: flex-start; gap: 10px; color: #b4b4b4; font-size: 11px; margin-top: 23px; max-width: 360px; }
+.troco-page .currency-footnote svg { color: var(--accent); }
+.troco-page .currency-display { position: relative; min-height: 500px; display: grid; place-items: center; text-align: left; }
+.troco-page .currency-globe { position: absolute; inset: 0; display: grid; place-items: center; }
+.troco-page .currency-globe svg { width: 100%; stroke: #ffffff1c; stroke-width: .8; transform: rotate(-20deg); }
+.troco-page .currency-face { position: relative; width: 72%; padding-left: 20px; }
+.troco-page .currency-face > span { font-size: 10px; color: #b4b4b4; }
+.troco-page .currency-face strong { font-size: clamp(100px, 13vw, 184px); font-weight: 400; letter-spacing: -.08em; line-height: 1.4; display: block; color: var(--accent); }
+.troco-page .currency-face h3 { font-size: 23px; letter-spacing: -.03em; }
+.troco-page .currency-face p { margin-top: 4px; font-size: 11px; color: #b4b4b4; }
+.troco-page .currency-count { position: absolute; bottom: 0; right: 0; font-size: 11px; font-variant-numeric: tabular-nums; }
+.troco-page .currency-count span { color: #a0a0a0; }
+.troco-page .privacy-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 42px; }
+.troco-page .privacy-top > svg { color: #c53c00; }
+.troco-page .privacy-layout { display: grid; grid-template-columns: 1.25fr 1fr; gap: 95px; }
+.troco-page .privacy-title span { display: block; line-height: 1.2; }
+.troco-page .privacy-title span:last-child { color: #c53c00; }
+.troco-page .privacy-detail { padding-top: 6px; }
+.troco-page .privacy-detail p { color: var(--muted); font-size: 14px; margin-bottom: 17px; }
+.troco-page .privacy-detail .privacy-lead { color: var(--ink); font-size: 19px; }
+.troco-page .privacy-detail .privacy-small { font-size: 11px; }
+.troco-page .privacy-detail .text-link { border-bottom: 1px solid var(--ink); }
+.troco-page .privacy-bottom { display: flex; gap: 40px; margin-top: 52px; padding-top: 25px; border-top: 1px solid var(--line); }
+.troco-page .privacy-bottom span { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--muted); }
+.troco-page .pro-section { background: var(--soft); border-block: 1px solid var(--line); }
+.troco-page .pro-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 110px; align-items: center; }
+.troco-page .pro-copy h2 { margin-top: 27px; }
+.troco-page .pro-copy > p:not(.eyebrow) { color: var(--muted); max-width: 340px; margin-top: 24px; font-size: 14px; }
+.troco-page .pro-copy .check-list { margin-top: 32px; }
+.troco-page .price-card { padding: 35px 40px 28px; background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--accent); }
+.troco-page .price-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; }
+.troco-page .pro-wordmark { font-size: 25px; font-weight: 600; letter-spacing: -.055em; display: flex; align-items: center; gap: 7px; }
+.troco-page .pro-wordmark span { background: var(--accent); color: #191919; padding: 3px 6px; font-size: 10px; border-radius: 4px; letter-spacing: 0; font-weight: 500; }
+.troco-page .billing-switch { display: flex; background: var(--soft); padding: 4px; border: 1px solid #e7e7e7; border-radius: 5px; }
+.troco-page .billing-switch button { width: 50%; border: 0; border-radius: 3px; background: transparent; font-size: 12px; min-height: 40px; color: var(--muted); }
+.troco-page .billing-switch button.active { background: #fff; color: var(--ink); box-shadow: 0 1px 4px #00000014; }
+.troco-page .price-value { display: flex; align-items: baseline; gap: 9px; margin-top: 23px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.troco-page .price-value > span { font-size: 13px; color: var(--muted); }
+.troco-page .price-value strong { font-size: 67px; letter-spacing: -.06em; line-height: 1.2; font-weight: 500; }
+.troco-page .price-value strong span { font-size: 36px; }
+.troco-page .price-saving { font-size: 11px; color: #ac3600; margin-top: 6px; }
+.troco-page .price-card .button { display: flex; justify-content: space-between; margin-top: 28px; }
+.troco-page .trial-note { text-align: center; font-size: 11px; margin-top: 13px; }
+.troco-page .price-note { text-align: center; font-size: 9px; margin-top: 22px; color: var(--muted); }
+.troco-page .faq-section { display: grid; grid-template-columns: 1fr 1.3fr; gap: 70px; }
+.troco-page .faq-heading h2 { margin-top: 23px; font-size: 42px; }
+.troco-page .faq-list { border-top: 1px solid var(--line); }
+.troco-page .faq-list details { border-bottom: 1px solid var(--line); }
+.troco-page .faq-list summary { min-height: 76px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; gap: 25px; font-size: 14px; list-style: none; padding-block: 20px; }
+.troco-page .faq-list summary::-webkit-details-marker { display: none; }
+.troco-page .faq-list summary svg { transition: transform 180ms ease-out; }
+.troco-page .faq-list details[open] summary svg { transform: rotate(45deg); color: #c53c00; }
+.troco-page .faq-list details p { color: var(--muted); font-size: 13px; padding: 0 35px 25px 0; max-width: 550px; }
+.troco-page .final-cta { background: var(--accent); position: relative; overflow: hidden; }
+.troco-page .final-inner { padding-block: 76px 80px; position: relative; }
+.troco-page .final-inner h2 { font-size: clamp(44px, 5.3vw, 76px); margin-top: 28px; position: relative; z-index: 10; }
+.troco-page .final-inner h2 > span { color: #191919; }
+.troco-page .final-actions { display: flex; align-items: center; gap: 24px; margin-top: 33px; position: relative; z-index: 10; }
+.troco-page .final-actions > span { font-size: 11px; }
+.troco-page .final-symbol { position: absolute; right: 10px; top: 70px; color: #191919; opacity: .16; transform: rotate(-25deg); }
+.troco-page .final-cta :focus-visible { outline-color: var(--ink); }
+.troco-page .footer-top { display: flex; align-items: center; gap: 30px; padding-block: 42px; }
+.troco-page .footer-top > p { color: var(--muted); font-size: 11px; }
+.troco-page .back-top { margin-left: auto; border: 1px solid var(--line); border-radius: 50%; width: 44px; height: 44px; display: grid; place-items: center; transform: rotate(-90deg); }
+.troco-page .footer-bottom { border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 21px; font-size: 10px; color: var(--muted); }
+.troco-page .footer-bottom nav { display: flex; gap: 22px; }
+.troco-page .footer-bottom a { display: inline-flex; min-height: 44px; align-items: center; }
+/* Progressive enhancement: without JavaScript every section remains visible. */
+@media (prefers-reduced-motion: no-preference) {
+  .troco-page .motion-ready:not(.has-entered) .enter { opacity: 0; transform: translateY(22px); }
+  .troco-page .has-entered .enter { transition: opacity 650ms ease-out, transform 650ms ease-out; }
+  .troco-page .has-entered .enter:nth-child(2) { transition-delay: 100ms; }
+  .troco-page .swap-content { animation: content-arrive 350ms ease-out both; }
+  .troco-page .hero-copy { animation: content-arrive 750ms ease-out both; }
+  @supports (animation-timeline: scroll()) {
+    .troco-page .reading-progress { animation: reading-progress linear both; animation-timeline: scroll(); }
+  }
+}
+.troco-page .hero:not(.is-visible) .hero-phone, .troco-page .hero:not(.is-visible) .currency-float { animation-play-state: paused; }
+.troco-page.motion-paused *, .troco-page.motion-paused *::before, .troco-page.motion-paused *::after { animation: none !important; transition: none !important; }
+.troco-page.motion-paused .enter { opacity: 1 !important; transform: none !important; }
+@keyframes phone-arrive { from { opacity: 0; transform: translateY(25px) rotate(0); } to { opacity: 1; transform: translateY(0) rotate(-8deg); } }
+@keyframes phone-float { 0%, 100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-10px) rotate(-6deg); } }
+@keyframes currency-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -12px; } }
+@keyframes caption-arrive { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes content-arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes reading-progress { to { transform: scaleX(1); } }
+@media (min-width: 1600px) { .troco-page .hero { min-height: 800px; } }
+@media (max-width: 1150px) {
+  .troco-page .shell { width: calc(100% - 72px); }
+  .troco-page .desktop-nav { gap: 20px; }
+  .troco-page .nav-actions { gap: 13px; }
+  .troco-page .nav-cta { display: none; }
+  .troco-page .hero { min-height: 690px; }
+  .troco-page h1 { font-size: 72px; }
+  .troco-page .hero-art { transform: scale(.86); transform-origin: center right; }
+  .troco-page .hero-description { max-width: 330px; }
+  .troco-page .hero-actions { gap: 17px; }
+  .troco-page .hero-actions .button { padding-inline: 17px; gap: 13px; }
+  .troco-page .product-detail { padding-inline: 34px; }
+  .troco-page .currency-layout { gap: 32px; }
+  .troco-page .privacy-layout, .troco-page .pro-layout { gap: 60px; }
+  .troco-page .price-card { padding-inline: 30px; }
+}
+@media (max-width: 800px) {
+  .troco-page .shell { width: calc(100% - 48px); }
+  .troco-page .section-space { padding-block: 72px; }
+  .troco-page .nav-inner { height: 76px; }
+  .troco-page .desktop-nav { display: none; }
+  .troco-page .mobile-toggle { display: grid; }
+  .troco-page .mobile-nav:not([hidden]) { display: grid; padding: 10px 24px 20px; border-top: 1px solid var(--line); }
+  .troco-page .mobile-nav a { min-height: 49px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .troco-page .hero { grid-template-columns: 1fr; gap: 0; padding-top: 46px; padding-bottom: 75px; }
+  .troco-page .hero-copy { padding-top: 0; }
+  .troco-page h1 { font-size: clamp(57px, 9.6vw, 82px); }
+  .troco-page .hero-description { max-width: 400px; }
+  .troco-page .hero-art { height: 555px; width: min(550px, 100%); justify-self: center; transform: scale(.91); transform-origin: center; }
+  .troco-page .hero-bottom { bottom: 20px; }
+  .troco-page .benefits-inner { gap: 15px; }
+  .troco-page .benefits-inner p { font-size: 10px; gap: 8px; }
+  .troco-page .benefits-inner svg { width: 17px; }
+  .troco-page .section-heading { gap: 25px; grid-template-columns: 1fr; }
+  .troco-page .section-heading > p { justify-self: start; max-width: 400px; }
+  .troco-page .product-selector { gap: 14px; }
+  .troco-page .product-selector button { font-size: 11px; gap: 6px; }
+  .troco-page .selector-number { display: none; }
+  .troco-page .product-stage { grid-template-columns: 1fr 1fr; }
+  .troco-page .product-detail { padding: 30px 24px; }
+  .troco-page .product-detail h3 { font-size: 27px; }
+  .troco-page .product-preview { min-height: 600px; padding-inline: 15px; }
+  .troco-page .product-phone { width: 210px; }
+  .troco-page .currency-layout { grid-template-columns: 1fr; }
+  .troco-page .currency-picker { grid-template-columns: repeat(9, 1fr); max-width: none; }
+  .troco-page .currency-display { width: 440px; max-width: 100%; min-height: 420px; justify-self: center; }
+  .troco-page .currency-face strong { font-size: 140px; }
+  .troco-page .privacy-layout { gap: 30px; grid-template-columns: 1fr 1fr; }
+  .troco-page .privacy-title { font-size: 38px; }
+  .troco-page .pro-layout { gap: 35px; }
+  .troco-page .price-card { padding: 25px; }
+  .troco-page .price-value { gap: 6px; }
+  .troco-page .price-value strong { font-size: 54px; }
+  .troco-page .price-value > span { font-size: 11px; }
+  .troco-page .price-value strong span { font-size: 30px; }
+  .troco-page .faq-section { grid-template-columns: 1fr; gap: 35px; }
+  .troco-page .final-symbol { right: -100px; }
+}
+@media (max-width: 560px) {
+  .troco-page .shell { width: calc(100% - 40px); }
+  .troco-page .nav-inner { height: 70px; gap: 10px; }
+  .troco-page .wordmark { font-size: 28px; }
+  .troco-page .brand-symbol { width: 31px; height: 31px; border-radius: 8px; }
+  .troco-page .nav-actions { gap: 9px; }
+  .troco-page .language-picker button { width: 29px; }
+  .troco-page .mobile-toggle { width: 44px; height: 44px; }
+  .troco-page .hero { padding-top: 38px; padding-bottom: 64px; }
+  .troco-page .hero-copy .eyebrow { font-size: 10px; margin-bottom: 24px; }
+  .troco-page h1 { font-size: clamp(50px, 13.2vw, 72px); }
+  .troco-page .hero-description { font-size: 15px; margin-top: 23px; max-width: 330px; }
+  .troco-page .hero-actions { gap: 20px; margin-top: 24px; flex-wrap: wrap; }
+  .troco-page .hero-actions .button { min-height: 48px; font-size: 12px; }
+  .troco-page .hero-actions .text-link { font-size: 12px; gap: 8px; }
+  .troco-page .availability { flex-wrap: wrap; font-size: 9px; gap: 5px; margin-top: 20px; }
+  .troco-page .hero-art { height: 440px; transform: none; margin-top: 12px; }
+  .troco-page .hero-phone { width: 187px; border-radius: 30px; border-width: 5px; }
+  .troco-page .orbital-scene { width: min(360px, calc(100vw - 20px)); height: auto; aspect-ratio: 1; }
+  .troco-page .hero-disc { width: 76%; height: 76%; top: 12%; left: 12%; }
+  .troco-page .currency-float { padding: 10px 12px; gap: 9px; }
+  .troco-page .currency-float strong { font-size: 25px; }
+  .troco-page .currency-float small { font-size: 8px; }
+  .troco-page .currency-float-usd { right: 4px; top: 57px; }
+  .troco-page .currency-float-eur { left: 6px; top: 130px; }
+  .troco-page .currency-float-brl { bottom: 61px; right: 7px; }
+  .troco-page .point-one { bottom: 67px; left: 60px; }
+  .troco-page .point-two { top: 33px; right: 96px; }
+  .troco-page .hero-caption { font-size: 9px; padding: 11px 12px; bottom: 8px; left: 0; gap: 9px; }
+  .troco-page .hero-caption small { font-size: 8px; }
+  .troco-page .hero-caption > svg { margin-left: 2px; }
+  .troco-page .caption-icon { padding: 7px; }
+  .troco-page .motion-control { right: 0; bottom: -28px; }
+  .troco-page .hero-bottom { font-size: 8px; bottom: 13px; gap: 12px; }
+  .troco-page .hero-bottom > span:first-child { display: none; }
+  .troco-page .hero-bottom > a { margin-right: 46px; }
+  .troco-page .benefits-inner { gap: 7px; padding-block: 22px; }
+  .troco-page .benefits-inner p { flex-direction: column; align-items: flex-start; font-size: 10px; padding-right: 8px; line-height: 1.5; }
+  .troco-page .benefits-inner p:last-child { padding-left: 6px; }
+  .troco-page .section-space { padding-block: 60px; }
+  .troco-page h2 { font-size: 38px; }
+  .troco-page .eyebrow { font-size: 10px; }
+  .troco-page .section-heading { gap: 22px; }
+  .troco-page .section-heading > p { font-size: 14px; }
+  .troco-page .product-selector { margin-top: 28px; gap: 6px; }
+  .troco-page .product-selector button { flex-direction: column; align-items: flex-start; gap: 10px; font-size: 10px; padding-block: 13px; }
+  .troco-page .product-selector button svg { width: 18px; height: 18px; }
+  .troco-page .product-stage { grid-template-columns: 1fr; margin-top: 22px; }
+  .troco-page .product-detail { padding: 27px; min-height: 460px; }
+  .troco-page .feature-icon { margin-bottom: 22px; }
+  .troco-page .product-detail h3 { font-size: 30px; }
+  .troco-page .product-description { font-size: 13px; }
+  .troco-page .product-preview { border-left: 0; border-top: 1px solid var(--line); min-height: 570px; padding-top: 30px; padding-bottom: 48px; }
+  .troco-page .product-phone { width: 222px; }
+  .troco-page .preview-type { left: 25px; top: 160px; }
+  .troco-page .currency-layout { gap: 25px; }
+  .troco-page .currency-picker { grid-template-columns: repeat(5, 1fr); gap: 7px; }
+  .troco-page .currency-display { min-height: 350px; width: 350px; }
+  .troco-page .currency-face { padding-left: 10px; }
+  .troco-page .currency-face strong { font-size: 125px; }
+  .troco-page .currency-face h3 { font-size: 20px; }
+  .troco-page .privacy-top { margin-bottom: 26px; }
+  .troco-page .privacy-layout { grid-template-columns: 1fr; gap: 26px; }
+  .troco-page .privacy-title { font-size: 43px; }
+  .troco-page .privacy-bottom { margin-top: 30px; gap: 15px; flex-wrap: wrap; }
+  .troco-page .privacy-bottom span { font-size: 10px; }
+  .troco-page .pro-layout { grid-template-columns: 1fr; gap: 32px; }
+  .troco-page .price-card { padding: 27px; }
+  .troco-page .price-value strong { font-size: 68px; }
+  .troco-page .price-value strong span { font-size: 36px; }
+  .troco-page .faq-heading h2 { font-size: 36px; }
+  .troco-page .faq-list summary { font-size: 13px; }
+  .troco-page .final-inner { padding-block: 58px; }
+  .troco-page .final-inner h2 { font-size: clamp(36px, 10vw, 53px); }
+  .troco-page .final-actions { flex-wrap: wrap; gap: 17px; }
+  .troco-page .final-symbol { display: none; }
+  .troco-page .footer-top { gap: 15px; flex-wrap: wrap; padding-block: 30px; }
+  .troco-page .footer-top > p { order: 3; width: 100%; }
+  .troco-page .footer-bottom { flex-direction: column; align-items: flex-start; gap: 6px; padding-bottom: 22px; }
+  .troco-page .footer-bottom nav { gap: 17px; flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .troco-page *, .troco-page *::before, .troco-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .troco-page .enter { opacity: 1 !important; transform: none !important; }
+  .troco-page .motion-control { display: none; }
+}

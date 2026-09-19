@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troco — Privacidade / Privacy / Privacidad</title>
+<style>
+  :root {
+    --ink: #0d1218;
+    --ink-raised: #161e28;
+    --brass: #8a5d0b;
+    --text: #1c1c1e;
+    --muted: #6b6f76;
+    --rule: rgba(0, 0, 0, .1);
+    --page: #f4f5f7;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --brass: #f0ae3c;
+      --text: #f2f4f7;
+      --muted: #9aa1ab;
+      --rule: rgba(255, 255, 255, .12);
+      --page: #0d1218;
+      --card: #161e28;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 72px;
+    background: var(--page);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  header {
+    padding: 48px 0 24px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 32px;
+  }
+  h1 { font-size: 1.75rem; margin: 0 0 6px; letter-spacing: -.02em; }
+  .updated { color: var(--muted); font-size: .875rem; margin: 0; }
+  nav { margin-top: 20px; display: flex; gap: 8px; flex-wrap: wrap; }
+  nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font: 600 .75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--brass);
+    text-decoration: none;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 8px 14px;
+  }
+  section { margin-bottom: 56px; }
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 { font-size: 1rem; margin: 28px 0 8px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 6px; }
+  .panel {
+    background: var(--ink);
+    color: #e8eef4;
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin: 24px 0;
+  }
+  .panel strong { color: #f6b63c; }
+  .panel p { color: #e8eef4; margin: 0; }
+  code {
+    font: .9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: 1px 5px;
+  }
+  a { color: var(--brass); }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 20px;
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Troco</h1>
+  <p class="updated">Última atualização: 18 de setembro de 2026 · Last updated: 18 September 2026</p>
+  <nav>
+    <a href="#pt">Português</a>
+    <a href="#en">English</a>
+    <a href="#es">Español</a>
+  </nav>
+</header>
+
+<!-- ============================ pt-BR ============================ -->
+<section id="pt" lang="pt-BR">
+  <h2>Política de Privacidade</h2>
+
+  <div class="panel">
+    <p><strong>O resumo:</strong> o Troco não coleta seus dados para o desenvolvedor e não usa
+      analytics, publicidade ou rastreamento. O seu quadro fica no aparelho e, quando há uma conta
+      iCloud disponível, é sincronizado pelo CloudKit da Apple. Se você decidir compartilhá-lo, as
+      pessoas que aceitarem o convite poderão ver e editar o quadro inteiro.</p>
+  </div>
+
+  <h3>O que o app guarda, e onde</h3>
+  <p>Tudo o que você registra — contas, transações, categorias, orçamentos e regras de recorrência —
+  é gravado primeiro num banco de dados dentro do contêiner do próprio app no seu iPhone. Esse
+  contêiner é compartilhado apenas entre o app e o seu widget, e nenhum outro aplicativo consegue
+  lê-lo diretamente.</p>
+  <p>As preferências (moeda base, idioma, tema) ficam no mesmo lugar, pelo mesmo motivo: o widget
+  precisa saber em que moeda mostrar o total. O nome informado no primeiro acesso também fica no
+  aparelho; quando uma transação é criada, uma cópia desse nome pode ser gravada nela para indicar
+  a autoria dentro de um quadro compartilhado.</p>
+
+  <h3>Sincronização e compartilhamento pelo iCloud</h3>
+  <p>Quando o aparelho está conectado a uma conta iCloud, o Troco sincroniza automaticamente o
+  quadro com um contêiner privado do CloudKit. Podem ser enviados à Apple o nome do quadro; contas,
+  saldos e dados de cartões; transações, valores, datas e notas; categorias; orçamentos; regras de
+  recorrência; cotações usadas em conversões; e o nome e identificador CloudKit de quem criou uma
+  transação. O desenvolvedor não opera um servidor próprio nem recebe uma cópia desse conteúdo.</p>
+  <p>O quadro começa privado na sua conta iCloud. Se você usar a opção de compartilhamento, o
+  CloudKit envia um convite e concede aos participantes que o aceitarem acesso de leitura e escrita
+  ao quadro inteiro. Os participantes podem ver as alterações e os nomes de autoria que estiverem
+  gravados nas transações. Interromper o compartilhamento impede novas sincronizações, mas não apaga
+  automaticamente as informações que já tenham sido baixadas para o aparelho de outra pessoa.</p>
+  <p>Os dados permanecem no iCloud enquanto fizerem parte do quadro. Excluir um registro no Troco
+  sincroniza essa exclusão; apenas desinstalar o app não garante que a cópia do iCloud seja apagada.
+  O armazenamento, a segurança e as opções da conta iCloud são regidos pela Apple.</p>
+
+  <h3>O que sai do aparelho</h3>
+  <p>Além da sincronização pelo CloudKit, o app faz requisições para buscar cotações de câmbio:</p>
+  <ul>
+    <li><strong>Cotações atuais:</strong> <code>economia.awesomeapi.com.br</code> recebe uma lista fixa
+      dos códigos ISO suportados pelo app, ancorada em <code>USD</code>. Essa lista é igual para todos
+      e não revela a sua moeda base.</li>
+    <li><strong>Cotações históricas:</strong> ao consultar a taxa de uma transferência passada,
+      <code>api.frankfurter.dev</code> recebe a data e os códigos ISO das duas moedas.</li>
+    <li><strong>O que não vai:</strong> nenhum saldo, nenhum lançamento, nenhum nome de conta,
+      nenhum identificador seu ou do seu aparelho. As requisições são anônimas e não autenticadas.</li>
+  </ul>
+  <p>As cotações atuais ficam guardadas no aparelho por até quinze minutos, para que o app funcione sem internet
+  e para não repetir a mesma pergunta a cada abertura.</p>
+
+  <h3>Assinaturas</h3>
+  <p>As assinaturas do Troco Pro são oferecidas e processadas pela App Store por meio do StoreKit.
+  O app consulta à Apple os produtos disponíveis e se existe um direito ativo para liberar os
+  recursos correspondentes. O desenvolvedor não recebe número de cartão, endereço de cobrança ou
+  outros dados de pagamento. Num quadro compartilhado, a data até a qual os recursos Pro estão
+  disponíveis pode ser sincronizada pelo CloudKit para que os participantes tenham o mesmo acesso.</p>
+
+  <h3>Backups que você faz</h3>
+  <p>Em Ajustes existe a opção de exportar o seu ledger como um arquivo <code>.json</code>. Esse
+  arquivo é escrito onde <em>você</em> escolher salvar — Arquivos, iCloud Drive, outro app. A partir
+  daí ele segue as regras de privacidade do lugar onde foi salvo, e não as deste app. Nada é
+  exportado sem você pedir.</p>
+  <p>Ao importar, o arquivo substitui os dados atuais do quadro e restaura todo o estado portátil,
+  inclusive preferências como moeda base, idioma e tema. O arquivo não leva credenciais,
+  participantes nem o vínculo de compartilhamento do CloudKit; o quadro restaurado pode ser
+  compartilhado novamente depois.</p>
+  <p>Se você usa o Backup do iCloud da Apple, o contêiner do app entra nesse backup como o de
+  qualquer outro aplicativo. Isso é um mecanismo do iOS, sob a sua conta iCloud; nós não temos
+  acesso a ele.</p>
+
+  <h3>O que não existe neste app</h3>
+  <ul>
+    <li>Nenhum SDK de analytics, de publicidade ou de atribuição.</li>
+    <li>Nenhum rastreamento entre apps ou sites. O app não pede permissão de rastreamento porque
+      não rastreia.</li>
+    <li>Nenhuma conta, login ou cadastro próprio do Troco. A sincronização usa a conta iCloud já
+      configurada no aparelho.</li>
+    <li>Nenhum servidor operado pelo desenvolvedor. A sincronização e as compras usam serviços da
+      Apple; as cotações usam somente os serviços descritos acima.</li>
+  </ul>
+
+  <h3>Dados coletados, na definição da Apple</h3>
+  <p>O desenvolvedor não coleta dados do app e não tem analytics ou backend próprio. A ficha de
+  privacidade na App Store declara “Dados não coletados”. A Apple processa dados necessários para
+  oferecer iCloud, CloudKit e App Store conforme os termos e a política de privacidade dela.</p>
+
+  <h3>Crianças</h3>
+  <p>O app não coleta dados de ninguém, de qualquer idade.</p>
+
+  <h3>Mudanças nesta política</h3>
+  <p>Se o app passar a tratar dados de outra forma, esta página será atualizada e a data no topo
+  mudará junto.</p>
+
+  <h3>Contato</h3>
+  <p>Dúvida, bug ou pedido: <a href="mailto:me@vitorfigueredo.dev">me@vitorfigueredo.dev</a>.</p>
+</section>
+
+<!-- ============================ en ============================ -->
+<section id="en" lang="en">
+  <h2>Privacy Policy</h2>
+
+  <div class="panel">
+    <p><strong>The short version:</strong> Troco does not collect your data for the developer and
+      does not use analytics, advertising or tracking. Your ledger stays on the device and, when an
+      iCloud account is available, is synchronized through Apple's CloudKit. If you choose to share
+      it, people who accept the invitation can view and edit the entire ledger.</p>
+  </div>
+
+  <h3>What the app stores, and where</h3>
+  <p>Everything you enter — accounts, transactions, categories, budgets and recurring rules — is
+  first written to a database inside the app's own container on your iPhone. That container is shared
+  only between the app and its widget, and no other app can read it directly.</p>
+  <p>Preferences (base currency, language, theme) live in the same place, for the same reason: the
+  widget needs to know which currency to show the total in. The name entered during onboarding also
+  stays on the device; when a transaction is created, a copy of that name may be stored on it to
+  identify its author inside a shared ledger.</p>
+
+  <h3>iCloud synchronization and sharing</h3>
+  <p>When the device is signed in to an iCloud account, Troco automatically synchronizes the ledger
+  with a private CloudKit container. Data sent to Apple may include the ledger name; accounts,
+  balances and card details; transactions, amounts, dates and notes; categories; budgets; recurring
+  rules; exchange rates used for conversions; and the name and CloudKit identifier of the person who
+  created a transaction. The developer does not operate a server or receive a copy of this content.</p>
+  <p>The ledger starts private to your iCloud account. If you use the sharing option, CloudKit sends
+  an invitation and grants participants who accept it read and write access to the entire ledger.
+  Participants can see changes and any author names stored on transactions. Stopping sharing prevents
+  further synchronization but does not automatically erase information already downloaded to another
+  person's device.</p>
+  <p>Data remains in iCloud while it is part of the ledger. Deleting a record in Troco synchronizes
+  that deletion; uninstalling the app alone does not guarantee that its iCloud copy is deleted.
+  Storage, security and iCloud account controls are governed by Apple.</p>
+
+  <h3>What leaves the device</h3>
+  <p>In addition to CloudKit synchronization, the app makes requests to fetch exchange rates:</p>
+  <ul>
+    <li><strong>Current rates:</strong> <code>economia.awesomeapi.com.br</code> receives a fixed list
+      of the ISO codes supported by the app, anchored in <code>USD</code>. The list is the same for
+      everyone and does not reveal your base currency.</li>
+    <li><strong>Historical rates:</strong> when looking up the rate for a past transfer,
+      <code>api.frankfurter.dev</code> receives the date and the ISO codes of both currencies.</li>
+    <li><strong>What does not:</strong> no balances, no transactions, no account names, no
+      identifier of you or your device. The requests are anonymous and unauthenticated.</li>
+  </ul>
+  <p>Current rates are cached on the device for up to fifteen minutes, so the app works without a network
+  and doesn't ask the same question on every launch.</p>
+
+  <h3>Subscriptions</h3>
+  <p>Troco Pro subscriptions are offered and processed by the App Store through StoreKit. The app
+  asks Apple for the available products and whether there is an active entitlement so it can unlock
+  the corresponding features. The developer does not receive card numbers, billing addresses or
+  other payment details. In a shared ledger, the date through which Pro features are available may
+  be synchronized through CloudKit so participants receive the same access.</p>
+
+  <h3>Backups you make</h3>
+  <p>Settings offers an export of your ledger as a <code>.json</code> file. That file is written
+  wherever <em>you</em> choose to save it — Files, iCloud Drive, another app. From there it follows
+  the privacy terms of wherever it landed, not this app's. Nothing is ever exported without you
+  asking.</p>
+  <p>When imported, the file replaces the ledger's current data and restores its complete portable
+  state, including preferences such as base currency, language and theme. The file does not carry
+  CloudKit credentials, participants or its sharing link; the restored ledger can be shared again
+  afterwards.</p>
+  <p>If you use Apple's iCloud Backup, the app's container is included in it like any other app's.
+  That is an iOS mechanism under your own iCloud account; we have no access to it.</p>
+
+  <h3>What this app does not have</h3>
+  <ul>
+    <li>No analytics, advertising or attribution SDK.</li>
+    <li>No cross-app or cross-site tracking. The app never asks for tracking permission because it
+      does not track.</li>
+    <li>No Troco-specific account, login or registration. Synchronization uses the iCloud account
+      already configured on the device.</li>
+    <li>No server operated by the developer. Synchronization and purchases use Apple services;
+      exchange rates use only the services described above.</li>
+  </ul>
+
+  <h3>Data collected, in Apple's sense</h3>
+  <p>The developer does not collect app data and has no analytics or proprietary backend. The App
+  Store privacy card says “Data Not Collected”. Apple processes the data necessary to provide
+  iCloud, CloudKit and the App Store under its own terms and privacy policy.</p>
+
+  <h3>Children</h3>
+  <p>The app collects no data from anyone, of any age.</p>
+
+  <h3>Changes to this policy</h3>
+  <p>If the app starts handling data differently, this page will be updated and the date at the top
+  will change with it.</p>
+
+  <h3>Contact</h3>
+  <p>Questions, bugs or requests: <a href="mailto:me@vitorfigueredo.dev">me@vitorfigueredo.dev</a>.</p>
+</section>
+
+<!-- ============================ es ============================ -->
+<section id="es" lang="es">
+  <h2>Política de Privacidad</h2>
+
+  <div class="panel">
+    <p><strong>El resumen:</strong> Troco no recopila tus datos para el desarrollador y no utiliza
+      analítica, publicidad ni rastreo. Tu libro se guarda en el dispositivo y, cuando hay una cuenta
+      de iCloud disponible, se sincroniza mediante CloudKit de Apple. Si decides compartirlo, las
+      personas que acepten la invitación podrán ver y editar el libro completo.</p>
+  </div>
+
+  <h3>Qué guarda la app, y dónde</h3>
+  <p>Todo lo que registras — cuentas, transacciones, categorías, presupuestos y reglas periódicas —
+  se escribe primero en una base de datos dentro del contenedor de la propia app en tu iPhone. Ese
+  contenedor se comparte únicamente entre la app y su widget, y ninguna otra aplicación puede
+  leerlo directamente.</p>
+  <p>Las preferencias (moneda base, idioma, tema) viven en el mismo sitio, por el mismo motivo: el
+  widget necesita saber en qué moneda mostrar el total. El nombre indicado durante la configuración
+  inicial también queda en el dispositivo; al crear una transacción, una copia de ese nombre puede
+  guardarse en ella para identificar a su autor dentro de un libro compartido.</p>
+
+  <h3>Sincronización y uso compartido mediante iCloud</h3>
+  <p>Cuando el dispositivo está conectado a una cuenta de iCloud, Troco sincroniza automáticamente
+  el libro con un contenedor privado de CloudKit. Los datos enviados a Apple pueden incluir el nombre
+  del libro; cuentas, saldos y datos de tarjetas; transacciones, importes, fechas y notas; categorías;
+  presupuestos; reglas periódicas; cotizaciones usadas en conversiones; y el nombre y el identificador
+  de CloudKit de quien creó una transacción. El desarrollador no opera un servidor propio ni recibe
+  una copia de este contenido.</p>
+  <p>El libro comienza siendo privado en tu cuenta de iCloud. Si utilizas la opción de compartir,
+  CloudKit envía una invitación y concede acceso de lectura y escritura al libro completo a quienes
+  la acepten. Los participantes pueden ver los cambios y los nombres de autor guardados en las
+  transacciones. Dejar de compartir impide nuevas sincronizaciones, pero no borra automáticamente la
+  información que ya se haya descargado en el dispositivo de otra persona.</p>
+  <p>Los datos permanecen en iCloud mientras formen parte del libro. Eliminar un registro en Troco
+  sincroniza esa eliminación; desinstalar la app por sí solo no garantiza que se borre su copia de
+  iCloud. El almacenamiento, la seguridad y los controles de la cuenta de iCloud se rigen por Apple.</p>
+
+  <h3>Qué sale del dispositivo</h3>
+  <p>Además de la sincronización mediante CloudKit, la app realiza peticiones para consultar tipos
+  de cambio:</p>
+  <ul>
+    <li><strong>Cotizaciones actuales:</strong> <code>economia.awesomeapi.com.br</code> recibe una lista
+      fija de los códigos ISO admitidos por la app, anclada en <code>USD</code>. La lista es igual para
+      todos y no revela tu moneda base.</li>
+    <li><strong>Cotizaciones históricas:</strong> al consultar la tasa de una transferencia pasada,
+      <code>api.frankfurter.dev</code> recibe la fecha y los códigos ISO de ambas monedas.</li>
+    <li><strong>Qué no:</strong> ningún saldo, ningún movimiento, ningún nombre de cuenta, ningún
+      identificador tuyo o de tu dispositivo. Las peticiones son anónimas y no están autenticadas.</li>
+  </ul>
+  <p>Las cotizaciones actuales se guardan en el dispositivo hasta quince minutos, para que la app funcione sin
+  conexión y no repita la misma pregunta en cada apertura.</p>
+
+  <h3>Suscripciones</h3>
+  <p>Las suscripciones a Troco Pro se ofrecen y procesan en la App Store mediante StoreKit. La app
+  consulta a Apple los productos disponibles y si existe un derecho activo para desbloquear las
+  funciones correspondientes. El desarrollador no recibe números de tarjeta, direcciones de
+  facturación ni otros datos de pago. En un libro compartido, la fecha hasta la que están disponibles
+  las funciones Pro puede sincronizarse mediante CloudKit para que los participantes tengan el mismo
+  acceso.</p>
+
+  <h3>Copias que tú haces</h3>
+  <p>En Ajustes puedes exportar tu libro como un archivo <code>.json</code>. Ese archivo se escribe
+  donde <em>tú</em> elijas guardarlo — Archivos, iCloud Drive, otra app. A partir de ahí sigue las
+  condiciones de privacidad del lugar donde quedó, no las de esta app. Nada se exporta sin que lo
+  pidas.</p>
+  <p>Al importarlo, el archivo reemplaza los datos actuales del libro y restaura todo su estado
+  portátil, incluidas preferencias como la moneda base, el idioma y el tema. El archivo no incluye
+  credenciales, participantes ni el vínculo para compartir de CloudKit; después puedes volver a
+  compartir el libro restaurado.</p>
+  <p>Si usas la Copia de Seguridad de iCloud de Apple, el contenedor de la app se incluye en ella
+  como el de cualquier otra. Es un mecanismo de iOS bajo tu propia cuenta de iCloud; nosotros no
+  tenemos acceso.</p>
+
+  <h3>Lo que esta app no tiene</h3>
+  <ul>
+    <li>Ningún SDK de analítica, publicidad o atribución.</li>
+    <li>Ningún rastreo entre apps o sitios. La app nunca pide permiso de rastreo porque no
+      rastrea.</li>
+    <li>Ninguna cuenta, inicio de sesión o registro propio de Troco. La sincronización utiliza la
+      cuenta de iCloud ya configurada en el dispositivo.</li>
+    <li>Ningún servidor operado por el desarrollador. La sincronización y las compras utilizan
+      servicios de Apple; las cotizaciones utilizan únicamente los servicios descritos arriba.</li>
+  </ul>
+
+  <h3>Datos recopilados, según Apple</h3>
+  <p>El desarrollador no recopila datos de la app y no dispone de analítica ni de un backend propio.
+  La ficha de privacidad de la App Store dice “No se recopilan datos”. Apple procesa los datos
+  necesarios para ofrecer iCloud, CloudKit y la App Store conforme a sus propios términos y política
+  de privacidad.</p>
+
+  <h3>Menores</h3>
+  <p>La app no recopila datos de nadie, de ninguna edad.</p>
+
+  <h3>Cambios en esta política</h3>
+  <p>Si la app empieza a tratar los datos de otra manera, esta página se actualizará y la fecha de
+  arriba cambiará con ella.</p>
+
+  <h3>Contacto</h3>
+  <p>Dudas, errores o peticiones: <a href="mailto:me@vitorfigueredo.dev">me@vitorfigueredo.dev</a>.</p>
+</section>
+
+<footer>
+  <p>Troco · <a href="mailto:me@vitorfigueredo.dev">me@vitorfigueredo.dev</a></p>
+</footer>
+
+</main>
+</body>
+</html>

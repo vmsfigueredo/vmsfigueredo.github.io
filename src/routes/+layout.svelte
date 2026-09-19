@@ -1,10 +1,13 @@
 <script>
 	import '../app.css';
+	import { page } from '$app/state';
 	import Nav from '$lib/components/Nav.svelte';
 	import { t, locale } from '$lib/i18n/index.js';
 
 	/** @type {{ children?: import('svelte').Snippet }} */
 	let { children } = $props();
+
+	const isTroco = $derived(page.url.pathname === '/troco' || page.url.pathname.startsWith('/troco/'));
 
 	const SITE = 'https://vitorfigueredo.dev';
 	const OG_IMAGE = `${SITE}/og.png`;
@@ -24,6 +27,7 @@
 </script>
 
 <svelte:head>
+	{#if !isTroco}
 	<title>{$t.meta.title}</title>
 	<meta name="description" content={$t.meta.description} />
 	<link rel="canonical" href={SITE} />
@@ -49,10 +53,13 @@
 		href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
 		rel="stylesheet"
 	/>
+	{/if}
 </svelte:head>
 
 <div class="relative z-10">
-	<Nav />
+	{#if !isTroco}
+		<Nav />
+	{/if}
 	<main>
 		{@render children?.()}
 	</main>
