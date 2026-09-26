@@ -96,7 +96,7 @@
 
 <header>
   <h1>Troco</h1>
-  <p class="updated">Última atualização: 18 de setembro de 2026 · Last updated: 18 September 2026</p>
+  <p class="updated">Última atualização: 26 de setembro de 2026 · Last updated: 26 September 2026</p>
   <nav>
     <a href="#pt">Português</a>
     <a href="#en">English</a>
@@ -109,8 +109,8 @@
   <h2>Política de Privacidade</h2>
 
   <div class="panel">
-    <p><strong>O resumo:</strong> o Troco não coleta seus dados para o desenvolvedor e não usa
-      analytics, publicidade ou rastreamento. O seu quadro fica no aparelho e, quando há uma conta
+    <p><strong>O resumo:</strong> o Troco não envia seu conteúdo financeiro ao desenvolvedor e não usa
+      publicidade ou rastreamento. Diagnósticos técnicos via Sentry são opcionais e vêm desligados. O seu quadro fica no aparelho e, quando há uma conta
       iCloud disponível, é sincronizado pelo CloudKit da Apple. Se você decidir compartilhá-lo, as
       pessoas que aceitarem o convite poderão ver e editar o quadro inteiro.</p>
   </div>
@@ -128,7 +128,7 @@
   <h3>Sincronização e compartilhamento pelo iCloud</h3>
   <p>Quando o aparelho está conectado a uma conta iCloud, o Troco sincroniza automaticamente o
   quadro com um contêiner privado do CloudKit. Podem ser enviados à Apple o nome do quadro; contas,
-  saldos e dados de cartões; transações, valores, datas e notas; categorias; orçamentos; regras de
+  saldos e dados de cartões; transações, valores, datas, notas e o estabelecimento ou pessoa de cada uma; os dados de extratos importados descritos abaixo; categorias; orçamentos; regras de
   recorrência; cotações usadas em conversões; e o nome e identificador CloudKit de quem criou uma
   transação. O desenvolvedor não opera um servidor próprio nem recebe uma cópia desse conteúdo.</p>
   <p>O quadro começa privado na sua conta iCloud. Se você usar a opção de compartilhamento, o
@@ -154,6 +154,39 @@
   <p>As cotações atuais ficam guardadas no aparelho por até quinze minutos, para que o app funcione sem internet
   e para não repetir a mesma pergunta a cada abertura.</p>
 
+  <h3>Importação de extratos</h3>
+  <p>Com o Troco Pro, você pode importar um extrato bancário (OFX, QFX, QBO ou CSV) escolhendo o
+  arquivo no app ou usando “Abrir com” a partir de outro aplicativo. O arquivo é lido e comparado
+  com os seus lançamentos <strong>somente no aparelho</strong>: ele não é enviado ao desenvolvedor
+  nem a nenhum serviço. O app trabalha numa cópia temporária, que é apagada quando a importação
+  termina; cópias que tenham ficado para trás (por exemplo, se o app for encerrado no meio) são
+  apagadas na abertura seguinte.</p>
+  <p>Para entender as colunas de um CSV que ele não reconhece, o app pode usar o modelo de
+  linguagem da Apple que roda no próprio aparelho (Apple Intelligence). Esse modelo recebe o nome
+  da coluna e até três valores de exemplo dela, e o processamento acontece localmente.</p>
+  <p>Nada é gravado antes de você confirmar a revisão. Depois disso, além dos lançamentos que você
+  aceitar, o app guarda: a descrição original de cada linha do banco; um identificador de cada
+  linha importada, para não importá-la duas vezes; as linhas que você decidiu ignorar; a forma
+  como as colunas do CSV foram lidas; e um resumo criptográfico (SHA-256) do banco e do número da
+  conta, usado para reconhecer a conta na próxima importação — o número da conta em si nunca é
+  gravado. Essas informações fazem parte do quadro e são sincronizadas pelo CloudKit como o
+  restante.</p>
+
+  <h3>Diagnósticos opcionais</h3>
+  <p>Em Ajustes, você pode ativar “Compartilhar diagnósticos”. A opção vem desligada. Só depois
+  da sua escolha o Sentry é iniciado para enviar relatórios de crashes e falhas técnicas ao projeto
+  do desenvolvedor, hospedado no Sentry nos Estados Unidos. Eles contêm horário, versão do app e do
+  sistema, códigos de erro e informações técnicas de stack trace para localizar a falha.</p>
+  <p>Os relatórios são filtrados no aparelho: não incluem conteúdo do quadro, nomes, saldos,
+  valores, notas, credenciais ou identificadores do iCloud. Não gravamos telas, sessões, toques,
+  navegação ou arquivos. Não acrescentamos identificadores persistentes de usuário ou aparelho.
+  Como em qualquer conexão de internet, o serviço recebe o IP de origem da conexão.</p>
+  <p>A escolha fica neste aparelho, excluída do backup e da sincronização. Ao desligar, o app
+  interrompe os envios e descarta a fila local. Relatórios já recebidos não são apagados por essa
+  opção; seguem a retenção do projeto no Sentry. Como não associamos relatórios à sua identidade,
+  pode não ser possível localizar um relatório individual. Para dúvidas ou solicitações, use o
+  contato abaixo. Consulte também a <a href="https://sentry.io/privacy/">política do Sentry</a>.</p>
+
   <h3>Assinaturas</h3>
   <p>As assinaturas do Troco Pro são oferecidas e processadas pela App Store por meio do StoreKit.
   O app consulta à Apple os produtos disponíveis e se existe um direito ativo para liberar os
@@ -176,22 +209,22 @@
 
   <h3>O que não existe neste app</h3>
   <ul>
-    <li>Nenhum SDK de analytics, de publicidade ou de atribuição.</li>
+    <li>Nenhum SDK de publicidade, atribuição ou análise de comportamento. O Sentry é usado apenas para diagnósticos opcionais.</li>
     <li>Nenhum rastreamento entre apps ou sites. O app não pede permissão de rastreamento porque
       não rastreia.</li>
     <li>Nenhuma conta, login ou cadastro próprio do Troco. A sincronização usa a conta iCloud já
       configurada no aparelho.</li>
     <li>Nenhum servidor operado pelo desenvolvedor. A sincronização e as compras usam serviços da
-      Apple; as cotações usam somente os serviços descritos acima.</li>
+      Apple; as cotações e os diagnósticos opcionais usam os serviços descritos acima.</li>
   </ul>
 
   <h3>Dados coletados, na definição da Apple</h3>
-  <p>O desenvolvedor não coleta dados do app e não tem analytics ou backend próprio. A ficha de
-  privacidade na App Store declara “Dados não coletados”. A Apple processa dados necessários para
-  oferecer iCloud, CloudKit e App Store conforme os termos e a política de privacidade dela.</p>
+  <p>Quando você ativa os diagnósticos, coletamos dados de crash e outros diagnósticos para
+  corrigir falhas, sem vinculá-los à sua identidade e sem rastreamento. A Apple processa os dados
+  necessários para iCloud, CloudKit e App Store conforme seus próprios termos e política.</p>
 
   <h3>Crianças</h3>
-  <p>O app não coleta dados de ninguém, de qualquer idade.</p>
+  <p>Os diagnósticos opcionais seguem as mesmas limitações de dados descritas acima, independentemente da idade.</p>
 
   <h3>Mudanças nesta política</h3>
   <p>Se o app passar a tratar dados de outra forma, esta página será atualizada e a data no topo
@@ -206,8 +239,8 @@
   <h2>Privacy Policy</h2>
 
   <div class="panel">
-    <p><strong>The short version:</strong> Troco does not collect your data for the developer and
-      does not use analytics, advertising or tracking. Your ledger stays on the device and, when an
+    <p><strong>The short version:</strong> Troco does not send your financial content to the developer and
+      does not use advertising or tracking. Technical diagnostics through Sentry are optional and off by default. Your ledger stays on the device and, when an
       iCloud account is available, is synchronized through Apple's CloudKit. If you choose to share
       it, people who accept the invitation can view and edit the entire ledger.</p>
   </div>
@@ -224,7 +257,7 @@
   <h3>iCloud synchronization and sharing</h3>
   <p>When the device is signed in to an iCloud account, Troco automatically synchronizes the ledger
   with a private CloudKit container. Data sent to Apple may include the ledger name; accounts,
-  balances and card details; transactions, amounts, dates and notes; categories; budgets; recurring
+  balances and card details; transactions, amounts, dates, notes and the business or person of each one; the imported-statement data described below; categories; budgets; recurring
   rules; exchange rates used for conversions; and the name and CloudKit identifier of the person who
   created a transaction. The developer does not operate a server or receive a copy of this content.</p>
   <p>The ledger starts private to your iCloud account. If you use the sharing option, CloudKit sends
@@ -250,6 +283,37 @@
   <p>Current rates are cached on the device for up to fifteen minutes, so the app works without a network
   and doesn't ask the same question on every launch.</p>
 
+  <h3>Statement import</h3>
+  <p>With Troco Pro, you can import a bank statement (OFX, QFX, QBO or CSV) by picking the file in
+  the app or using “Open with” from another app. The file is read and compared with your entries
+  <strong>only on the device</strong>: it is not sent to the developer or to any service. The app
+  works on a temporary copy that is deleted when the import ends; copies left behind (for example,
+  if the app is closed midway) are deleted the next time it opens.</p>
+  <p>To understand the columns of a CSV it doesn't recognize, the app may use Apple's on-device
+  language model (Apple Intelligence). That model receives the column name and up to three example
+  values from it, and the processing happens locally.</p>
+  <p>Nothing is saved before you confirm the review. After that, besides the entries you accept,
+  the app keeps: the bank's original description of each line; an identifier for each imported
+  line, so it isn't imported twice; the lines you chose to ignore; how the CSV columns were read;
+  and a cryptographic digest (SHA-256) of the bank and account number, used to recognize the
+  account on the next import — the account number itself is never stored. This information is
+  part of the ledger and is synchronized through CloudKit like the rest.</p>
+
+  <h3>Optional diagnostics</h3>
+  <p>In Settings, you can enable “Share diagnostics”. This is off by default. Only after your
+  choice does Sentry start sending crash and technical error reports to the developer's Sentry
+  project, hosted in the United States. Reports contain the time, app and system versions,
+  error codes and technical stack trace information used to locate the failure.</p>
+  <p>Reports are filtered on the device: they exclude ledger content, names, balances, amounts,
+  notes, credentials and iCloud identifiers. We do not record screens, sessions, taps, navigation
+  or files, and we do not attach persistent user or device identifiers. As with any internet
+  connection, the service receives the connection's source IP address.</p>
+  <p>Your choice stays on this device, excluded from backups and synchronization. Turning it off
+  stops uploads and discards the local queue. Reports already received are not deleted by this
+  switch; they follow the Sentry project's retention policy. Since reports are not associated with
+  your identity, locating an individual report may not be possible. For questions or requests,
+  use the contact below. See also <a href="https://sentry.io/privacy/">Sentry's privacy policy</a>.</p>
+
   <h3>Subscriptions</h3>
   <p>Troco Pro subscriptions are offered and processed by the App Store through StoreKit. The app
   asks Apple for the available products and whether there is an active entitlement so it can unlock
@@ -271,22 +335,22 @@
 
   <h3>What this app does not have</h3>
   <ul>
-    <li>No analytics, advertising or attribution SDK.</li>
+    <li>No advertising, attribution or behavioral analytics SDK. Sentry is used only for optional diagnostics.</li>
     <li>No cross-app or cross-site tracking. The app never asks for tracking permission because it
       does not track.</li>
     <li>No Troco-specific account, login or registration. Synchronization uses the iCloud account
       already configured on the device.</li>
     <li>No server operated by the developer. Synchronization and purchases use Apple services;
-      exchange rates use only the services described above.</li>
+      exchange rates and optional diagnostics use the services described above.</li>
   </ul>
 
   <h3>Data collected, in Apple's sense</h3>
-  <p>The developer does not collect app data and has no analytics or proprietary backend. The App
-  Store privacy card says “Data Not Collected”. Apple processes the data necessary to provide
-  iCloud, CloudKit and the App Store under its own terms and privacy policy.</p>
+  <p>When you enable diagnostics, we collect crash data and other diagnostic data to fix
+  failures, without linking them to your identity or using them for tracking. Apple processes
+  data needed for iCloud, CloudKit and the App Store under its own terms and privacy policy.</p>
 
   <h3>Children</h3>
-  <p>The app collects no data from anyone, of any age.</p>
+  <p>Optional diagnostics follow the same data limitations described above, regardless of age.</p>
 
   <h3>Changes to this policy</h3>
   <p>If the app starts handling data differently, this page will be updated and the date at the top
@@ -301,8 +365,8 @@
   <h2>Política de Privacidad</h2>
 
   <div class="panel">
-    <p><strong>El resumen:</strong> Troco no recopila tus datos para el desarrollador y no utiliza
-      analítica, publicidad ni rastreo. Tu libro se guarda en el dispositivo y, cuando hay una cuenta
+    <p><strong>El resumen:</strong> Troco no envía tu contenido financiero al desarrollador y no utiliza
+      publicidad ni rastreo. Los diagnósticos técnicos mediante Sentry son opcionales y vienen desactivados. Tu libro se guarda en el dispositivo y, cuando hay una cuenta
       de iCloud disponible, se sincroniza mediante CloudKit de Apple. Si decides compartirlo, las
       personas que acepten la invitación podrán ver y editar el libro completo.</p>
   </div>
@@ -320,7 +384,7 @@
   <h3>Sincronización y uso compartido mediante iCloud</h3>
   <p>Cuando el dispositivo está conectado a una cuenta de iCloud, Troco sincroniza automáticamente
   el libro con un contenedor privado de CloudKit. Los datos enviados a Apple pueden incluir el nombre
-  del libro; cuentas, saldos y datos de tarjetas; transacciones, importes, fechas y notas; categorías;
+  del libro; cuentas, saldos y datos de tarjetas; transacciones, importes, fechas, notas y el comercio o persona de cada una; los datos de extractos importados descritos más abajo; categorías;
   presupuestos; reglas periódicas; cotizaciones usadas en conversiones; y el nombre y el identificador
   de CloudKit de quien creó una transacción. El desarrollador no opera un servidor propio ni recibe
   una copia de este contenido.</p>
@@ -348,6 +412,39 @@
   <p>Las cotizaciones actuales se guardan en el dispositivo hasta quince minutos, para que la app funcione sin
   conexión y no repita la misma pregunta en cada apertura.</p>
 
+  <h3>Importación de extractos</h3>
+  <p>Con Troco Pro, puedes importar un extracto bancario (OFX, QFX, QBO o CSV) eligiendo el
+  archivo en la app o usando “Abrir con” desde otra aplicación. El archivo se lee y se compara con
+  tus movimientos <strong>solo en el dispositivo</strong>: no se envía al desarrollador ni a ningún
+  servicio. La app trabaja sobre una copia temporal que se borra cuando termina la importación; las
+  copias que hayan quedado (por ejemplo, si la app se cierra a mitad) se borran la siguiente vez que
+  se abre.</p>
+  <p>Para entender las columnas de un CSV que no reconoce, la app puede usar el modelo de lenguaje
+  de Apple que funciona en el propio dispositivo (Apple Intelligence). Ese modelo recibe el nombre
+  de la columna y hasta tres valores de ejemplo, y el procesamiento ocurre localmente.</p>
+  <p>No se guarda nada antes de que confirmes la revisión. Después, además de los movimientos que
+  aceptes, la app guarda: la descripción original de cada línea del banco; un identificador de cada
+  línea importada, para no importarla dos veces; las líneas que decidiste ignorar; cómo se leyeron
+  las columnas del CSV; y un resumen criptográfico (SHA-256) del banco y del número de cuenta, que
+  sirve para reconocer la cuenta en la siguiente importación — el número de cuenta en sí nunca se
+  guarda. Esta información forma parte del libro y se sincroniza mediante CloudKit como el resto.</p>
+
+  <h3>Diagnósticos opcionales</h3>
+  <p>En Ajustes puedes activar “Compartir diagnósticos”. La opción viene desactivada. Solo después
+  de tu elección se inicia Sentry para enviar informes de cierres inesperados y errores técnicos
+  al proyecto del desarrollador, alojado en Sentry en Estados Unidos. Incluyen la hora, las versiones
+  de la app y del sistema, códigos de error e información técnica de la pila de llamadas.</p>
+  <p>Los informes se filtran en el dispositivo: no incluyen contenido del libro, nombres, saldos,
+  importes, notas, credenciales ni identificadores de iCloud. No grabamos pantallas, sesiones,
+  toques, navegación ni archivos. No añadimos identificadores persistentes de usuario o dispositivo.
+  Como en cualquier conexión a internet, el servicio recibe la IP de origen de la conexión.</p>
+  <p>La elección queda en este dispositivo, excluida de las copias y de la sincronización. Al
+  desactivarla, se interrumpen los envíos y se descarta la cola local. Los informes ya recibidos
+  no se borran mediante esta opción; siguen la retención del proyecto en Sentry. Como no asociamos
+  los informes a tu identidad, puede no ser posible localizar un informe individual. Para dudas
+  o solicitudes, usa el contacto de abajo. Consulta también la
+  <a href="https://sentry.io/privacy/">política de privacidad de Sentry</a>.</p>
+
   <h3>Suscripciones</h3>
   <p>Las suscripciones a Troco Pro se ofrecen y procesan en la App Store mediante StoreKit. La app
   consulta a Apple los productos disponibles y si existe un derecho activo para desbloquear las
@@ -371,23 +468,22 @@
 
   <h3>Lo que esta app no tiene</h3>
   <ul>
-    <li>Ningún SDK de analítica, publicidad o atribución.</li>
+    <li>Ningún SDK de publicidad, atribución o análisis de comportamiento. Sentry se usa solo para diagnósticos opcionales.</li>
     <li>Ningún rastreo entre apps o sitios. La app nunca pide permiso de rastreo porque no
       rastrea.</li>
     <li>Ninguna cuenta, inicio de sesión o registro propio de Troco. La sincronización utiliza la
       cuenta de iCloud ya configurada en el dispositivo.</li>
     <li>Ningún servidor operado por el desarrollador. La sincronización y las compras utilizan
-      servicios de Apple; las cotizaciones utilizan únicamente los servicios descritos arriba.</li>
+      servicios de Apple; las cotizaciones y los diagnósticos opcionales utilizan los servicios descritos arriba.</li>
   </ul>
 
   <h3>Datos recopilados, según Apple</h3>
-  <p>El desarrollador no recopila datos de la app y no dispone de analítica ni de un backend propio.
-  La ficha de privacidad de la App Store dice “No se recopilan datos”. Apple procesa los datos
-  necesarios para ofrecer iCloud, CloudKit y la App Store conforme a sus propios términos y política
-  de privacidad.</p>
+  <p>Cuando activas los diagnósticos, recopilamos datos de fallos y otros diagnósticos para
+  corregir errores, sin vincularlos a tu identidad ni usarlos para rastreo. Apple procesa los datos
+  necesarios para iCloud, CloudKit y la App Store según sus propios términos y política.</p>
 
   <h3>Menores</h3>
-  <p>La app no recopila datos de nadie, de ninguna edad.</p>
+  <p>Los diagnósticos opcionales siguen las mismas limitaciones de datos descritas arriba, independientemente de la edad.</p>
 
   <h3>Cambios en esta política</h3>
   <p>Si la app empieza a tratar los datos de otra manera, esta página se actualizará y la fecha de
