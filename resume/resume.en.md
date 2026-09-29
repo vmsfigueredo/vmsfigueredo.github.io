@@ -14,6 +14,8 @@ css: |-
   p { font-size: 11.5px; line-height: 1.4; }
   a { color: #1a7f37; text-decoration: none; }
   .tag { font-size: 10px; color: #8250df; }
+  h2, h3, .meta { break-after: avoid; page-break-after: avoid; }
+  li { break-inside: avoid; }
 ---
 
 # Vitor Marileu S. de Figueredo Filho
@@ -22,14 +24,14 @@ css: |-
 
 ## Summary
 
-Tech Lead and Senior Full Stack Developer with 10+ years building web systems. I lead teams, define architecture, and ship resilient, high-performance applications in PHP (Laravel), React, .NET (C#) and React Native — from public-sector oversight platforms to enterprise logistics integrations.
+Tech Lead and Senior Full Stack Developer with nearly 10 years building web systems. I lead teams, define architecture, and ship resilient, high-performance applications in PHP (Laravel), React, .NET (C#) and React Native — from public-sector oversight platforms to enterprise logistics integrations.
 
 ## Experience
 
 ### Tech Lead | Senior Full Stack Developer — Join Tecnologia
 <p class="meta">Jan 2024 – present · Porto Alegre, BR (Remote)</p>
 
-- Promoted to Tech Lead after 12 months: technical coordination, code review, and stakeholder alignment.
+- Promoted to Tech Lead after 3 months: technical coordination, code review, and stakeholder alignment.
 - Leading a large-scale public-sector oversight platform — one of the largest of its kind in Latin America.
 - Aligning expectations and technical feasibility directly with government stakeholders.
 - Full stack development with PHP (Laravel 11) and ReactJS; MySQL and Elasticsearch integrations.
@@ -49,7 +51,7 @@ Tech Lead and Senior Full Stack Developer with 10+ years building web systems. I
 ### Tech Lead | Full Stack Developer — Rehagro
 <p class="meta">Oct 2022 – Oct 2024 · Belo Horizonte, BR (Remote)</p>
 
-- Promoted to Tech Lead after 3 months, leading 5 developers on code quality, mentorship and support.
+- Promoted to Tech Lead after 12 months, leading 5 developers on code quality, mentorship and support.
 - Ran SCRUM ceremonies: dailies, planning, reviews, retrospectives.
 - Defined system architecture, tech decisions, and complex integrations with continuous deployment.
 - Full stack with Laravel (PHP), .NET (C#), React (JS/TS) and React Native.
@@ -57,9 +59,19 @@ Tech Lead and Senior Full Stack Developer with 10+ years building web systems. I
 <p class="tag">Laravel · .NET / C# · React · React Native · MySQL</p>
 
 ### Full Stack Web Developer — VFTec / Freelance
-<p class="meta">2015 – 2022 · Brasília, BR</p>
+<p class="meta">2019 – 2022 · Brasília, BR</p>
 
-- 7 years of freelance and contract full stack web development.
+- Freelance and contract full stack web development.
+
+### Volunteer Missionary — The Church of Jesus Christ of Latter-day Saints
+<p class="meta">2017 – 2019 · Curitiba, BR</p>
+
+- Two years of volunteer missionary service in Curitiba, Brazil.
+
+### Web Developer — Freelance
+<p class="meta">2015 – 2017</p>
+
+- First projects: custom websites and web systems as a freelancer.
 
 ## Skills
 

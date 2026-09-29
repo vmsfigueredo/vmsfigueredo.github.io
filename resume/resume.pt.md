@@ -14,6 +14,8 @@ css: |-
   p { font-size: 11.5px; line-height: 1.4; }
   a { color: #1a7f37; text-decoration: none; }
   .tag { font-size: 10px; color: #8250df; }
+  h2, h3, .meta { break-after: avoid; page-break-after: avoid; }
+  li { break-inside: avoid; }
 ---
 
 # Vitor Marileu S. de Figueredo Filho
@@ -22,14 +24,14 @@ css: |-
 
 ## Resumo
 
-Líder Técnico e Desenvolvedor Full Stack Sênior com mais de 10 anos construindo sistemas web. Lidero equipes, defino arquitetura e entrego aplicações resilientes e de alta performance em PHP (Laravel), React, .NET (C#) e React Native — de plataformas de fiscalização do setor público a integrações logísticas corporativas.
+Líder Técnico e Desenvolvedor Full Stack Sênior com quase 10 anos construindo sistemas web. Lidero equipes, defino arquitetura e entrego aplicações resilientes e de alta performance em PHP (Laravel), React, .NET (C#) e React Native — de plataformas de fiscalização do setor público a integrações logísticas corporativas.
 
 ## Experiência
 
 ### Líder Técnico | Desenvolvedor Full Stack Sr. — Join Tecnologia
 <p class="meta">Jan 2024 – atual · Porto Alegre, BR (Remoto)</p>
 
-- Promovido a Líder Técnico após 12 meses: coordenação técnica, revisão de código e alinhamento com stakeholders.
+- Promovido a Líder Técnico após 3 meses: coordenação técnica, revisão de código e alinhamento com stakeholders.
 - Liderando plataforma de fiscalização do setor público de grande porte — uma das maiores do tipo na América Latina.
 - Alinhamento de expectativas e viabilidade técnica direto com stakeholders governamentais.
 - Desenvolvimento full stack com PHP (Laravel 11) e ReactJS; integrações MySQL e Elasticsearch.
@@ -49,7 +51,7 @@ Líder Técnico e Desenvolvedor Full Stack Sênior com mais de 10 anos construin
 ### Líder Técnico | Desenvolvedor Full Stack — Rehagro
 <p class="meta">Out 2022 – Out 2024 · Belo Horizonte, BR (Remoto)</p>
 
-- Promovido a Líder Técnico após 3 meses, liderando 5 desenvolvedores em qualidade, mentoria e suporte.
+- Promovido a Líder Técnico após 12 meses, liderando 5 desenvolvedores em qualidade, mentoria e suporte.
 - Conduzi cerimônias SCRUM: dailies, plannings, reviews e retrospectives.
 - Definição de arquitetura, decisões técnicas e integrações complexas com deploy contínuo.
 - Full stack com Laravel (PHP), .NET (C#), React (JS/TS) e React Native.
@@ -57,9 +59,19 @@ Líder Técnico e Desenvolvedor Full Stack Sênior com mais de 10 anos construin
 <p class="tag">Laravel · .NET / C# · React · React Native · MySQL</p>
 
 ### Desenvolvedor Web Full Stack — VFTec / Autônomo
-<p class="meta">2015 – 2022 · Brasília, BR</p>
+<p class="meta">2019 – 2022 · Brasília, BR</p>
 
-- 7 anos de desenvolvimento web full stack como freelancer e contratos.
+- Desenvolvimento web full stack como freelancer e em contratos.
+
+### Missionário Voluntário — A Igreja de Jesus Cristo dos Santos dos Últimos Dias
+<p class="meta">2017 – 2019 · Curitiba, BR</p>
+
+- Dois anos de trabalho missionário voluntário em Curitiba, Brasil.
+
+### Desenvolvedor Web — Freelance
+<p class="meta">2015 – 2017</p>
+
+- Primeiros projetos: sites e sistemas web sob medida como freelancer.
 
 ## Habilidades
 

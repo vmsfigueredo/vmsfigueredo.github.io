@@ -26,20 +26,20 @@ export const experience = [
 			pt: 'Tech Lead · Desenvolvedor Full Stack Sênior'
 		},
 		blurb: {
-			en: "I lead the engineering team of one of Latin America's largest public-sector oversight platforms. Promoted to Tech Lead after 12 months.",
-			pt: 'Lidero o time técnico de uma das maiores plataformas de fiscalização pública da América Latina. Promovido a Tech Lead após 12 meses.'
+			en: "I lead the engineering team of one of Latin America's largest public-sector oversight platforms. Promoted to Tech Lead after 3 months.",
+			pt: 'Lidero o time técnico de uma das maiores plataformas de fiscalização pública da América Latina. Promovido a Tech Lead após 3 meses.'
 		},
 		stack: ['PHP', 'Laravel 11', 'ReactJS', 'MySQL', 'Elasticsearch'],
 		bullets: {
 			en: [
-				'Promoted to Tech Lead after 12 months: technical coordination, code review, and stakeholder alignment.',
+				'Promoted to Tech Lead after 3 months: technical coordination, code review, and stakeholder alignment.',
 				'Leading a large-scale public-sector oversight platform — one of the largest of its kind in Latin America.',
 				'Aligning expectations and technical feasibility directly with government stakeholders.',
 				'Full stack development with PHP (Laravel 11) and ReactJS; MySQL and Elasticsearch integrations.',
 				'Optimized and scaled the system for high performance and maintainability in a critical project.'
 			],
 			pt: [
-				'Promovido a Líder Técnico após 12 meses: coordenação técnica, revisão de código e alinhamento com stakeholders.',
+				'Promovido a Líder Técnico após 3 meses: coordenação técnica, revisão de código e alinhamento com stakeholders.',
 				'Liderando plataforma de fiscalização do setor público de grande porte — uma das maiores do tipo na América Latina.',
 				'Alinhamento de expectativas e viabilidade técnica direto com stakeholders governamentais.',
 				'Desenvolvimento full stack com PHP (Laravel 11) e ReactJS; integrações MySQL e Elasticsearch.',
@@ -79,19 +79,19 @@ export const experience = [
 		period: { en: 'Oct 2022 – Oct 2024', pt: 'Out 2022 – Out 2024' },
 		role: { en: 'Tech Lead · Full Stack Developer', pt: 'Tech Lead · Desenvolvedor Full Stack' },
 		blurb: {
-			en: 'Led 5 developers, ran the agile ceremonies and defined the architecture of web and mobile products. Promoted to Tech Lead after 3 months.',
-			pt: 'Liderei 5 desenvolvedores, conduzi as cerimônias ágeis e defini a arquitetura de produtos web e mobile. Promovido a Tech Lead após 3 meses.'
+			en: 'Led 5 developers, ran the agile ceremonies and defined the architecture of web and mobile products. Promoted to Tech Lead after 12 months.',
+			pt: 'Liderei 5 desenvolvedores, conduzi as cerimônias ágeis e defini a arquitetura de produtos web e mobile. Promovido a Tech Lead após 12 meses.'
 		},
 		stack: ['Laravel', '.NET / C#', 'React', 'React Native', 'MySQL'],
 		bullets: {
 			en: [
-				'Promoted to Tech Lead after 3 months, leading 5 developers on code quality, mentorship and support.',
+				'Promoted to Tech Lead after 12 months, leading 5 developers on code quality, mentorship and support.',
 				'Ran SCRUM ceremonies: dailies, planning, reviews, retrospectives.',
 				'Defined system architecture, tech decisions, and complex integrations with continuous deployment.',
 				'Full stack with Laravel (PHP), .NET (C#), React (JS/TS) and React Native.'
 			],
 			pt: [
-				'Promovido a Líder Técnico após 3 meses, liderando 5 desenvolvedores em qualidade, mentoria e suporte.',
+				'Promovido a Líder Técnico após 12 meses, liderando 5 desenvolvedores em qualidade, mentoria e suporte.',
 				'Conduzi cerimônias SCRUM: dailies, plannings, reviews e retrospectives.',
 				'Definição de arquitetura, decisões técnicas e integrações complexas com deploy contínuo.',
 				'Full stack com Laravel (PHP), .NET (C#), React (JS/TS) e React Native.'
