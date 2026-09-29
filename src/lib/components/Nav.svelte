@@ -1,97 +1,108 @@
 <script>
-	import { t, locale, toggleLocale } from '$lib/i18n/index.js';
-	import { theme, cycleTheme } from '$lib/theme/index.js';
+	import { afterNavigate } from '$app/navigation';
+	import { page } from '$app/state';
+	import { contact } from '$lib/data.js';
+	import { t, locale } from '$lib/i18n/index.js';
+	import Icon from './Icon.svelte';
+	import LangToggle from './LangToggle.svelte';
+	import ThemeToggle from './ThemeToggle.svelte';
 
 	let open = $state(false);
+	afterNavigate(() => (open = false));
 
-	const themeIcon = { system: '🖥️', light: '☀️', dark: '🌙' };
-	const themeLabel = { system: 'System', light: 'Light', dark: 'Dark' };
-
-	const links = [
-		{ href: '#home', key: 'home' },
-		{ href: '#about', key: 'about' },
-		{ href: '#projects', key: 'projects' },
-		{ href: '#experience', key: 'experience' },
-		{ href: '#contact', key: 'contact' }
-	];
-
-	function close() {
-		open = false;
-	}
+	const links = $derived([
+		{ href: '/#about', label: $t.nav.about, active: false },
+		{ href: '/#projects', label: $t.nav.projects, active: false },
+		{ href: '/#experience', label: $t.nav.experience, active: false },
+		{ href: '/blog/', label: $t.nav.blog, active: page.url.pathname.startsWith('/blog') },
+		{ href: '/#contact', label: $t.nav.contact, active: false }
+	]);
+	const resumeHref = $derived(encodeURI(contact.resume[$locale]));
 </script>
 
-<header
-	class="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-bg/80 backdrop-blur supports-[backdrop-filter]:bg-bg/60"
->
-	<nav class="mx-auto flex max-w-5xl items-center justify-between px-5 py-3.5">
-		<a href="#home" class="group flex items-center gap-2 text-sm font-bold" onclick={close}>
-			<span class="text-accent">~/</span><span class="text-fg">vitor</span><span
-				class="text-fg-dim group-hover:text-accent">.dev</span
-			>
+<svelte:window
+	onkeydown={(event) => {
+		if (event.key === 'Escape') open = false;
+	}}
+/>
+
+<header class="sticky top-0 z-50 border-b border-border bg-bg/85 backdrop-blur-md">
+	<nav
+		aria-label={$t.a11y.primaryNav}
+		class="mx-auto flex h-[68px] max-w-6xl items-center justify-between gap-4 px-6"
+	>
+		<a href="/" class="flex items-center gap-2.5 text-[17px] font-bold tracking-tight text-fg">
+			<span class="h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
+			Vitor Figueredo
 		</a>
 
-		<!-- desktop links -->
-		<ul class="hidden items-center gap-1 sm:flex">
-			{#each links as link (link.key)}
+		<ul class="hidden items-center gap-1 md:flex">
+			{#each links as link (link.href)}
 				<li>
 					<a
 						href={link.href}
-						class="rounded px-3 py-1.5 text-sm text-fg-dim transition-colors hover:bg-bg-elev hover:text-accent"
+						aria-current={link.active ? 'page' : undefined}
+						class="rounded-lg px-3 py-2 text-sm font-medium transition-colors {link.active
+							? 'bg-bg-alt text-fg'
+							: 'text-muted hover:bg-bg-alt hover:text-fg'}"
 					>
-						<span class="text-accent">{'>'}</span>
-						{$t.nav[link.key]}
+						{link.label}
 					</a>
 				</li>
 			{/each}
 		</ul>
 
 		<div class="flex items-center gap-2">
-			<button
-				onclick={cycleTheme}
-				class="flex items-center gap-1.5 rounded border border-border px-2.5 py-1.5 text-xs font-semibold text-fg-dim transition-colors hover:border-accent hover:text-accent"
-				aria-label="Toggle theme (current: {themeLabel[$theme]})"
-				title="Theme: {themeLabel[$theme]}"
+			<LangToggle />
+			<ThemeToggle />
+			<a
+				href={resumeHref}
+				target="_blank"
+				rel="noopener"
+				class="hidden h-9 items-center gap-2 rounded-lg border border-border bg-surface px-3.5 text-[13px] font-semibold text-fg transition-colors hover:bg-bg-alt sm:inline-flex"
 			>
-				<span>{themeIcon[$theme]}</span>
-				<span class="hidden sm:inline">{themeLabel[$theme]}</span>
-			</button>
-
+				<Icon name="download" size={15} />
+				<span class="lg:hidden">{$t.nav.resumeShort}</span>
+				<span class="hidden lg:inline">{$t.nav.resume}</span>
+			</a>
 			<button
-				onclick={toggleLocale}
-				class="flex items-center gap-1.5 rounded border border-border px-2.5 py-1.5 text-xs font-semibold text-fg-dim transition-colors hover:border-accent hover:text-accent"
-				aria-label="Toggle language"
-			>
-				<span class={$locale === 'en' ? 'text-accent' : 'opacity-50'}>🇺🇸 EN</span>
-				<span class="text-border">/</span>
-				<span class={$locale === 'pt' ? 'text-accent' : 'opacity-50'}>🇧🇷 PT</span>
-			</button>
-
-			<!-- mobile toggle -->
-			<button
-				class="rounded border border-border p-1.5 text-fg-dim sm:hidden"
-				onclick={() => (open = !open)}
-				aria-label="Menu"
+				type="button"
+				class="grid h-9 w-9 place-items-center rounded-lg border border-border text-fg md:hidden"
 				aria-expanded={open}
+				aria-controls="mobile-menu"
+				aria-label={open ? $t.a11y.closeMenu : $t.a11y.menu}
+				onclick={() => (open = !open)}
 			>
-				{#if open}✕{:else}☰{/if}
+				<Icon name={open ? 'close' : 'menu'} size={18} />
 			</button>
 		</div>
 	</nav>
 
 	{#if open}
-		<ul class="border-t border-border bg-bg-soft px-5 py-2 sm:hidden">
-			{#each links as link (link.key)}
-				<li>
-					<a
-						href={link.href}
-						onclick={close}
-						class="block py-2 text-sm text-fg-dim hover:text-accent"
-					>
-						<span class="text-accent">{'>'}</span>
-						{$t.nav[link.key]}
-					</a>
-				</li>
-			{/each}
-		</ul>
+		<div id="mobile-menu" class="border-t border-border bg-bg px-6 pt-2 pb-5 md:hidden">
+			<ul class="flex flex-col">
+				{#each links as link (link.href)}
+					<li>
+						<a
+							href={link.href}
+							onclick={() => (open = false)}
+							aria-current={link.active ? 'page' : undefined}
+							class="block border-b border-border py-3 text-[15px] font-medium text-fg"
+						>
+							{link.label}
+						</a>
+					</li>
+				{/each}
+			</ul>
+			<a
+				href={resumeHref}
+				target="_blank"
+				rel="noopener"
+				class="mt-4 inline-flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-accent text-sm font-semibold text-on-accent"
+			>
+				<Icon name="download" size={16} />
+				{$t.nav.resume}
+			</a>
+		</div>
 	{/if}
 </header>

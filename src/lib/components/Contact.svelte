@@ -1,7 +1,8 @@
 <script>
-	import { t } from '$lib/i18n/index.js';
-	import { contact } from '$lib/data.js';
 	import { reveal } from '$lib/actions/reveal.js';
+	import { contact } from '$lib/data.js';
+	import { t } from '$lib/i18n/index.js';
+	import Icon from './Icon.svelte';
 
 	let copied = $state('');
 
@@ -10,90 +11,89 @@
 		try {
 			await navigator.clipboard.writeText(value);
 			copied = key;
-			setTimeout(() => (copied = ''), 1500);
+			setTimeout(() => (copied = ''), 1800);
 		} catch {
-			/* clipboard blocked — ignore */
+			/* clipboard blocked: the visible value can still be selected */
 		}
 	}
 
 	const rows = $derived([
 		{
 			key: 'email',
-			label: $t.contact.emailLabel,
+			icon: 'mail',
+			label: $t.contact.email,
 			value: contact.email,
 			href: `mailto:${contact.email}`,
-			copyable: true,
-			action: { label: $t.contact.emailMe, href: `mailto:${contact.email}`, external: false }
+			external: false,
+			copy: contact.email
 		},
 		{
-			key: 'phone',
-			label: $t.contact.phoneLabel,
+			key: 'whatsapp',
+			icon: 'message',
+			label: $t.contact.whatsapp,
 			value: contact.phone,
-			href: `tel:${contact.phone.replace(/\s/g, '')}`,
-			copyable: true,
-			action: { label: `${$t.contact.whatsapp} ↗`, href: contact.whatsapp, external: true }
+			href: contact.whatsapp,
+			external: true,
+			copy: contact.phone
 		},
 		{
 			key: 'linkedin',
-			label: $t.contact.linkedinLabel,
+			icon: 'linkedin',
+			label: $t.contact.linkedin,
 			value: 'in/vmsfigueredo',
 			href: contact.linkedin,
-			copyable: false,
-			action: null
+			external: true,
+			copy: ''
 		}
 	]);
 </script>
 
-<section id="contact" class="px-5 py-20">
-	<div class="mx-auto max-w-5xl">
-		<h2 class="mb-6 flex items-center gap-3 text-2xl font-bold">
-			<span class="text-accent">#</span>{$t.contact.heading}
-			<span class="h-px flex-1 bg-border"></span>
-		</h2>
+<section id="contact" aria-labelledby="contact-title" class="py-20">
+	<div class="mx-auto max-w-6xl px-6">
+		<div
+			use:reveal
+			class="grid items-center gap-10 rounded-3xl bg-band p-7 text-band-fg sm:p-12 md:grid-cols-[1.15fr_0.85fr] lg:p-14 dark:border dark:border-border"
+		>
+			<div>
+				<p class="text-[13px] font-bold tracking-[0.08em] text-accent-ring uppercase dark:text-accent">
+					{$t.contact.kicker}
+				</p>
+				<h2 id="contact-title" class="mt-2 text-3xl font-extrabold tracking-[-0.025em] sm:text-[34px]">
+					{$t.contact.title}
+				</h2>
+				<p class="mt-3 max-w-md leading-relaxed text-band-muted">{$t.contact.lead}</p>
+			</div>
 
-		<div use:reveal class="rounded-lg border border-border bg-bg-soft p-6 sm:p-8">
-			<p class="mb-1 text-sm text-fg-dim">
-				<span class="text-accent">$</span> {$t.contact.cmd}
-			</p>
-			<p class="mb-6 text-fg">{$t.contact.intro}</p>
-
-			<ul class="space-y-3">
+			<ul class="flex flex-col gap-2.5">
 				{#each rows as row (row.key)}
-					<li class="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
-						<span class="w-20 shrink-0 text-fg-dim">{row.label}</span>
-						<span class="text-accent">→</span>
+					<li class="flex gap-2">
 						<a
 							href={row.href}
-							target={row.action?.external || row.key === 'linkedin' ? '_blank' : undefined}
-							rel="noopener"
-							class="text-cyan transition-colors hover:text-accent hover:underline"
+							target={row.external ? '_blank' : undefined}
+							rel={row.external ? 'noopener noreferrer' : undefined}
+							class="flex min-w-0 flex-1 items-center justify-between gap-3 rounded-xl border border-white/12 bg-white/6 px-4 py-3.5 text-[15px] font-medium transition-colors hover:bg-white/12"
 						>
-							{row.value}
+							<span class="flex min-w-0 items-center gap-3">
+								<Icon name={row.icon} size={18} />
+								<span class="truncate">{row.value}</span>
+							</span>
+							<span class="shrink-0 text-xs text-band-muted">{row.label}</span>
 						</a>
-
-						<span class="ml-auto flex items-center gap-2">
-							{#if row.copyable}
-								<button
-									onclick={() => copy(row.value, row.key)}
-									class="rounded border border-border px-2 py-0.5 text-xs text-fg-dim transition-colors hover:border-accent hover:text-accent"
-								>
-									{copied === row.key ? $t.contact.copied : $t.contact.copy}
-								</button>
-							{/if}
-							{#if row.action}
-								<a
-									href={row.action.href}
-									target={row.action.external ? '_blank' : undefined}
-									rel="noopener"
-									class="rounded border border-accent/60 bg-accent/10 px-2 py-0.5 text-xs font-semibold text-accent transition-colors hover:bg-accent hover:text-bg"
-								>
-									{row.action.label}
-								</a>
-							{/if}
-						</span>
+						{#if row.copy}
+							<button
+								type="button"
+								onclick={() => copy(row.copy, row.key)}
+								aria-label="{$t.contact.copy}: {row.label}"
+								title="{$t.contact.copy}: {row.label}"
+								class="grid w-12 shrink-0 place-items-center rounded-xl border border-white/12 bg-white/6 transition-colors hover:bg-white/12"
+							>
+								<Icon name={copied === row.key ? 'check' : 'copy'} size={16} />
+							</button>
+						{/if}
 					</li>
 				{/each}
 			</ul>
+			<p class="sr-only" aria-live="polite">{copied ? $t.contact.copied : ''}</p>
 		</div>
 	</div>
 </section>

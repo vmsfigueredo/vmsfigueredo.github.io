@@ -1,70 +1,67 @@
 <script>
-	import { t, locale } from '$lib/i18n/index.js';
-	import { projects } from '$lib/data.js';
 	import { reveal } from '$lib/actions/reveal.js';
+	import { projects } from '$lib/data.js';
+	import { t, locale } from '$lib/i18n/index.js';
+	import { card, chip } from '$lib/ui.js';
+	import Icon from './Icon.svelte';
+	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<section id="projects" class="px-5 py-20">
-	<div class="mx-auto max-w-5xl">
-		<h2 class="mb-6 flex items-center gap-3 text-2xl font-bold">
-			<span class="text-accent">#</span>{$t.projects.heading}
-			<span class="h-px flex-1 bg-border"></span>
-		</h2>
-
-		<p class="mb-8 text-sm text-fg-dim">
-			<span class="text-accent">$</span> {$t.projects.cmd}
-		</p>
-
-		<div class="grid gap-5 md:grid-cols-2">
-			{#each projects as project (project.name)}
-				<article
-					use:reveal
-					class="flex flex-col rounded-lg border border-border bg-bg-soft p-5 transition-colors hover:border-accent/60 sm:p-6"
-				>
-					<div class="mb-2 flex flex-wrap items-baseline justify-between gap-2">
-						<h3 class="text-lg font-bold text-fg">
-							<span class="text-accent">{'>'}</span>
-							{project.name}
-						</h3>
-						<span class="shrink-0 text-xs text-fg-dim">{project.year}</span>
-					</div>
-
-					<p class="mb-3 text-xs text-cyan">{project.role[$locale]}</p>
-
-					<div class="mb-4 flex items-start gap-4">
-						<p class="flex-1 text-sm leading-relaxed text-fg-dim">
-							{project.summary[$locale]}
+<section id="projects" aria-labelledby="projects-title" class="py-20">
+	<div class="mx-auto max-w-6xl px-6">
+		<SectionHeading
+			id="projects-title"
+			kicker={$t.projects.kicker}
+			title={$t.projects.title}
+			lead={$t.projects.lead}
+			class="mb-10"
+		/>
+		<div class="grid gap-5 md:grid-cols-3">
+			{#each projects as project, index (project.name)}
+				<article use:reveal={{ delay: index * 80 }} class="{card} flex flex-col gap-4 p-7">
+					<div class="flex items-start justify-between gap-3">
+						<div>
+							<p class="text-xs font-semibold tracking-[0.06em] text-muted-2 uppercase">
+								{project.role[$locale]}
+							</p>
+							<h3 class="mt-1 text-lg font-bold tracking-tight text-fg">{project.name}</h3>
+						</div>
+						<p class="text-right">
+							<span class="block text-[26px] leading-none font-bold tracking-tight text-accent">
+								{project.stat.value}
+							</span>
+							<span class="mt-1 block text-[11px] font-medium text-muted-2">
+								{project.stat.label[$locale]}
+							</span>
 						</p>
-						{#if project.stat}
-							<div
-								class="shrink-0 rounded-lg border border-accent/40 bg-accent/5 px-4 py-3 text-center"
-							>
-								<div class="text-2xl font-bold leading-none text-accent">
-									{project.stat.value}
-								</div>
-								<div class="mt-1 text-[10px] uppercase tracking-wide text-fg-dim">
-									{project.stat.label[$locale]}
-								</div>
-							</div>
-						{/if}
 					</div>
 
-					<ul class="mb-4 space-y-1.5">
-						{#each project.highlights[$locale] as hl (hl)}
-							<li class="flex gap-2 text-xs leading-relaxed text-fg-dim">
-								<span class="mt-0.5 shrink-0 text-accent">▹</span>
-								<span>{hl}</span>
-							</li>
+					<p class="text-[15px] leading-relaxed text-muted">{project.plain[$locale]}</p>
+
+					<ul class="flex flex-wrap gap-1.5" aria-label={$t.projects.stackLabel}>
+						{#each project.tags as tag (tag)}
+							<li class={chip}>{tag}</li>
 						{/each}
 					</ul>
 
-					<div class="mt-auto flex flex-wrap gap-1.5 pt-2">
-						{#each project.stack as tech (tech)}
-							<span class="rounded bg-bg-elev px-2 py-0.5 text-xs text-purple">
-								{tech}
-							</span>
-						{/each}
-					</div>
+					<details class="group mt-auto border-t border-border pt-4">
+						<summary
+							class="flex list-none items-center justify-between text-sm font-semibold text-accent hover:text-accent-hover [&::-webkit-details-marker]:hidden"
+						>
+							{$t.projects.details}
+							<Icon name="chevron-down" size={16} class="transition-transform group-open:rotate-180" />
+						</summary>
+						<ul class="mt-3 space-y-2">
+							{#each project.highlights[$locale] as highlight (highlight)}
+								<li class="flex gap-2.5 text-sm leading-relaxed text-muted">
+									<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"
+									></span>
+									<span>{highlight}</span>
+								</li>
+							{/each}
+						</ul>
+						<p class="mt-3 text-xs leading-relaxed text-muted-2">{project.stack.join(' · ')}</p>
+					</details>
 				</article>
 			{/each}
 		</div>

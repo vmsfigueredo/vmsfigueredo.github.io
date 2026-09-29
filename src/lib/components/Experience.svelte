@@ -1,78 +1,105 @@
 <script>
-	import { t, locale } from '$lib/i18n/index.js';
-	import { experience, contact } from '$lib/data.js';
 	import { reveal } from '$lib/actions/reveal.js';
+	import { contact, education, experience } from '$lib/data.js';
+	import { t, locale } from '$lib/i18n/index.js';
+	import Icon from './Icon.svelte';
+	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<section id="experience" class="px-5 py-20">
-	<div class="mx-auto max-w-5xl">
-		<h2 class="mb-6 flex items-center gap-3 text-2xl font-bold">
-			<span class="text-accent">#</span>{$t.experience.heading}
-			<span class="h-px flex-1 bg-border"></span>
-		</h2>
-
-		<p class="mb-8 text-sm text-fg-dim">
-			<span class="text-accent">$</span> {$t.experience.cmd}
-		</p>
-
-		<ol class="space-y-5">
-			{#each experience as job, i (job.company + i)}
-				<li use:reveal>
-					<article
-						class="rounded-lg border border-border bg-bg-soft p-5 transition-colors hover:border-accent/60 sm:p-6"
-					>
-						<div class="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-							<div>
-								<h3 class="text-lg font-bold text-fg">
-									{job.role[$locale]}
-								</h3>
-								<p class="text-sm text-cyan">
-									{job.company}
-									<span class="text-fg-dim">· {job.location[$locale]}</span>
-								</p>
-							</div>
-							<span
-								class="shrink-0 rounded px-2 py-0.5 text-xs font-semibold {job.current
-									? 'bg-accent/15 text-accent'
-									: 'text-fg-dim'}"
-							>
-								{job.current ? `● ${$t.experience.current}` : ''}
+<section
+	id="experience"
+	aria-labelledby="experience-title"
+	class="border-y border-border bg-bg-alt py-20"
+>
+	<div class="mx-auto grid max-w-6xl gap-14 px-6 lg:grid-cols-[1.4fr_1fr]">
+		<div>
+			<SectionHeading
+				id="experience-title"
+				kicker={$t.experience.kicker}
+				title={$t.experience.title}
+				class="mb-10"
+			/>
+			<ol class="ml-2 border-l-2 border-border">
+				{#each experience as job (job.company)}
+					<li use:reveal class="relative pb-9 pl-8 last:pb-0">
+						<span
+							aria-hidden="true"
+							class="absolute top-1.5 -left-[7px] h-3 w-3 rounded-full border-2 {job.current
+								? 'border-accent bg-accent ring-4 ring-accent-soft'
+								: 'border-border-strong bg-bg'}"
+						></span>
+						<div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+							<h3 class="text-[17px] font-bold text-fg">
+								{job.role[$locale]}
+								{#if job.current}
+									<span
+										class="ml-1.5 rounded-full bg-accent-soft px-2 py-0.5 align-middle text-[11px] font-bold text-accent"
+									>
+										{$t.experience.current}
+									</span>
+								{/if}
+							</h3>
+							<span class="text-[13px] font-medium whitespace-nowrap text-muted-2">
 								{job.period[$locale]}
 							</span>
 						</div>
-
-						<ul class="mb-4 space-y-1.5">
-							{#each job.bullets[$locale] as bullet (bullet)}
-								<li class="flex gap-2 text-sm leading-relaxed text-fg-dim">
-									<span class="mt-0.5 shrink-0 text-accent">▹</span>
-									<span>{bullet}</span>
-								</li>
-							{/each}
-						</ul>
-
-						<div class="flex flex-wrap gap-1.5">
-							{#each job.stack as tech (tech)}
-								<span
-									class="rounded bg-bg-elev px-2 py-0.5 text-xs text-purple"
-								>
-									{tech}
-								</span>
-							{/each}
-						</div>
-					</article>
-				</li>
-			{/each}
-		</ol>
-
-		<div class="mt-8 text-center">
+						<p class="font-medium text-muted">{job.company} · {job.location[$locale]}</p>
+						<p class="mt-1.5 max-w-2xl text-[15px] leading-relaxed text-muted">{job.blurb[$locale]}</p>
+					</li>
+				{/each}
+			</ol>
 			<a
 				href={contact.linkedin}
 				target="_blank"
-				rel="noopener"
-				class="inline-flex items-center gap-2 rounded border border-border px-4 py-2 text-sm text-fg-dim transition-colors hover:border-cyan hover:text-cyan"
+				rel="noopener noreferrer"
+				class="mt-9 inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent-hover"
 			>
-				{$t.experience.viewMore} →
+				{$t.experience.linkedin}
+				<Icon name="arrow-right" size={15} />
 			</a>
+		</div>
+
+		<div>
+			<SectionHeading
+				kicker={$t.experience.eduKicker}
+				title={$t.experience.eduTitle}
+				size="md"
+				class="mb-4"
+			/>
+			<ul class="divide-y divide-border border-y border-border">
+				{#each education as edu (edu.degree.en)}
+					<li class="flex justify-between gap-4 py-3 text-sm">
+						<span class="text-fg">
+							{edu.degree[$locale]}
+							<span class="block text-muted-2">{edu.school}</span>
+						</span>
+						<span class="whitespace-nowrap text-muted-2">{edu.year}</span>
+					</li>
+				{/each}
+			</ul>
+
+			<h3 class="mt-8 mb-3 text-sm font-bold text-fg">{$t.experience.langTitle}</h3>
+			<ul class="space-y-2 text-sm">
+				{#each $t.languages as language (language.name)}
+					<li class="flex flex-wrap justify-between gap-x-4">
+						<span class="text-fg">{language.name}</span>
+						<span class="text-muted-2">
+							{language.level}
+							{#if language.cert}
+								·
+								<a
+									href={language.cert}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="font-medium text-accent hover:underline"
+								>
+									{$t.experience.certificate}
+								</a>
+							{/if}
+						</span>
+					</li>
+				{/each}
+			</ul>
 		</div>
 	</div>
 </section>
