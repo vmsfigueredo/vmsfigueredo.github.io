@@ -37,3 +37,4 @@ Regras que valem sempre:
 - O HTML gerado é sanitizado. Scripts e links `javascript:` são removidos.
 - Imagens de capa ficam em `static/images/blog/` e são referenciadas como `/images/blog/arquivo.webp`.
 - Em `npm run dev`, reinicie o servidor depois de criar ou editar um artigo.
+- Para revisar rascunhos no navegador sem publicar, rode `BLOG_DRAFTS=1 npm run dev`. O build do deploy nunca mostra rascunhos.

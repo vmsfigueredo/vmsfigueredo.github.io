@@ -5,6 +5,7 @@ date: "2026-09-18"
 lang: "en"
 tags: ["Multi-tenancy", "Laravel", "Sigebra"]
 translationKey: "sigebra-multi-tenancy"
+draft: true
 ---
 
 Sigebra is a multi-tenant school management system with a built-in Virtual Learning Environment. It has been adopted by six or more schools and spans a Laravel API, a SvelteKit web application, a background worker and a marketing site.

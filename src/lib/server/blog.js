@@ -6,7 +6,8 @@ import { createBlogIndex } from './blog-parser.js';
 /** @typedef {import('./blog-parser.js').DetailedPost} DetailedPost */
 
 const directory = path.resolve(process.cwd(), 'content/posts');
-const index = createBlogIndex({ directory });
+// `BLOG_DRAFTS=1 npm run dev` shows drafts locally for review. Builds never set it.
+const index = createBlogIndex({ directory, includeDrafts: process.env.BLOG_DRAFTS === '1' });
 
 /** @returns {Promise<BlogMetadata[]>} */
 export async function getPosts() {

@@ -5,13 +5,14 @@ date: "2026-09-18"
 lang: "en"
 tags: ["Leadership", "Architecture", "Teams"]
 translationKey: "technical-leadership"
+draft: true
 ---
 
-My path into technical leadership grew from delivery work. At Rehagro, I was promoted to Tech Lead after three months and led five developers. At Join Tecnologia, I was promoted after twelve months, adding technical coordination, code review and stakeholder alignment to my full-stack responsibilities.
+My path into technical leadership grew from delivery work. At a previous company, I was promoted to Tech Lead after twelve months and led five developers. At Join Tecnologia, I was promoted after three months, adding technical coordination, code review and stakeholder alignment to my full-stack responsibilities.
 
 ## Make decisions visible
 
-Architecture becomes useful to a team when its decisions can be explained and reviewed. At Rehagro, that meant defining system architecture, making technical decisions and guiding complex integrations while the team maintained continuous deployment.
+Architecture becomes useful to a team when its decisions can be explained and reviewed. On that team, that meant defining system architecture, making technical decisions and guiding complex integrations while the team maintained continuous deployment.
 
 A visible decision answers a few practical questions:
 
@@ -26,7 +27,7 @@ The written answer does not need to be long. It needs to give reviewers the cont
 
 Code review connects architecture to daily delivery. It is where a broad direction meets an actual API, query, component or deployment change. Reviewing for ownership, maintainability and fit helps a team apply the same decisions consistently.
 
-Mentoring and support are part of that process. Leading five developers at Rehagro included attention to code quality as well as helping the team move work forward.
+Mentoring and support are part of that process. Leading five developers included attention to code quality as well as helping the team move work forward.
 
 ## Keep product and technical language connected
 

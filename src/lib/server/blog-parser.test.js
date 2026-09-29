@@ -185,3 +185,18 @@ test('returns an empty table of contents for articles without headings', () => {
 	assert.deepEqual(post.toc, []);
 	assert.match(post.html, /<p>Only a paragraph/);
 });
+
+test('includes drafts only when explicitly asked, for local review', async () => {
+	const directory = await temporaryPosts({
+		'published.en.md': postSource({ date: '2026-09-10' }),
+		'draft.en.md': postSource({ date: '2026-09-11', draft: true })
+	});
+	const now = new Date('2026-09-18T12:00:00Z');
+
+	const publicIndex = await createBlogIndex({ directory, now });
+	const reviewIndex = await createBlogIndex({ directory, now, includeDrafts: true });
+
+	assert.deepEqual(publicIndex.getPosts().map(({ slug }) => slug), ['published']);
+	assert.deepEqual(reviewIndex.getPosts().map(({ slug }) => slug), ['draft', 'published']);
+	assert.ok(reviewIndex.getPost('en', 'draft'));
+});

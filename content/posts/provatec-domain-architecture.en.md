@@ -5,6 +5,7 @@ date: "2026-09-18"
 lang: "en"
 tags: ["Architecture", "Laravel", "PROVATEC"]
 translationKey: "provatec-domain-architecture"
+draft: true
 ---
 
 PROVATEC is an enrollment platform for a large annual medical board exam. Its work spans candidate registration, configurable forms, online payments and an administrative back office. Treating that as one undivided application would make every change depend on unrelated parts of the system.

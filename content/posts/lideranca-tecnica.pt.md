@@ -5,13 +5,14 @@ date: "2026-09-18"
 lang: "pt"
 tags: ["Liderança", "Arquitetura", "Times"]
 translationKey: "technical-leadership"
+draft: true
 ---
 
-Meu caminho para a liderança técnica nasceu do trabalho de entrega. Na Rehagro, fui promovido a Líder Técnico após três meses e liderei cinco desenvolvedores. Na Join Tecnologia, fui promovido após doze meses e acrescentei coordenação técnica, revisão de código e alinhamento com stakeholders às minhas responsabilidades full stack.
+Meu caminho para a liderança técnica nasceu do trabalho de entrega. Em uma empresa anterior, fui promovido a Líder Técnico após doze meses e liderei cinco desenvolvedores. Na Join Tecnologia, fui promovido após três meses e acrescentei coordenação técnica, revisão de código e alinhamento com stakeholders às minhas responsabilidades full stack.
 
 ## Tornar as decisões visíveis
 
-A arquitetura se torna útil para um time quando suas decisões podem ser explicadas e revisadas. Na Rehagro, isso significou definir a arquitetura dos sistemas, tomar decisões técnicas e orientar integrações complexas enquanto o time mantinha o deploy contínuo.
+A arquitetura se torna útil para um time quando suas decisões podem ser explicadas e revisadas. Naquele time, isso significou definir a arquitetura dos sistemas, tomar decisões técnicas e orientar integrações complexas enquanto o time mantinha o deploy contínuo.
 
 Uma decisão visível responde a perguntas práticas:
 
@@ -26,7 +27,7 @@ A resposta escrita não precisa ser longa. Ela precisa oferecer aos revisores o 
 
 A revisão de código conecta arquitetura à entrega diária. É onde uma direção ampla encontra uma API, consulta, componente ou mudança de deploy concreta. Revisar responsabilidade, manutenção e aderência ajuda o time a aplicar as mesmas decisões de maneira consistente.
 
-Mentoria e suporte fazem parte desse processo. Liderar cinco desenvolvedores na Rehagro incluiu atenção à qualidade do código e ajuda para o time avançar o trabalho.
+Mentoria e suporte fazem parte desse processo. Liderar cinco desenvolvedores incluiu atenção à qualidade do código e ajuda para o time avançar o trabalho.
 
 ## Conectar a linguagem do produto à linguagem técnica
 

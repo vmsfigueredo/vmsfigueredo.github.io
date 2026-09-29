@@ -13,7 +13,15 @@ const config = {
 			strict: true
 		}),
 		// User/org site served at root — no base path.
-		paths: { base: '' }
+		paths: { base: '' },
+		prerender: {
+			// The article route is legitimately empty while every post is a draft.
+			// Any other unseen route is still a build error.
+			handleUnseenRoutes: ({ routes, message }) => {
+				if (routes.every((route) => route === '/blog/[lang]/[slug]')) return;
+				throw new Error(message);
+			}
+		}
 	}
 };
 

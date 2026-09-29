@@ -5,6 +5,7 @@ date: "2026-09-18"
 lang: "pt"
 tags: ["Arquitetura", "Laravel", "PROVATEC"]
 translationKey: "provatec-domain-architecture"
+draft: true
 ---
 
 A PROVATEC é uma plataforma de inscrição para uma grande prova anual de certificação médica. O trabalho envolve cadastro de candidatos, formulários configuráveis, pagamentos online e um back office administrativo. Tratar tudo como uma aplicação sem divisões faria cada mudança depender de partes do sistema que não têm relação entre si.

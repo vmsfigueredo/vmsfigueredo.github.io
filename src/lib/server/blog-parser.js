@@ -257,9 +257,9 @@ function metadata(post) {
 /**
  * Build and validate a deterministic index for one content directory.
  *
- * @param {{directory: string, now?: Date}} options
+ * @param {{directory: string, now?: Date, includeDrafts?: boolean}} options
  */
-export async function createBlogIndex({ directory, now = new Date() }) {
+export async function createBlogIndex({ directory, now = new Date(), includeDrafts = false }) {
 	const files = await markdownFiles(directory);
 	const parsed = await Promise.all(
 		files.map(async (file) => parsePost(await readFile(file, 'utf8'), path.basename(file)))
@@ -280,7 +280,7 @@ export async function createBlogIndex({ directory, now = new Date() }) {
 	}
 
 	const publicPosts = parsed
-		.filter((post) => !post.draft && new Date(`${post.date}T00:00:00.000Z`) <= now)
+		.filter((post) => (includeDrafts || !post.draft) && new Date(`${post.date}T00:00:00.000Z`) <= now)
 		.sort((left, right) => right.date.localeCompare(left.date) || left.lang.localeCompare(right.lang));
 	const postsByPath = new Map(publicPosts.map((post) => [`${post.lang}/${post.slug}`, post]));
 	/** @type {Map<string, Partial<Record<BlogLanguage, string>>>} */
