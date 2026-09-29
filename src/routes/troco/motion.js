@@ -12,3 +12,14 @@ export function inView(node) {
   observer.observe(node);
   return { destroy() { observer.disconnect(); } };
 }
+
+/** Reports whether at least a third of the node is on screen.
+ * @param {HTMLElement} node
+ * @param {(visible: boolean) => void} onChange
+ */
+export function watchVisible(node, onChange) {
+  if (typeof IntersectionObserver === 'undefined') return;
+  const observer = new IntersectionObserver(([entry]) => onChange(entry.isIntersecting), { threshold: 0.35 });
+  observer.observe(node);
+  return { destroy() { observer.disconnect(); } };
+}
