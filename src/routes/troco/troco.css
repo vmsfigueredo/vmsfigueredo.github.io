@@ -78,7 +78,7 @@
 .troco-page .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; height: 88px; }
 .troco-page .wordmark { display: inline-flex; align-items: center; font-size: 31px; line-height: 1; font-weight: 700; letter-spacing: -.06em; }
 .troco-page .wordmark-dot { color: var(--accent-text); }
-.troco-page .brand-symbol { width: 37px; height: 37px; background: var(--accent); border-radius: 10px; color: var(--on-accent); margin-right: 10px; display: grid; place-items: center; }
+.troco-page .brand-symbol { width: 37px; height: 37px; background: linear-gradient(#1c2530, #0d1218); border-radius: 10px; color: var(--accent); margin-right: 10px; display: grid; place-items: center; }
 .troco-page .desktop-nav { display: flex; gap: 28px; margin-left: auto; }
 .troco-page .desktop-nav a { display: flex; gap: 7px; align-items: center; font-size: 12px; min-height: 44px; }
 .troco-page .desktop-nav a:hover, .troco-page .footer-bottom a:hover { color: var(--accent-text); }

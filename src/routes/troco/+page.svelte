@@ -341,6 +341,9 @@
 	<title>{pageCopy.meta.title}</title>
 	<meta name="description" content={pageCopy.meta.description} />
 	<link rel="canonical" href={CANONICAL_URL} />
+	<link rel="icon" type="image/png" sizes="32x32" href="/troco/favicon-32.png" />
+	<link rel="icon" type="image/png" sizes="192x192" href="/troco/favicon-192.png" />
+	<link rel="apple-touch-icon" href="/troco/apple-touch-icon.png" />
 	<meta property="og:title" content={pageCopy.meta.title} />
 	<meta property="og:description" content={pageCopy.meta.description} />
 	<meta property="og:type" content="website" />

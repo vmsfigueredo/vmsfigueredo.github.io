@@ -28,6 +28,7 @@
 
 <svelte:head>
 	{#if !isTroco}
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 	<title>{$t.meta.title}</title>
 	<meta name="description" content={$t.meta.description} />
 	<link rel="canonical" href={SITE} />
