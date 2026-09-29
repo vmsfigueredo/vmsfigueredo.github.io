@@ -5,7 +5,6 @@ date: "2026-09-18"
 lang: "en"
 tags: ["Leadership", "Architecture", "Teams"]
 translationKey: "technical-leadership"
-draft: true
 ---
 
 My path into technical leadership grew from delivery work. At a previous company, I was promoted to Tech Lead after twelve months and led five developers. At Join Tecnologia, I was promoted after three months, adding technical coordination, code review and stakeholder alignment to my full-stack responsibilities.

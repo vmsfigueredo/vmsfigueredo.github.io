@@ -5,7 +5,6 @@ date: "2026-09-18"
 lang: "pt"
 tags: ["Liderança", "Arquitetura", "Times"]
 translationKey: "technical-leadership"
-draft: true
 ---
 
 Meu caminho para a liderança técnica nasceu do trabalho de entrega. Em uma empresa anterior, fui promovido a Líder Técnico após doze meses e liderei cinco desenvolvedores. Na Join Tecnologia, fui promovido após três meses e acrescentei coordenação técnica, revisão de código e alinhamento com stakeholders às minhas responsabilidades full stack.
