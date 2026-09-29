@@ -6,8 +6,12 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import Services from '$lib/components/Services.svelte';
 	import Travel from '$lib/components/Travel.svelte';
+	import Writing from '$lib/components/Writing.svelte';
 	import { contact } from '$lib/data.js';
 	import { t, locale } from '$lib/i18n/index.js';
+
+	/** @type {{ data: { posts: import('$lib/blog/format.js').PostSummary[] } }} */
+	let { data } = $props();
 
 	const SITE = 'https://vitorfigueredo.dev';
 	const person = {
@@ -37,4 +41,5 @@
 <Projects />
 <Experience />
 <Travel />
+<Writing posts={data.posts} />
 <Contact />
