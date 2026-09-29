@@ -8,7 +8,7 @@ export const translations = {
 		meta: {
 			title: 'Vitor Figueredo — Tech Lead & Senior Full Stack Developer',
 			description:
-				'Tech Lead and Senior Full Stack Developer with 10+ years building reliable web systems with Laravel, SvelteKit, React and .NET. Available for remote work.'
+				'Tech Lead and Senior Full Stack Developer with nearly 10 years building reliable web systems with Laravel, SvelteKit, React and .NET. Available for remote work.'
 		},
 		a11y: {
 			skip: 'Skip to content',
@@ -32,11 +32,11 @@ export const translations = {
 			hello: "Hi, I'm Vitor.",
 			titleStart: 'I build systems',
 			titleAccent: 'companies trust.',
-			lead: "For over 10 years I've turned business needs into software that works at scale. Today I lead the engineering team of one of Latin America's largest public-sector oversight platforms.",
+			lead: "For almost 10 years I've turned business needs into software that works at scale. Today I lead the engineering team of one of Latin America's largest public-sector oversight platforms.",
 			ctaProjects: 'See projects',
 			ctaContact: 'Get in touch',
 			trust: [
-				{ value: '10+', label: 'years of experience' },
+				{ value: '9+', label: 'years of experience' },
 				{ value: '2×', label: 'promoted to Tech Lead' },
 				{ value: 'PT · EN', label: 'Portuguese and English' }
 			],
@@ -159,7 +159,7 @@ export const translations = {
 		meta: {
 			title: 'Vitor Figueredo — Tech Lead e Desenvolvedor Full Stack Sênior',
 			description:
-				'Tech Lead e Desenvolvedor Full Stack Sênior com mais de 10 anos construindo sistemas web confiáveis com Laravel, SvelteKit, React e .NET. Disponível para trabalho remoto.'
+				'Tech Lead e Desenvolvedor Full Stack Sênior com quase 10 anos construindo sistemas web confiáveis com Laravel, SvelteKit, React e .NET. Disponível para trabalho remoto.'
 		},
 		a11y: {
 			skip: 'Pular para o conteúdo',
@@ -183,11 +183,11 @@ export const translations = {
 			hello: 'Olá, eu sou o Vitor.',
 			titleStart: 'Construo sistemas',
 			titleAccent: 'que empresas confiam.',
-			lead: 'Há mais de 10 anos transformo necessidades de negócio em software que funciona em escala. Hoje lidero o time técnico de uma das maiores plataformas de fiscalização pública da América Latina.',
+			lead: 'Há quase 10 anos transformo necessidades de negócio em software que funciona em escala. Hoje lidero o time técnico de uma das maiores plataformas de fiscalização pública da América Latina.',
 			ctaProjects: 'Ver projetos',
 			ctaContact: 'Fale comigo',
 			trust: [
-				{ value: '10+', label: 'anos de experiência' },
+				{ value: '9+', label: 'anos de experiência' },
 				{ value: '2×', label: 'promovido a Tech Lead' },
 				{ value: 'PT · EN', label: 'português e inglês' }
 			],
