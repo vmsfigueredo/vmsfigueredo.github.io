@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "postbuild": "node scripts/append-blog-sitemap.js",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+    "test:content": "node --test \"src/**/*.test.js\"",
     "resume": "md-to-pdf resume/resume.en.md && md-to-pdf resume/resume.pt.md && mv resume/resume.en.pdf \"static/Resume - Vitor Figueredo.pdf\" && mv resume/resume.pt.pdf \"static/Curriculo - Vitor Figueredo.pdf\""
   },
   "devDependencies": {
@@ -15,10 +17,15 @@
     "@sveltejs/kit": "^2.8.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^22.20.4",
+    "@types/sanitize-html": "^2.16.2",
+    "marked": "^18.0.14",
+    "sanitize-html": "^2.17.7",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.5.0",
-    "vite": "^5.4.0"
+    "vite": "^5.4.0",
+    "yaml": "^2.9.1"
   }
 }
