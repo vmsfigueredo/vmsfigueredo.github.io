@@ -20,7 +20,8 @@
 				class="mb-10"
 			/>
 			<ol class="ml-2 border-l-2 border-border">
-				{#each experience as job (job.company)}
+				{#each experience as job (job.period.en)}
+					{@const company = typeof job.company === 'string' ? job.company : job.company[$locale]}
 					<li use:reveal class="relative pb-9 pl-8 last:pb-0">
 						<span
 							aria-hidden="true"
@@ -43,7 +44,9 @@
 								{job.period[$locale]}
 							</span>
 						</div>
-						<p class="font-medium text-muted">{job.company} · {job.location[$locale]}</p>
+						<p class="font-medium text-muted">
+							{company}{#if job.location}<span> · {job.location[$locale]}</span>{/if}
+						</p>
 						<p class="mt-1.5 max-w-2xl text-[15px] leading-relaxed text-muted">{job.blurb[$locale]}</p>
 					</li>
 				{/each}

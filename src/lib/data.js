@@ -14,7 +14,7 @@ export const contact = {
 	}
 };
 
-/** @type {Array<{company:string, location:Record<'en'|'pt',string>, period:Record<'en'|'pt',string>, current?:boolean, role:Record<'en'|'pt',string>, blurb:Record<'en'|'pt',string>, stack:string[], bullets:Record<'en'|'pt',string[]>}>} */
+/** @type {Array<{company:Record<'en'|'pt',string>|string, location?:Record<'en'|'pt',string>, period:Record<'en'|'pt',string>, current?:boolean, role:Record<'en'|'pt',string>, blurb:Record<'en'|'pt',string>, stack:string[], bullets:Record<'en'|'pt',string[]>}>} */
 export const experience = [
 	{
 		company: 'Join Tecnologia',
@@ -101,17 +101,43 @@ export const experience = [
 	{
 		company: 'VFTec / Freelance',
 		location: { en: 'Brasília, BR', pt: 'Brasília, BR' },
-		period: { en: '2015 – 2022', pt: '2015 – 2022' },
+		period: { en: '2019 – 2022', pt: '2019 – 2022' },
 		role: { en: 'Full Stack Web Developer', pt: 'Desenvolvedor Web Full Stack' },
 		blurb: {
-			en: 'Seven years delivering custom websites and systems as a freelancer and contractor.',
-			pt: 'Sete anos entregando sites e sistemas sob medida como freelancer e em contratos.'
+			en: 'Custom websites and web systems for clients, as a freelancer and on contracts.',
+			pt: 'Sites e sistemas web sob medida para clientes, como freelancer e em contratos.'
 		},
 		stack: ['PHP', 'JavaScript', 'MySQL'],
 		bullets: {
-			en: ['7 years of freelance and contract full stack web development.'],
-			pt: ['7 anos de desenvolvimento web full stack como freelancer e contratos.']
+			en: ['Freelance and contract full stack web development.'],
+			pt: ['Desenvolvimento web full stack como freelancer e em contratos.']
 		}
+	},
+	{
+		company: {
+			en: 'The Church of Jesus Christ of Latter-day Saints',
+			pt: 'A Igreja de Jesus Cristo dos Santos dos Últimos Dias'
+		},
+		location: { en: 'Curitiba, BR', pt: 'Curitiba, BR' },
+		period: { en: '2017 – 2019', pt: '2017 – 2019' },
+		role: { en: 'Volunteer Missionary', pt: 'Missionário Voluntário' },
+		blurb: {
+			en: 'Two years of volunteer missionary service in Curitiba, Brazil.',
+			pt: 'Dois anos de trabalho missionário voluntário em Curitiba, Brasil.'
+		},
+		stack: [],
+		bullets: { en: [], pt: [] }
+	},
+	{
+		company: 'Freelance',
+		period: { en: '2015 – 2017', pt: '2015 – 2017' },
+		role: { en: 'Web Developer', pt: 'Desenvolvedor Web' },
+		blurb: {
+			en: 'First projects: custom websites and web systems as a freelancer.',
+			pt: 'Primeiros projetos: sites e sistemas web sob medida como freelancer.'
+		},
+		stack: ['PHP', 'JavaScript', 'MySQL'],
+		bullets: { en: [], pt: [] }
 	}
 ];
 
