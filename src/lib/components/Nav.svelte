@@ -31,7 +31,7 @@
 		aria-label={$t.a11y.primaryNav}
 		class="mx-auto flex h-[68px] max-w-6xl items-center justify-between gap-4 px-6"
 	>
-		<a href="/" class="flex items-center gap-2.5 text-[17px] font-bold tracking-tight text-fg">
+		<a href="/" class="flex shrink-0 items-center gap-2.5 text-[17px] font-bold tracking-tight whitespace-nowrap text-fg">
 			<span class="h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
 			Vitor Figueredo
 		</a>

@@ -19,6 +19,8 @@
 	const otherLang = $derived(post.lang === 'pt' ? 'en' : 'pt');
 	const translationUrl = $derived(post.translations[otherLang]);
 	const tocItems = $derived(post.toc.filter((item) => item.level === 2 || item.level === 3));
+	// With a table of contents, header and footer line up with the text column (TOC 220px + gap 64px).
+	const columnClass = $derived(tocItems.length ? 'max-w-5xl lg:pl-[284px]' : 'max-w-3xl');
 	const alternates = $derived(
 		Object.entries(post.translations).map(([lang, href]) => ({
 			hreflang: lang === 'pt' ? 'pt-BR' : 'en',
@@ -73,7 +75,7 @@
 
 {#key post.url}
 	<article lang={post.lang === 'pt' ? 'pt-BR' : 'en'} class="mx-auto max-w-6xl px-6 pb-20">
-		<header class="mx-auto max-w-3xl pt-10 pb-8 sm:pt-14">
+		<header class="mx-auto {columnClass} pt-10 pb-8 sm:pt-14">
 			<a
 				href="/blog/"
 				class="inline-flex items-center gap-1.5 text-sm font-medium text-muted-2 transition-colors hover:text-accent"
@@ -144,7 +146,7 @@
 			</div>
 		</div>
 
-		<footer class="mx-auto mt-14 max-w-3xl">
+		<footer class="mx-auto mt-14 {columnClass}">
 			<div class="flex items-center gap-4 rounded-2xl border border-border bg-bg-alt p-5">
 				<img
 					src="/vitor-avatar.webp"
