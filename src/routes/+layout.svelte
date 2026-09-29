@@ -2,12 +2,19 @@
 	import '../app.css';
 	import { page } from '$app/state';
 	import Nav from '$lib/components/Nav.svelte';
-	import { t, locale } from '$lib/i18n/index.js';
+	import { t, locale, initLocale } from '$lib/i18n/index.js';
+	import { initTheme } from '$lib/theme/index.js';
 
 	/** @type {{ children?: import('svelte').Snippet }} */
 	let { children } = $props();
 
 	const isTroco = $derived(page.url.pathname === '/troco' || page.url.pathname.startsWith('/troco/'));
+
+	$effect(() => {
+		if (isTroco) return;
+		initTheme();
+		initLocale(page.url.pathname);
+	});
 
 	const SITE = 'https://vitorfigueredo.dev';
 	const OG_IMAGE = `${SITE}/og.png`;

@@ -1,28 +1,17 @@
-import { writable } from 'svelte/store';
+import { get, writable } from 'svelte/store';
 import { browser } from '$app/environment';
+import { readStorage, writeStorage } from '$lib/storage.js';
 
 /** @typedef {'system' | 'light' | 'dark'} Theme */
 
 const STORAGE_KEY = 'theme';
 const ORDER = /** @type {Theme[]} */ (['system', 'light', 'dark']);
 
-/** @returns {Theme} */
-function initial() {
-	if (browser) {
-		const saved = localStorage.getItem(STORAGE_KEY);
-		if (saved === 'light' || saved === 'dark' || saved === 'system') return saved;
-	}
-	return 'system';
-}
+/** Starts as "system" everywhere; `initTheme` loads the saved choice after mount. */
+export const theme = writable(/** @type {Theme} */ ('system'));
 
-export const theme = writable(/** @type {Theme} */ (initial()));
-
-/**
- * Resolve a theme to the concrete class and apply it to <html>.
- * @param {Theme} value
- */
+/** @param {Theme} value */
 function apply(value) {
-	if (!browser) return;
 	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	const effective = value === 'system' ? (prefersDark ? 'dark' : 'light') : value;
 	const root = document.documentElement;
@@ -30,23 +19,24 @@ function apply(value) {
 	root.classList.toggle('light', effective === 'light');
 }
 
-if (browser) {
+let started = false;
+
+export function initTheme() {
+	if (!browser || started) return;
+	started = true;
+
+	const saved = readStorage(STORAGE_KEY);
+	if (saved === 'light' || saved === 'dark' || saved === 'system') theme.set(saved);
 	theme.subscribe((value) => {
-		localStorage.setItem(STORAGE_KEY, value);
+		writeStorage(STORAGE_KEY, value);
 		apply(value);
 	});
-
-	// React to OS changes while in "system" mode.
-	const mq = window.matchMedia('(prefers-color-scheme: dark)');
-	mq.addEventListener('change', () => {
-		if (localStorage.getItem(STORAGE_KEY) === 'system') apply('system');
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+		if (get(theme) === 'system') apply('system');
 	});
 }
 
 /** Cycle system → light → dark → system. */
 export function cycleTheme() {
-	theme.update((current) => {
-		const next = ORDER[(ORDER.indexOf(current) + 1) % ORDER.length];
-		return next;
-	});
+	theme.update((current) => ORDER[(ORDER.indexOf(current) + 1) % ORDER.length]);
 }
