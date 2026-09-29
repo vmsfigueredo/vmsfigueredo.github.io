@@ -1,0 +1,99 @@
+<!doctype html>
+<!--
+  Source of static/og.png (1200x630). Regenerate from the repo root with:
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
+    --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,630 \
+    --virtual-time-budget=5000 --screenshot=static/og.png "file://$PWD/scripts/og/og.html"
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			html,
+			body {
+				margin: 0;
+				width: 1200px;
+				height: 630px;
+				overflow: hidden;
+				background: #fff;
+				font-family: Inter, system-ui, sans-serif;
+				color: #0f172a;
+			}
+			.wrap {
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
+				gap: 64px;
+				height: 100%;
+				padding: 0 84px;
+				background: radial-gradient(circle at 88% 12%, #eff6ff, transparent 55%);
+			}
+			.text {
+				flex: 1;
+			}
+			.pill {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+				font-size: 22px;
+				font-weight: 600;
+				color: #2563eb;
+				background: #eff6ff;
+				border: 1px solid #bfdbfe;
+				padding: 10px 20px;
+				border-radius: 999px;
+			}
+			.pill i {
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background: #2563eb;
+			}
+			h1 {
+				font-size: 88px;
+				line-height: 1;
+				letter-spacing: -0.035em;
+				font-weight: 800;
+				margin: 30px 0 22px;
+			}
+			p {
+				font-size: 32px;
+				line-height: 1.35;
+				color: #475569;
+				margin: 0;
+			}
+			p b {
+				color: #2563eb;
+				font-weight: 600;
+			}
+			.url {
+				margin-top: 44px;
+				font-size: 24px;
+				font-weight: 600;
+				color: #64748b;
+			}
+			img {
+				width: 368px;
+				height: 460px;
+				object-fit: cover;
+				border-radius: 32px;
+				box-shadow: 0 28px 70px rgba(15, 23, 42, 0.2);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="text">
+				<span class="pill"><i></i>Tech Lead · Senior Full Stack Developer</span>
+				<h1>Vitor Figueredo</h1>
+				<p>I build systems <b>companies trust.</b><br />Laravel · SvelteKit · React · .NET</p>
+				<div class="url">vitorfigueredo.dev</div>
+			</div>
+			<img src="../../static/vitor.jpg" alt="" />
+		</div>
+	</body>
+</html>
