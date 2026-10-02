@@ -22,7 +22,7 @@
 		en: { code: 'USD', symbol: '$', monthly: 2.99, yearly: 29.99 }
 	};
 	const CAROUSEL_MS = 6000;
-	const EULA_URL = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/';
+	const TERMS_URL = '/troco/terms.html';
 	const currencyCodes = ['USD', 'BRL', 'EUR', 'GBP', 'ARS', 'MXN', 'CAD', 'JPY', 'CLP'];
 	const currencyLabelShape = Object.fromEntries(currencyCodes.map((code) => [code, 'string']));
 	const completeCopyShape = {
@@ -534,5 +534,5 @@
     <div class="shell final-inner enter"><p class="eyebrow">{editorial.footerNote}</p><h2>{editorial.finalTitle[0]}<br /><span>{editorial.finalTitle[1]}</span></h2><div class="final-actions"><a class="button button-dark" href={betaHref} {...betaExternal}>{betaLabel(pageCopy.finalCta.beta)}<Icon name="diagonal" /></a><span>{pageCopy.finalCta.appStoreStatus}</span></div>{#if !TESTFLIGHT_URL}<p class="cta-hint">{pageCopy.cta.hint}</p>{/if}<div class="final-symbol" aria-hidden="true"><Icon name="mark" size={280} /></div></div>
   </section>
 
-  <footer class="troco-footer shell"><div class="footer-top"><a class="wordmark" href="#top" aria-label="Troco"><span class="brand-symbol"><Icon name="mark" size={25} /></span>troco<span class="wordmark-dot">.</span></a><p>{editorial.footerNote}</p><a href="#top" class="back-top" aria-label="Troco"><Icon name="arrow" size={22} /></a></div><div class="footer-bottom"><p>© 2026 Troco. {pageCopy.footer.rights}</p><nav aria-label="Troco"><a href="/troco/privacy.html">{pageCopy.footer.privacy}</a><a href={EULA_URL}>{pageCopy.footer.eula}</a><a href={`mailto:${SUPPORT_EMAIL}`}>{pageCopy.footer.support}</a></nav></div></footer>
+  <footer class="troco-footer shell"><div class="footer-top"><a class="wordmark" href="#top" aria-label="Troco"><span class="brand-symbol"><Icon name="mark" size={25} /></span>troco<span class="wordmark-dot">.</span></a><p>{editorial.footerNote}</p><a href="#top" class="back-top" aria-label="Troco"><Icon name="arrow" size={22} /></a></div><div class="footer-bottom"><p>© 2026 Troco. {pageCopy.footer.rights}</p><nav aria-label="Troco"><a href="/troco/privacy.html">{pageCopy.footer.privacy}</a><a href={TERMS_URL}>{pageCopy.footer.eula}</a><a href={`mailto:${SUPPORT_EMAIL}`}>{pageCopy.footer.support}</a></nav></div></footer>
 </div>

@@ -200,7 +200,7 @@ export const copy = {
 		},
 		footer: {
 			privacy: 'Privacidade',
-			eula: 'EULA da Apple',
+			eula: 'Termos de uso',
 			support: 'Falar com o suporte',
 			rights: 'Todos os direitos reservados.'
 		},
@@ -403,7 +403,7 @@ export const copy = {
 		},
 		footer: {
 			privacy: 'Privacy',
-			eula: 'Apple EULA',
+			eula: 'Terms of Use',
 			support: 'Contact support',
 			rights: 'All rights reserved.'
 		},
@@ -607,7 +607,7 @@ export const copy = {
 		},
 		footer: {
 			privacy: 'Privacidad',
-			eula: 'EULA de Apple',
+			eula: 'Términos de uso',
 			support: 'Contactar con soporte',
 			rights: 'Todos los derechos reservados.'
 		},
