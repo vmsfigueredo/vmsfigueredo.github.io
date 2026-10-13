@@ -42,7 +42,9 @@ export const translations = {
 			],
 			codeAlt: 'Code snippet describing Vitor as a Tech Lead working with Laravel, SvelteKit, React and .NET',
 			nowLabel: 'Currently',
-			nowRole: 'Tech Lead at Join Tecnologia'
+			nowRole: 'Tech Lead at Join Tecnologia',
+			buildingLabel: "What I'm building now?",
+			buildingNote: 'my side project'
 		},
 		services: {
 			kicker: 'How I help',
@@ -193,7 +195,9 @@ export const translations = {
 			],
 			codeAlt: 'Trecho de código descrevendo o Vitor como Tech Lead que trabalha com Laravel, SvelteKit, React e .NET',
 			nowLabel: 'Atualmente',
-			nowRole: 'Tech Lead na Join Tecnologia'
+			nowRole: 'Tech Lead na Join Tecnologia',
+			buildingLabel: 'O que estou construindo agora?',
+			buildingNote: 'meu projeto pessoal'
 		},
 		services: {
 			kicker: 'Como eu ajudo',

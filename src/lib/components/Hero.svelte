@@ -44,21 +44,22 @@
 			</dl>
 		</div>
 
-		<div class="relative mx-auto w-full max-w-sm md:max-w-none">
-			<figure
-				class="overflow-hidden rounded-3xl border border-border bg-surface shadow-photo"
-				aria-label={$t.hero.codeAlt}
-			>
-				<div class="flex items-center gap-2 border-b border-border bg-bg-alt px-4 py-3">
-					<span class="h-3 w-3 rounded-full bg-[#f87171]" aria-hidden="true"></span>
-					<span class="h-3 w-3 rounded-full bg-[#fbbf24]" aria-hidden="true"></span>
-					<span class="h-3 w-3 rounded-full bg-[#34d399]" aria-hidden="true"></span>
-					<span class="ml-2 font-mono text-xs text-muted-2">Vitor.php</span>
-				</div>
-				<pre
-					class="overflow-x-auto px-5 pt-5 pb-20 font-mono text-[11.5px] leading-[1.75] text-fg sm:text-[13px]"
-					aria-hidden="true"><code
-						><span class="k">final class</span> <span class="t">Vitor</span> <span class="k">extends</span> <span class="t">Engineer</span>
+		<div class="mx-auto w-full max-w-sm md:max-w-none">
+			<div class="relative">
+				<figure
+					class="overflow-hidden rounded-3xl border border-border bg-surface shadow-photo"
+					aria-label={$t.hero.codeAlt}
+				>
+					<div class="flex items-center gap-2 border-b border-border bg-bg-alt px-4 py-3">
+						<span class="h-3 w-3 rounded-full bg-[#f87171]" aria-hidden="true"></span>
+						<span class="h-3 w-3 rounded-full bg-[#fbbf24]" aria-hidden="true"></span>
+						<span class="h-3 w-3 rounded-full bg-[#34d399]" aria-hidden="true"></span>
+						<span class="ml-2 font-mono text-xs text-muted-2">Vitor.php</span>
+					</div>
+					<pre
+						class="overflow-x-auto px-5 pt-5 pb-20 font-mono text-[11.5px] leading-[1.75] text-fg sm:text-[13px]"
+						aria-hidden="true"><code
+							><span class="k">final class</span> <span class="t">Vitor</span> <span class="k">extends</span> <span class="t">Engineer</span>
 {'{'}
     <span class="k">public string</span> <span class="v">$role</span> = <span class="s">'Tech Lead'</span>;
     <span class="k">public int</span> <span class="v">$years</span> = <span class="n">9</span>;
@@ -75,22 +76,37 @@
             -&gt;<span class="f">deploy</span>();
     {'}'}
 {'}'}</code
-					></pre>
-			</figure>
-			<div
-				class="absolute bottom-5 -left-3 flex items-center gap-3 rounded-2xl border border-border bg-surface/95 px-4 py-3 shadow-card backdrop-blur sm:-left-7"
-			>
-				<span
-					class="grid h-9 w-9 place-items-center rounded-xl bg-accent-soft text-sm font-bold text-accent"
-					aria-hidden="true">JT</span
+						></pre>
+				</figure>
+				<div
+					class="absolute bottom-5 -left-3 flex items-center gap-3 rounded-2xl border border-border bg-surface/95 px-4 py-3 shadow-card backdrop-blur sm:-left-7"
 				>
-				<span class="leading-tight">
-					<small class="block text-[11px] font-medium tracking-wide text-muted-2 uppercase">
-						{$t.hero.nowLabel}
-					</small>
-					<b class="text-sm font-semibold text-fg">{$t.hero.nowRole}</b>
-				</span>
+					<span
+						class="grid h-9 w-9 place-items-center rounded-xl bg-accent-soft text-sm font-bold text-accent"
+						aria-hidden="true">JT</span
+					>
+					<span class="leading-tight">
+						<small class="block text-[11px] font-medium tracking-wide text-muted-2 uppercase">
+							{$t.hero.nowLabel}
+						</small>
+						<b class="text-sm font-semibold text-fg">{$t.hero.nowRole}</b>
+					</span>
+				</div>
 			</div>
+			<a
+				href="/troco"
+				class="group mt-6 flex items-center justify-between gap-4 rounded-2xl border border-border bg-surface px-5 py-4 transition-colors hover:border-accent-ring hover:bg-accent-soft"
+			>
+				<span class="leading-tight">
+					<small class="block text-[13px] text-muted">{$t.hero.buildingLabel}</small>
+					<b class="text-base font-semibold text-fg">
+						Troco <span class="font-normal text-muted-2">· {$t.hero.buildingNote}</span>
+					</b>
+				</span>
+				<span class="text-accent transition-transform group-hover:translate-x-1">
+					<Icon name="arrow-right" size={18} />
+				</span>
+			</a>
 		</div>
 	</div>
 </section>
