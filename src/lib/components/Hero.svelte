@@ -8,7 +8,7 @@
 	<div
 		class="mx-auto grid max-w-6xl items-center gap-10 px-6 pt-10 pb-16 md:grid-cols-[1.15fr_0.85fr] md:gap-14 md:pt-20 md:pb-20"
 	>
-		<div class="order-2 md:order-1">
+		<div>
 			<p
 				class="inline-flex items-center gap-2 rounded-full border border-accent-ring bg-accent-soft px-3 py-1.5 text-[13px] font-semibold text-accent"
 			>
@@ -44,18 +44,39 @@
 			</dl>
 		</div>
 
-		<div class="relative order-1 mx-auto w-full max-w-[300px] sm:max-w-sm md:order-2 md:max-w-none">
-			<picture>
-				<source srcset="/vitor.webp" type="image/webp" />
-				<img
-					src="/vitor.jpg"
-					alt={$t.hero.photoAlt}
-					width="800"
-					height="1000"
-					fetchpriority="high"
-					class="aspect-[4/5] w-full rounded-3xl bg-bg-alt object-cover shadow-photo"
-				/>
-			</picture>
+		<div class="relative mx-auto w-full max-w-sm md:max-w-none">
+			<figure
+				class="overflow-hidden rounded-3xl border border-border bg-surface shadow-photo"
+				aria-label={$t.hero.codeAlt}
+			>
+				<div class="flex items-center gap-2 border-b border-border bg-bg-alt px-4 py-3">
+					<span class="h-3 w-3 rounded-full bg-[#f87171]" aria-hidden="true"></span>
+					<span class="h-3 w-3 rounded-full bg-[#fbbf24]" aria-hidden="true"></span>
+					<span class="h-3 w-3 rounded-full bg-[#34d399]" aria-hidden="true"></span>
+					<span class="ml-2 font-mono text-xs text-muted-2">Vitor.php</span>
+				</div>
+				<pre
+					class="overflow-x-auto px-5 pt-5 pb-20 font-mono text-[11.5px] leading-[1.75] text-fg sm:text-[13px]"
+					aria-hidden="true"><code
+						><span class="k">final class</span> <span class="t">Vitor</span> <span class="k">extends</span> <span class="t">Engineer</span>
+{'{'}
+    <span class="k">public string</span> <span class="v">$role</span> = <span class="s">'Tech Lead'</span>;
+    <span class="k">public int</span> <span class="v">$years</span> = <span class="n">9</span>;
+
+    <span class="k">public array</span> <span class="v">$stack</span> = [
+        <span class="s">'Laravel'</span>, <span class="s">'SvelteKit'</span>,
+        <span class="s">'React'</span>, <span class="s">'.NET'</span>,
+    ];
+
+    <span class="k">public function</span> <span class="f">ship</span>(<span class="t">Problem</span> <span class="v">$p</span>): <span class="t">System</span>
+    {'{'}
+        <span class="k">return</span> <span class="v">$this</span>-&gt;<span class="f">design</span>(<span class="v">$p</span>)
+            -&gt;<span class="f">build</span>()
+            -&gt;<span class="f">deploy</span>();
+    {'}'}
+{'}'}</code
+					></pre>
+			</figure>
 			<div
 				class="absolute bottom-5 -left-3 flex items-center gap-3 rounded-2xl border border-border bg-surface/95 px-4 py-3 shadow-card backdrop-blur sm:-left-7"
 			>
@@ -73,3 +94,38 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	pre .k {
+		color: var(--color-accent);
+		font-weight: 600;
+	}
+	pre .t {
+		color: var(--color-fg);
+		font-weight: 600;
+	}
+	pre .v {
+		color: #c2410c;
+	}
+	pre .s {
+		color: #15803d;
+	}
+	pre .n {
+		color: #a21caf;
+	}
+	pre .f {
+		color: #7c3aed;
+	}
+	:global(.dark) pre .v {
+		color: #fdba74;
+	}
+	:global(.dark) pre .s {
+		color: #86efac;
+	}
+	:global(.dark) pre .n {
+		color: #f0abfc;
+	}
+	:global(.dark) pre .f {
+		color: #c4b5fd;
+	}
+</style>

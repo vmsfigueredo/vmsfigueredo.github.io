@@ -40,7 +40,7 @@ export const translations = {
 				{ value: '2×', label: 'promoted to Tech Lead' },
 				{ value: 'PT · EN', label: 'Portuguese and English' }
 			],
-			photoAlt: 'Vitor Figueredo smiling on a street in Paris',
+			codeAlt: 'Code snippet describing Vitor as a Tech Lead working with Laravel, SvelteKit, React and .NET',
 			nowLabel: 'Currently',
 			nowRole: 'Tech Lead at Join Tecnologia'
 		},
@@ -191,7 +191,7 @@ export const translations = {
 				{ value: '2×', label: 'promovido a Tech Lead' },
 				{ value: 'PT · EN', label: 'português e inglês' }
 			],
-			photoAlt: 'Vitor Figueredo sorrindo em uma rua de Paris',
+			codeAlt: 'Trecho de código descrevendo o Vitor como Tech Lead que trabalha com Laravel, SvelteKit, React e .NET',
 			nowLabel: 'Atualmente',
 			nowRole: 'Tech Lead na Join Tecnologia'
 		},
