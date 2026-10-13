@@ -22,7 +22,6 @@ export const copy = {
 		nav: {
 			features: 'Recursos',
 			currencies: 'Moedas',
-			pro: 'Pro',
 			privacy: 'Privacidade',
 			beta: 'Pedir acesso beta',
 			languageLabel: 'Idioma'
@@ -136,7 +135,7 @@ export const copy = {
 				['Só no Troco', 'Card perguntando se um lançamento que o banco não mostra deve ser mantido.'],
 				['Conciliado', 'Resumo do mês conciliado, com quantos lançamentos foram conciliados automaticamente e quantos você revisou.']
 			],
-			formats: 'Incluída no Troco Pro. Aceita arquivos OFX, QFX, QBO e CSV.',
+			formats: 'Aceita arquivos OFX, QFX, QBO e CSV.',
 			note: 'Em desenvolvimento. Ainda não está disponível no app.',
 			next: {
 				status: 'Em breve',
@@ -144,18 +143,6 @@ export const copy = {
 				description:
 					'A próxima etapa: tire um print do app do seu banco e o Troco lê uma transação ou a lista inteira. A leitura é feita pelo modelo de IA do próprio iPhone, offline. A imagem não sai do aparelho.'
 			}
-		},
-		pro: {
-			eyebrow: 'Troco Pro',
-			title: 'Mais espaço para a sua organização.',
-			description:
-				'O Pro remove os limites da versão gratuita e habilita o compartilhamento da casa.',
-			monthly: 'R$ 9,99 por mês',
-			yearly: 'R$ 99,99 por ano',
-			trial: 'Teste grátis por 7 dias',
-			recommended: 'Melhor escolha',
-			limits: 'Remova os limites da versão gratuita',
-			sharing: 'Habilite o compartilhamento do livro-caixa da casa'
 		},
 		privacy: {
 			eyebrow: 'Privacidade por padrão',
@@ -232,7 +219,6 @@ export const copy = {
 		nav: {
 			features: 'Features',
 			currencies: 'Currencies',
-			pro: 'Pro',
 			privacy: 'Privacy',
 			beta: 'Request beta access',
 			languageLabel: 'Language'
@@ -346,7 +332,7 @@ export const copy = {
 				['Only in Troco', 'Card asking whether to keep an entry that the bank does not show.'],
 				['Reconciled', 'Reconciled month summary, with how many entries matched automatically and how many you reviewed.']
 			],
-			formats: 'Included with Troco Pro. Accepts OFX, QFX, QBO, and CSV files.',
+			formats: 'Accepts OFX, QFX, QBO, and CSV files.',
 			note: 'In development. Not yet available in the app.',
 			next: {
 				status: 'Coming soon',
@@ -354,17 +340,6 @@ export const copy = {
 				description:
 					'Next up: take a screenshot of your banking app and Troco reads one transaction or the whole list. The reading runs on the iPhone\'s own AI model, offline. The image never leaves your device.'
 			}
-		},
-		pro: {
-			eyebrow: 'Troco Pro',
-			title: 'More room for your financial organization.',
-			description: 'Pro removes free-plan limits and enables household sharing.',
-			monthly: '$2.99 per month',
-			yearly: '$29.99 per year',
-			trial: '7-day free trial',
-			recommended: 'Best value',
-			limits: 'Remove free-plan limits',
-			sharing: 'Enable household-ledger sharing'
 		},
 		privacy: {
 			eyebrow: 'Privacy by default',
@@ -441,7 +416,6 @@ export const copy = {
 		nav: {
 			features: 'Funciones',
 			currencies: 'Monedas',
-			pro: 'Pro',
 			privacy: 'Privacidad',
 			beta: 'Solicitar acceso beta',
 			languageLabel: 'Idioma'
@@ -555,7 +529,7 @@ export const copy = {
 				['Solo en Troco', 'Tarjeta que pregunta si se mantiene un movimiento que el banco no muestra.'],
 				['Conciliado', 'Resumen del mes conciliado, con cuántos movimientos se conciliaron automáticamente y cuántos revisaste.']
 			],
-			formats: 'Incluida en Troco Pro. Acepta archivos OFX, QFX, QBO y CSV.',
+			formats: 'Acepta archivos OFX, QFX, QBO y CSV.',
 			note: 'En desarrollo. Todavía no está disponible en la app.',
 			next: {
 				status: 'Próximamente',
@@ -563,18 +537,6 @@ export const copy = {
 				description:
 					'Lo siguiente: haz una captura de la app de tu banco y Troco lee un movimiento o la lista completa. La lectura la hace el modelo de IA del propio iPhone, sin conexión. La imagen no sale del dispositivo.'
 			}
-		},
-		pro: {
-			eyebrow: 'Troco Pro',
-			title: 'Más espacio para organizar tus finanzas.',
-			description:
-				'Pro elimina los límites de la versión gratuita y activa el uso compartido del hogar.',
-			monthly: 'R$ 9,99 al mes',
-			yearly: 'R$ 99,99 al año',
-			trial: 'Prueba gratis durante 7 días',
-			recommended: 'Mejor opción',
-			limits: 'Elimina los límites de la versión gratuita',
-			sharing: 'Activa el uso compartido del libro mayor del hogar'
 		},
 		privacy: {
 			eyebrow: 'Privacidad por defecto',

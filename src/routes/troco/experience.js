@@ -16,15 +16,13 @@ export const experience = {
     currencyNote: 'Valores originais preservados. Saldo consolidado na moeda-base que você escolher.',
     principles: ['Sem anúncios.', 'Sem rastreamento.', 'Simplesmente seu.'],
     privateLabel: 'Seus dados ficam com você', cloudLabel: 'Sincronização com iCloud',
-    proTitle: 'Seus planos\nmerecem espaço.', month: 'Mensal', year: 'Anual', perMonth: '/ mês', perYear: '/ ano',
-    annualSaving: 'Ganhe 2 meses no plano anual', priceNote: 'Preços no Brasil. Disponível no lançamento.',
     finalTitle: ['Seu próximo passo.', 'Em qualquer moeda.'],
     footerNote: 'Finanças pessoais, sem fronteiras.',
     faqTitle: 'Antes de começar.', faqLabel: 'Perguntas frequentes',
     faqs: [
       ['Já posso baixar o Troco?', 'O Troco está chegando à App Store. Até lá, o beta público está aberto no TestFlight: é só tocar em "Acessar o beta público".'],
-      ['O Troco conecta à minha conta bancária?', 'Não. Os lançamentos são manuais: você organiza receitas, despesas, transferências, contas e cartões no app. A importação de extratos, no Troco Pro, traz movimentações de arquivos OFX, QFX ou CSV que você escolher.'],
-      ['Como funciona o compartilhamento?', 'Com o Troco Pro, você pode compartilhar o livro-caixa da casa. A pessoa convidada pode ler e editar todo o livro-caixa compartilhado.'],
+      ['O Troco conecta à minha conta bancária?', 'Não. Os lançamentos são manuais: você organiza receitas, despesas, transferências, contas e cartões no app. A importação de extratos traz movimentações de arquivos OFX, QFX ou CSV que você escolher.'],
+      ['Como funciona o compartilhamento?', 'Você pode compartilhar o livro-caixa da casa. A pessoa convidada pode ler e editar todo o livro-caixa compartilhado.'],
       ['Preciso criar uma conta?', 'O Troco não tem cadastro próprio. A sincronização entre dispositivos usa sua conta do iCloud, com os serviços da Apple.'],
       ['O Troco usa inteligência artificial?', 'Sim, a do próprio iPhone. Com Apple Intelligence, o modelo do aparelho ajuda a entender o extrato do seu banco, e a leitura acontece no iPhone. A próxima etapa é transformar prints do app do banco em lançamentos, também offline.']
     ]
@@ -45,15 +43,13 @@ export const experience = {
     currencyNote: 'Original values preserved. A consolidated balance in the base currency you choose.',
     principles: ['No ads.', 'No tracking.', 'Simply yours.'],
     privateLabel: 'Your data stays with you', cloudLabel: 'Sync with iCloud',
-    proTitle: 'Give your plans\nroom to grow.', month: 'Monthly', year: 'Yearly', perMonth: '/ month', perYear: '/ year',
-    annualSaving: 'Get 2 months free with the yearly plan', priceNote: 'Prices in US dollars. The App Store sets the final price for your country. Available at launch.',
     finalTitle: ['Your next step.', 'In any currency.'],
     footerNote: 'Personal finance without borders.',
     faqTitle: 'Before you begin.', faqLabel: 'Frequently asked questions',
     faqs: [
       ['Can I download Troco yet?', 'Troco is coming to the App Store. Until then, the public beta is open on TestFlight: just tap "Join the public beta".'],
-      ['Does Troco connect to my bank?', 'No. Entries are manual: you organize income, expenses, transfers, accounts, and cards in the app. Statement import, in Troco Pro, brings in transactions from OFX, QFX, or CSV files you choose.'],
-      ['How does sharing work?', 'Troco Pro lets you share your household ledger. An invited person can read and edit the entire shared ledger.'],
+      ['Does Troco connect to my bank?', 'No. Entries are manual: you organize income, expenses, transfers, accounts, and cards in the app. Statement import brings in transactions from OFX, QFX, or CSV files you choose.'],
+      ['How does sharing work?', 'Troco lets you share your household ledger. An invited person can read and edit the entire shared ledger.'],
       ['Do I need to create an account?', 'Troco has no proprietary sign-up. Device synchronization uses your iCloud account through Apple services.'],
       ['Does Troco use artificial intelligence?', "Yes, the iPhone's own. With Apple Intelligence, the on-device model helps read your bank statement, and the reading happens on the iPhone. Next, screenshots of your banking app will become entries, offline as well."]
     ]
@@ -74,15 +70,13 @@ export const experience = {
     currencyNote: 'Valores originales preservados. Saldo consolidado en la moneda base que elijas.',
     principles: ['Sin anuncios.', 'Sin rastreo.', 'Simplemente tuyo.'],
     privateLabel: 'Tus datos se quedan contigo', cloudLabel: 'Sincronización con iCloud',
-    proTitle: 'Tus planes\nmerecen espacio.', month: 'Mensual', year: 'Anual', perMonth: '/ mes', perYear: '/ año',
-    annualSaving: 'Gana 2 meses con el plan anual', priceNote: 'Precios en Brasil. Disponible en el lanzamiento.',
     finalTitle: ['Tu próximo paso.', 'En cualquier moneda.'],
     footerNote: 'Finanzas personales sin fronteras.',
     faqTitle: 'Antes de empezar.', faqLabel: 'Preguntas frecuentes',
     faqs: [
       ['¿Ya puedo descargar Troco?', 'Troco llegará pronto a la App Store. Mientras tanto, la beta pública está abierta en TestFlight: solo toca "Acceder a la beta pública".'],
-      ['¿Troco se conecta a mi banco?', 'No. Los registros son manuales: tú organizas ingresos, gastos, transferencias, cuentas y tarjetas en la app. La importación de extractos, en Troco Pro, trae movimientos de archivos OFX, QFX o CSV que elijas.'],
-      ['¿Cómo funciona el uso compartido?', 'Troco Pro permite compartir el libro de cuentas del hogar. La persona invitada puede leer y editar todo el libro compartido.'],
+      ['¿Troco se conecta a mi banco?', 'No. Los registros son manuales: tú organizas ingresos, gastos, transferencias, cuentas y tarjetas en la app. La importación de extractos trae movimientos de archivos OFX, QFX o CSV que elijas.'],
+      ['¿Cómo funciona el uso compartido?', 'Troco permite compartir el libro de cuentas del hogar. La persona invitada puede leer y editar todo el libro compartido.'],
       ['¿Necesito crear una cuenta?', 'Troco no tiene un registro propio. La sincronización entre dispositivos usa tu cuenta de iCloud mediante servicios de Apple.'],
       ['¿Troco usa inteligencia artificial?', 'Sí, la del propio iPhone. Con Apple Intelligence, el modelo del dispositivo ayuda a entender el extracto de tu banco, y la lectura ocurre en el iPhone. Lo siguiente es convertir capturas de la app del banco en movimientos, también sin conexión.']
     ]

@@ -201,26 +201,6 @@
 .troco-page .privacy-detail .text-link { border-bottom: 1px solid var(--ink); }
 .troco-page .privacy-bottom { display: flex; gap: 40px; margin-top: 52px; padding-top: 25px; border-top: 1px solid var(--line); }
 .troco-page .privacy-bottom span { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--muted); }
-.troco-page .pro-section { }
-.troco-page .pro-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 110px; align-items: center; }
-.troco-page .pro-copy h2 { margin-top: 27px; }
-.troco-page .pro-copy > p:not(.eyebrow) { color: var(--muted); max-width: 340px; margin-top: 24px; font-size: 14px; }
-.troco-page .pro-copy .check-list { margin-top: 32px; }
-.troco-page .price-card { padding: 35px 40px 28px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-hero); }
-.troco-page .price-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; }
-.troco-page .pro-wordmark { font-size: 25px; font-weight: 600; letter-spacing: -.055em; display: flex; align-items: center; gap: 7px; }
-.troco-page .pro-wordmark span { background: var(--accent); color: var(--on-accent); padding: 3px 7px; font-size: 10px; border-radius: 6px; letter-spacing: .02em; font-weight: 600; }
-.troco-page .billing-switch { display: flex; background: var(--raised); padding: 4px; border-radius: var(--radius-control); }
-.troco-page .billing-switch button { width: 50%; border: 0; border-radius: 10px; background: transparent; font-size: 12px; min-height: 40px; color: var(--muted); }
-.troco-page .billing-switch button.active { background: var(--surface); color: var(--ink); box-shadow: 0 1px 4px #00000014; }
-.troco-page .price-value { display: flex; align-items: baseline; gap: 9px; margin-top: 23px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.troco-page .price-value > span { font-size: 13px; color: var(--muted); }
-.troco-page .price-value strong { font-size: 67px; letter-spacing: -.06em; line-height: 1.2; font-weight: 500; }
-.troco-page .price-value strong span { font-size: 36px; }
-.troco-page .price-saving { font-size: 12px; font-weight: 500; color: var(--accent-text); margin-top: 6px; }
-.troco-page .price-card .button { display: flex; justify-content: space-between; margin-top: 28px; }
-.troco-page .trial-note { text-align: center; font-size: 11px; margin-top: 13px; }
-.troco-page .price-note { text-align: center; font-size: 9px; margin-top: 22px; color: var(--muted); }
 .troco-page .faq-section { display: grid; grid-template-columns: 1fr 1.3fr; gap: 70px; }
 .troco-page .faq-heading h2 { margin-top: 23px; font-size: 42px; }
 .troco-page .faq-list { border-top: 1px solid var(--line); }
@@ -315,8 +295,7 @@
   .troco-page .intelligence { gap: 40px; }
   .troco-page .currency-layout { gap: 32px; padding: 56px 40px; }
   .troco-page .final-inner { padding: 64px 40px; }
-  .troco-page .privacy-layout, .troco-page .pro-layout { gap: 60px; }
-  .troco-page .price-card { padding-inline: 30px; }
+  .troco-page .privacy-layout { gap: 60px; }
 }
 @media (max-width: 800px) {
   .troco-page .shell { width: calc(100% - 48px); }
@@ -357,12 +336,6 @@
   .troco-page .privacy-arch > div + div { border-top: 1px solid var(--line); }
   .troco-page .intelligence { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; padding: 30px 24px; }
   .troco-page .privacy-title { font-size: 38px; }
-  .troco-page .pro-layout { gap: 35px; }
-  .troco-page .price-card { padding: 25px; }
-  .troco-page .price-value { gap: 6px; }
-  .troco-page .price-value strong { font-size: 54px; }
-  .troco-page .price-value > span { font-size: 11px; }
-  .troco-page .price-value strong span { font-size: 30px; }
   .troco-page .faq-section { grid-template-columns: 1fr; gap: 35px; }
   .troco-page .final-symbol { right: -100px; }
   .troco-page .final-inner { padding: 56px 32px; }
@@ -437,10 +410,6 @@
   .troco-page .intelligence h3 { font-size: 30px; }
   .troco-page .privacy-bottom { margin-top: 30px; gap: 15px; flex-wrap: wrap; }
   .troco-page .privacy-bottom span { font-size: 10px; }
-  .troco-page .pro-layout { grid-template-columns: 1fr; gap: 32px; }
-  .troco-page .price-card { padding: 27px; }
-  .troco-page .price-value strong { font-size: 68px; }
-  .troco-page .price-value strong span { font-size: 36px; }
   .troco-page .faq-heading h2 { font-size: 36px; }
   .troco-page .faq-list summary { font-size: 13px; }
   .troco-page .final-inner { padding: 44px 22px; }

@@ -14,13 +14,6 @@
 	const CANONICAL_URL = `${SITE}/troco`;
 	const OG_IMAGE = `${SITE}/troco/og.png`;
 	const SUPPORT_EMAIL = 'me@vitorfigueredo.dev';
-	// Base price is BRL; English shows US dollars. Keep these in sync with App Store Connect.
-	const BRL_PRICE = { code: 'BRL', symbol: 'R$', monthly: 9.99, yearly: 99.99 };
-	const PRICES = {
-		pt: BRL_PRICE,
-		es: BRL_PRICE,
-		en: { code: 'USD', symbol: '$', monthly: 2.99, yearly: 29.99 }
-	};
 	const CAROUSEL_MS = 6000;
 	const TERMS_URL = '/troco/terms.html';
 	const currencyCodes = ['USD', 'BRL', 'EUR', 'GBP', 'ARS', 'MXN', 'CAD', 'JPY', 'CLP'];
@@ -30,7 +23,6 @@
 		nav: {
 			features: 'string',
 			currencies: 'string',
-			pro: 'string',
 			privacy: 'string',
 			beta: 'string',
 			languageLabel: 'string'
@@ -94,17 +86,6 @@
 			formats: 'string',
 			note: 'string',
 			next: { status: 'string', title: 'string', description: 'string' }
-		},
-		pro: {
-			eyebrow: 'string',
-			title: 'string',
-			description: 'string',
-			monthly: 'string',
-			yearly: 'string',
-			trial: 'string',
-			recommended: 'string',
-			limits: 'string',
-			sharing: 'string'
 		},
 		privacy: {
 			eyebrow: 'string',
@@ -213,7 +194,6 @@
 	let carouselVisible = $state(false);
 	let reducedMotion = $state(false);
 	let selectedCurrency = $state(1);
-	let annual = $state(true);
 	let menuOpen = $state(false);
 	let motionPaused = $state(false);
 	let autoplay = $derived(!carouselHover && !carouselFocus && carouselVisible && !reducedMotion && !motionPaused);
@@ -221,11 +201,6 @@
 	let productCopy = $derived(pageCopy[/** @type {ProductKey} */ (activeProduct.key)]);
 	let activeCurrency = $derived(currencies[selectedCurrency]);
 	let importSoon = $derived(importFeature.status === 'soon');
-	let price = $derived(PRICES[language]);
-	let priceValue = $derived(annual ? price.yearly : price.monthly);
-	let priceInteger = $derived(String(Math.trunc(priceValue)));
-	let decimalSeparator = $derived(/** @type {string} */ (language) === 'en' ? '.' : ',');
-	let priceDecimal = $derived(decimalSeparator + priceValue.toFixed(2).split('.')[1]);
 	let betaMailto = $derived(
 		`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(pageCopy.mail.subject)}&body=${encodeURIComponent(pageCopy.mail.body)}`
 	);
@@ -247,21 +222,7 @@
 				'@type': 'Person',
 				name: 'Vitor Figueredo',
 				url: SITE
-			},
-			offers: [
-				{
-					'@type': 'Offer',
-					name: pageCopy.pro.monthly,
-					price: price.monthly.toFixed(2),
-					priceCurrency: price.code
-				},
-				{
-					'@type': 'Offer',
-					name: pageCopy.pro.yearly,
-					price: price.yearly.toFixed(2),
-					priceCurrency: price.code
-				}
-			]
+			}
 		}).replace(/</g, '\\u003c')
 	);
 
@@ -375,7 +336,6 @@
         <a href="#features">{pageCopy.nav.features}</a>
         <a href="#currencies">{pageCopy.nav.currencies}</a>
         <a href="#privacy">{pageCopy.nav.privacy}</a>
-        <a href="#pro">Troco Pro <span class="tiny-dot"></span></a>
       </nav>
       <div class="nav-actions">
         <div class="language-picker" role="group" aria-label={pageCopy.nav.languageLabel}>
@@ -391,7 +351,6 @@
       <a href="#features" onclick={() => menuOpen = false}>{pageCopy.nav.features}<Icon /></a>
       <a href="#currencies" onclick={() => menuOpen = false}>{pageCopy.nav.currencies}<Icon /></a>
       <a href="#privacy" onclick={() => menuOpen = false}>{pageCopy.nav.privacy}<Icon /></a>
-      <a href="#pro" onclick={() => menuOpen = false}>Troco Pro<Icon /></a>
       <a href={betaHref} {...betaExternal} onclick={() => menuOpen = false}>{betaLabel(pageCopy.nav.beta)}<Icon name="diagonal" /></a>
     </nav>
   </header>
@@ -520,19 +479,6 @@
     <div class="privacy-bottom enter"><span><Icon name="lock" size={18} />{editorial.privateLabel}</span><span><Icon name="cloud" size={20} />{editorial.cloudLabel}</span></div>
   </section>
 
-  <section id="pro" class="pro-section section-space" use:inView>
-    <div class="shell pro-layout">
-      <div class="pro-copy enter"><p class="eyebrow"><span class="section-number">05 /</span>Troco Pro</p><h2>{editorial.proTitle}</h2><p>{pageCopy.pro.description}</p><ul class="check-list"><li><Icon name="check" size={18} />{pageCopy.pro.limits}</li><li><Icon name="check" size={18} />{pageCopy.pro.sharing}</li></ul></div>
-      <div class="price-card enter">
-        <div class="price-top"><span class="pro-wordmark">troco<span>pro</span></span><Icon name="diagonal" size={25} /></div>
-        <div class="billing-switch" role="group" aria-label="Troco Pro"><button type="button" class:active={!annual} aria-pressed={!annual} onclick={() => annual = false}>{editorial.month}</button><button type="button" class:active={annual} aria-pressed={annual} onclick={() => annual = true}>{editorial.year}</button></div>
-        <div class="price-value" aria-live="polite" aria-atomic="true"><span>{price.symbol}</span><strong>{priceInteger}<span>{priceDecimal}</span></strong><span>{annual ? editorial.perYear : editorial.perMonth}</span></div>
-        <p class="price-saving">{annual ? editorial.annualSaving : pageCopy.pro.trial}</p>
-        <a class="button button-dark" href={betaHref} {...betaExternal}>{betaLabel(pageCopy.hero.beta)}<Icon name="diagonal" /></a>
-        <p class="trial-note">{pageCopy.pro.trial}</p><p class="price-note">{editorial.priceNote}</p>
-      </div>
-    </div>
-  </section>
 
   <section class="faq-section shell section-space" use:inView>
     <div class="faq-heading enter"><p class="eyebrow">{editorial.faqLabel}</p><h2>{editorial.faqTitle}</h2></div>
