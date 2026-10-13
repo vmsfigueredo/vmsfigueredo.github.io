@@ -16,7 +16,8 @@
     phone: 'M7 2h10v20H7zM10 5h4m-3 14h2', calendar: 'M4 6h16v15H4zM4 10h16M8 3v4m8-4v4',
     plus: 'M12 5v14M5 12h14', menu: 'M4 8h16M4 16h16', close: 'm6 6 12 12M6 18 18 6',
     pause: 'M9 5v14M15 5v14', play: 'm8 4 12 8-12 8V4',
-    mark: 'M4 8h14l-4-4M20 16H6l4 4'
+    mark: 'M4 8h14l-4-4M20 16H6l4 4',
+    camera: 'M4 8h3l2-3h6l2 3h3v11H4V8Zm8 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z'
   };
 </script>
 

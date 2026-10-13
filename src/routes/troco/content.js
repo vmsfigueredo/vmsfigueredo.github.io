@@ -78,11 +78,11 @@ export const copy = {
 			eyebrow: 'Orçamentos do mês',
 			title: 'Veja para onde o dinheiro vai.',
 			description:
-				'Próximos lançamentos, orçamentos por categoria e quanto ainda resta em cada um, direto no resumo do mês.',
+				'Quanto resta em todos os orçamentos do mês e em cada grupo de categorias, com o que já foi gasto logo abaixo.',
 			highlights: [
-				'Próximos lançamentos sempre à vista',
-				'Orçamentos por categoria, com o valor restante',
-				'Um destaque da categoria que mais pesou no mês'
+				'Quanto ainda resta no mês, em um número só',
+				'Orçamentos por grupo de categorias, com o valor restante',
+				'O que foi gasto em cada orçamento, a um toque'
 			]
 		},
 		transactions: {
@@ -97,14 +97,14 @@ export const copy = {
 			]
 		},
 		planning: {
-			eyebrow: 'Tetos e planejamento',
-			title: 'Planeje o mês com espaço para a vida real.',
+			eyebrow: 'Agenda do mês',
+			title: 'Tudo o que vence, antes de vencer.',
 			description:
-				'Defina orçamentos, acompanhe o que resta e compare sua renda com os gastos ao longo do mês.',
+				'Contas fixas, recorrências e faturas de cartão em uma agenda só. O que venceu aparece primeiro, com Confirmar e Adiar à mão.',
 			highlights: [
-				'Tetos por categoria, em valor ou em percentual da renda',
-				'Lançamentos recorrentes e futuros no planejamento do mês',
-				'Renda do mês ao lado do quanto já foi usado'
+				'Recorrências e lançamentos futuros no mesmo lugar',
+				'Faturas de cada cartão, com o fechamento e o vencimento',
+				'Confirme ou adie um compromisso sem sair da lista'
 			]
 		},
 		wallet: {
@@ -137,7 +137,13 @@ export const copy = {
 				['Conciliado', 'Resumo do mês conciliado, com quantos lançamentos foram conciliados automaticamente e quantos você revisou.']
 			],
 			formats: 'Incluída no Troco Pro. Aceita arquivos OFX, QFX, QBO e CSV.',
-			note: 'Em desenvolvimento. Ainda não está disponível no app.'
+			note: 'Em desenvolvimento. Ainda não está disponível no app.',
+			next: {
+				status: 'Em breve',
+				title: 'Um print do banco vira lançamento.',
+				description:
+					'A próxima etapa: tire um print do app do seu banco e o Troco lê uma transação ou a lista inteira. A leitura é feita pelo modelo de IA do próprio iPhone, offline. A imagem não sai do aparelho.'
+			}
 		},
 		pro: {
 			eyebrow: 'Troco Pro',
@@ -174,27 +180,27 @@ export const copy = {
 			eula: 'Contrato de licença padrão da Apple'
 		},
 		intelligence: {
-			eyebrow: 'Em desenvolvimento',
+			eyebrow: 'Já no app',
 			title: 'Inteligente sem ser intrometido.',
 			description:
-				'Estamos criando recursos inteligentes com as tecnologias on-device da Apple, sempre que fizer sentido. Eles ajudam o Troco a entender o que você registra, sem transformar suas finanças em matéria-prima para publicidade ou rastreamento.',
+				'O Troco usa o modelo de IA do próprio iPhone para entender o que chega até ele, sem transformar suas finanças em matéria-prima para publicidade ou rastreamento.',
 			items: [
-				'Interpretar entradas',
-				'Organizar informações',
-				'Categorizar lançamentos',
-				'Consultar seus dados em linguagem natural'
+				'Entende o extrato de bancos diferentes',
+				'Separa quem recebeu da descrição',
+				'Sugere a categoria pelo nome',
+				'Aprende com as suas decisões'
 			],
 			note:
 				'Quando um recurso usa o modelo da Apple no aparelho, o processamento acontece localmente. iCloud, App Store e cotações de câmbio seguem como descrito na política de privacidade.'
 		},
 		cta: {
-			join: 'Testar o Troco',
+			join: 'Acessar o beta público',
 			hint: 'Sem cadastro: envie o e-mail do seu Apple ID e respondemos com o convite.'
 		},
 		finalCta: {
 			title: 'Uma relação mais clara com o seu dinheiro começa aqui.',
 			description:
-				'Troco está chegando à App Store. Se quiser experimentar antes, peça acesso beta por e-mail.',
+				'Troco está chegando à App Store. Enquanto isso, o beta público está aberto no TestFlight.',
 			appStoreStatus: 'Em breve na App Store',
 			beta: 'Pedir acesso beta'
 		},
@@ -207,9 +213,9 @@ export const copy = {
 		screenshotAlt: {
 			onboarding: 'Tela de boas-vindas do Troco sobre uma paisagem de montanhas.',
 			overview: 'Resumo financeiro com saldo consolidado, moedas e fluxo mensal.',
-			budgets: 'Resumo de orçamentos com categorias e valores restantes.',
+			budgets: 'Orçamentos do mês com o valor restante em cada grupo de categorias.',
 			transactions: 'Lista de transações com valores originais e convertidos.',
-			planning: 'Planejamento mensal com renda, gastos e recorrências.',
+			planning: 'Agenda do mês com recorrências, faturas de cartão e compromissos vencidos.',
 			wallet: 'Carteira com contas e cartões organizados por moeda.'
 		},
 		mail: {
@@ -282,11 +288,11 @@ export const copy = {
 			eyebrow: 'Monthly budgets',
 			title: 'See where your money goes.',
 			description:
-				'Upcoming entries, category budgets, and how much is left in each one, right in the monthly overview.',
+				'How much is left across every budget this month and in each category group, with what you spent right below.',
 			highlights: [
-				'Upcoming entries always in view',
-				'Category budgets with the remaining amount',
-				'A highlight of the category that weighed most this month'
+				'What is left this month, in a single number',
+				'Budgets by category group, with the remaining amount',
+				'What went into each budget, one tap away'
 			]
 		},
 		transactions: {
@@ -301,14 +307,14 @@ export const copy = {
 			]
 		},
 		planning: {
-			eyebrow: 'Limits and planning',
-			title: 'Plan the month with room for real life.',
+			eyebrow: 'Monthly agenda',
+			title: 'Everything that is due, before it is due.',
 			description:
-				'Set budgets, track what remains, and compare your income with spending throughout the month.',
+				'Fixed bills, recurring entries, and card statements in one agenda. Anything overdue comes first, with Confirm and Postpone at hand.',
 			highlights: [
-				'Category limits, as an amount or as a share of income',
-				'Recurring and future entries in the monthly plan',
-				'Monthly income next to how much has been used'
+				'Recurring and future entries in one place',
+				'Each card statement, with its closing and due dates',
+				'Confirm or postpone a commitment without leaving the list'
 			]
 		},
 		wallet: {
@@ -341,7 +347,13 @@ export const copy = {
 				['Reconciled', 'Reconciled month summary, with how many entries matched automatically and how many you reviewed.']
 			],
 			formats: 'Included with Troco Pro. Accepts OFX, QFX, QBO, and CSV files.',
-			note: 'In development. Not yet available in the app.'
+			note: 'In development. Not yet available in the app.',
+			next: {
+				status: 'Coming soon',
+				title: 'A screenshot from your bank becomes an entry.',
+				description:
+					'Next up: take a screenshot of your banking app and Troco reads one transaction or the whole list. The reading runs on the iPhone\'s own AI model, offline. The image never leaves your device.'
+			}
 		},
 		pro: {
 			eyebrow: 'Troco Pro',
@@ -377,27 +389,27 @@ export const copy = {
 			eula: 'Apple Standard EULA'
 		},
 		intelligence: {
-			eyebrow: 'In development',
+			eyebrow: 'Now in the app',
 			title: 'Smart without being intrusive.',
 			description:
-				'We are building smart features with Apple\'s on-device technologies wherever they fit. They help Troco understand what you enter, without turning your finances into raw material for advertising or tracking.',
+				'Troco uses the iPhone\'s own AI model to understand what comes in, without turning your finances into raw material for advertising or tracking.',
 			items: [
-				'Interpret entries',
-				'Organize information',
-				'Categorize transactions',
-				'Ask about your data in plain language'
+				'Reads statements from different banks',
+				'Separates who was paid from the description',
+				'Suggests a category from the name',
+				'Learns from your decisions'
 			],
 			note:
 				'When a feature uses Apple\'s on-device model, processing happens locally. iCloud, the App Store, and exchange rates work as described in the privacy policy.'
 		},
 		cta: {
-			join: 'Try Troco',
+			join: 'Join the public beta',
 			hint: 'No sign-up: send the email of your Apple ID and we will reply with the invite.'
 		},
 		finalCta: {
 			title: 'A clearer relationship with your money starts here.',
 			description:
-				'Troco is coming to the App Store. If you would like to try it first, request beta access by email.',
+				'Troco is coming to the App Store. In the meantime, the public beta is open on TestFlight.',
 			appStoreStatus: 'Coming soon on the App Store',
 			beta: 'Request beta access'
 		},
@@ -410,9 +422,9 @@ export const copy = {
 		screenshotAlt: {
 			onboarding: 'Troco welcome screen set against a mountain landscape.',
 			overview: 'Financial summary with consolidated balance, currencies, and monthly flow.',
-			budgets: 'Budget summary with categories and remaining amounts.',
+			budgets: 'Monthly budgets with the amount left in each category group.',
 			transactions: 'Transaction list with original and converted amounts.',
-			planning: 'Monthly planning with income, spending, and recurring entries.',
+			planning: 'Monthly agenda with recurring entries, card statements, and overdue commitments.',
 			wallet: 'Wallet with accounts and cards organized by currency.'
 		},
 		mail: {
@@ -485,11 +497,11 @@ export const copy = {
 			eyebrow: 'Presupuestos del mes',
 			title: 'Ve a dónde va tu dinero.',
 			description:
-				'Próximos movimientos, presupuestos por categoría y cuánto queda en cada uno, directo en el resumen del mes.',
+				'Cuánto queda en todos los presupuestos del mes y en cada grupo de categorías, con lo gastado justo debajo.',
 			highlights: [
-				'Próximos movimientos siempre a la vista',
-				'Presupuestos por categoría, con el importe restante',
-				'Un destacado de la categoría que más pesó en el mes'
+				'Lo que queda del mes, en un solo número',
+				'Presupuestos por grupo de categorías, con el importe restante',
+				'Lo gastado en cada presupuesto, a un toque'
 			]
 		},
 		transactions: {
@@ -504,14 +516,14 @@ export const copy = {
 			]
 		},
 		planning: {
-			eyebrow: 'Topes y planificación',
-			title: 'Planifica el mes con espacio para la vida real.',
+			eyebrow: 'Agenda del mes',
+			title: 'Todo lo que vence, antes de que venza.',
 			description:
-				'Define presupuestos, sigue lo que queda y compara tus ingresos con los gastos durante el mes.',
+				'Cuentas fijas, recurrencias y facturas de tarjeta en una sola agenda. Lo vencido aparece primero, con Confirmar y Aplazar a mano.',
 			highlights: [
-				'Topes por categoría, en importe o en porcentaje de ingresos',
-				'Movimientos recurrentes y futuros en la planificación del mes',
-				'Ingresos del mes junto a lo que ya se usó'
+				'Recurrencias y movimientos futuros en el mismo lugar',
+				'La factura de cada tarjeta, con su cierre y vencimiento',
+				'Confirma o aplaza un compromiso sin salir de la lista'
 			]
 		},
 		wallet: {
@@ -544,7 +556,13 @@ export const copy = {
 				['Conciliado', 'Resumen del mes conciliado, con cuántos movimientos se conciliaron automáticamente y cuántos revisaste.']
 			],
 			formats: 'Incluida en Troco Pro. Acepta archivos OFX, QFX, QBO y CSV.',
-			note: 'En desarrollo. Todavía no está disponible en la app.'
+			note: 'En desarrollo. Todavía no está disponible en la app.',
+			next: {
+				status: 'Próximamente',
+				title: 'Una captura de tu banco se vuelve un movimiento.',
+				description:
+					'Lo siguiente: haz una captura de la app de tu banco y Troco lee un movimiento o la lista completa. La lectura la hace el modelo de IA del propio iPhone, sin conexión. La imagen no sale del dispositivo.'
+			}
 		},
 		pro: {
 			eyebrow: 'Troco Pro',
@@ -581,27 +599,27 @@ export const copy = {
 			eula: 'EULA estándar de Apple'
 		},
 		intelligence: {
-			eyebrow: 'En desarrollo',
+			eyebrow: 'Ya en la app',
 			title: 'Inteligente sin ser intrusivo.',
 			description:
-				'Estamos creando funciones inteligentes con las tecnologías en el dispositivo de Apple, cuando tenga sentido. Ayudan a Troco a entender lo que registras, sin convertir tus finanzas en materia prima para publicidad o rastreo.',
+				'Troco usa el modelo de IA del propio iPhone para entender lo que le llega, sin convertir tus finanzas en materia prima para publicidad o rastreo.',
 			items: [
-				'Interpretar entradas',
-				'Organizar información',
-				'Categorizar movimientos',
-				'Consultar tus datos en lenguaje natural'
+				'Entiende extractos de bancos distintos',
+				'Separa a quién se pagó de la descripción',
+				'Sugiere la categoría por el nombre',
+				'Aprende de tus decisiones'
 			],
 			note:
 				'Cuando una función usa el modelo de Apple en el dispositivo, el procesamiento ocurre localmente. iCloud, la App Store y los tipos de cambio funcionan como describe la política de privacidad.'
 		},
 		cta: {
-			join: 'Probar Troco',
+			join: 'Acceder a la beta pública',
 			hint: 'Sin registro: envía el correo de tu Apple ID y respondemos con la invitación.'
 		},
 		finalCta: {
 			title: 'Una relación más clara con tu dinero empieza aquí.',
 			description:
-				'Troco llegará a la App Store. Si quieres probarlo antes, solicita acceso beta por correo electrónico.',
+				'Troco llegará a la App Store. Mientras tanto, la beta pública está abierta en TestFlight.',
 			appStoreStatus: 'Próximamente en la App Store',
 			beta: 'Solicitar acceso beta'
 		},
@@ -614,9 +632,9 @@ export const copy = {
 		screenshotAlt: {
 			onboarding: 'Pantalla de bienvenida de Troco sobre un paisaje de montañas.',
 			overview: 'Resumen financiero con saldo consolidado, monedas y flujo mensual.',
-			budgets: 'Resumen de presupuestos con categorías e importes restantes.',
+			budgets: 'Presupuestos del mes con el importe restante en cada grupo de categorías.',
 			transactions: 'Lista de movimientos con importes originales y convertidos.',
-			planning: 'Planificación mensual con ingresos, gastos y movimientos recurrentes.',
+			planning: 'Agenda del mes con recurrencias, facturas de tarjeta y compromisos vencidos.',
 			wallet: 'Cartera con cuentas y tarjetas organizadas por moneda.'
 		},
 		mail: {

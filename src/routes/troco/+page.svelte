@@ -92,7 +92,8 @@
 				['string', 'string']
 			],
 			formats: 'string',
-			note: 'string'
+			note: 'string',
+			next: { status: 'string', title: 'string', description: 'string' }
 		},
 		pro: {
 			eyebrow: 'string',
@@ -488,6 +489,14 @@
         <p class="section-description">{pageCopy.import.description}</p>
         <ul class="check-list">{#each pageCopy.import.highlights as highlight}<li><Icon name="check" size={17} /><span>{highlight}</span></li>{/each}</ul>
         <p class="import-note">{importSoon ? pageCopy.import.note : pageCopy.import.formats}</p>
+        <div class="import-next">
+          <span class="import-next-icon" aria-hidden="true"><Icon name="camera" size={22} /></span>
+          <div>
+            <p class="eyebrow"><span class="soon-badge">{pageCopy.import.next.status}</span></p>
+            <h3>{pageCopy.import.next.title}</h3>
+            <p>{pageCopy.import.next.description}</p>
+          </div>
+        </div>
       </div>
       <figure class="import-preview enter">
         {#key importStep}<div class="phone import-phone swap-content"><img src={shot('import-' + (importStep + 1))} alt={pageCopy.import.screens[importStep][1]} width="720" height="1565" loading="lazy" decoding="async" /></div>{/key}
